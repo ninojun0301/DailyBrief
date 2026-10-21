@@ -9,7 +9,7 @@
       "publishedAt": "2026-10-20T07:00:00.000Z",
       "category": "tech",
       "source": "OpenAI News",
-      "summary": "OpenAI 称 Terminal X 借助 GPT-6.1 的评估代理，以 54 项标准评分，对资深投资人判断的匹配度达 88.6%，并能多识别出 25% 偏离基金授权范围的情况。"
+      "summary": "OpenAI 称 Terminal X 的 Eval Agent 依据 54 项标准评分，配合 GPT-6.1 Sol 后，对基金投资指令偏离的识别量提升 25%，与资深投资人判断的一致率达 88.6%。"
     },
     {
       "sourceId": "openai-news",
@@ -19,7 +19,7 @@
       "publishedAt": "2026-10-14T07:00:00.000Z",
       "category": "tech",
       "source": "OpenAI News",
-      "summary": "Third Moment Research 使用 GPT-6 Astra、GPT-6.1 Sol、Codex 及网络安全工具 Daybreak，让 1 万个智能体连续运行 36 小时以上，构建可长时间专注并随使用改进的代理。"
+      "summary": "AI 实验室 Third Moment Research 借助 GPT-6 Astra、GPT-6.1 Sol、Codex 及网络安全工具 Daybreak，让 1 万个智能体持续运行 36 小时以上，并随使用不断改进。"
     },
     {
       "sourceId": "openai-news",
@@ -29,7 +29,7 @@
       "publishedAt": "2026-10-09T07:00:00.000Z",
       "category": "tech",
       "source": "OpenAI News",
-      "summary": "OpenAI 称 Asana 在 Codex 中使用 GPT-6 Astra 与 GPT-6.1 Sol 重构浏览器代理，测试中模型成本降低 76 倍、速度提升 5 倍，得以为客户提供更强模型。"
+      "summary": "Asana 借助 Codex 中的 GPT-6 Astra 重构浏览器智能体，测试中成本降至原来的 1/76，速度提升 5 倍，以便向客户提供能力更强的模型。"
     },
     {
       "sourceId": "openai-news",
@@ -39,7 +39,7 @@
       "publishedAt": "2026-10-08T12:00:00.000Z",
       "category": "tech",
       "source": "OpenAI News",
-      "summary": "LegalOn 将 Codex 的日均估算成本削减 65%，同时保持开发速度，做法是按任务匹配 Astra、Sol 与 Luna 等模型，并策略性地管理预算。"
+      "summary": "LegalOn 将 Astra、Sol、Luna 等模型按任务匹配并策略性管理预算，使 Codex 每日预估成本下降 65%，同时保持原有开发速度。"
     },
     {
       "sourceId": "tldr-ai",
@@ -49,7 +49,7 @@
       "publishedAt": "2026-09-30T00:00:00.000Z",
       "category": "tech",
       "source": "TLDR AI",
-      "summary": "TLDR AI 当期快讯涉及 OpenAI「Dots」、GPT-6.1 Sol 以及「软件工厂」等话题，因原文未提供摘要，具体内容暂无法确认。"
+      "summary": "TLDR AI 本期要目提及 OpenAI「Dots」、GPT-6.1 Sol 以及「软件工厂」等话题，未提供更多具体细节。"
     },
     {
       "sourceId": "smol-ai-news",
@@ -59,7 +59,7 @@
       "publishedAt": "2026-08-06T05:44:39.000Z",
       "category": "tech",
       "source": "Smol AI News",
-      "summary": "Meta 的 Muse Spark 1.2 升至前沿水平，在 Vals 指数排名前五，价格为每测试 0.69 美元，比 Kimi 便宜 3 倍，比 Fable、Opus 和 5.6 Sol 便宜 10 倍以上，并在五项 STEM 奥赛中获金牌级成绩。"
+      "summary": "Meta 的 Muse Spark 1.2 在 Vals Index 升至前五，每测试成本 0.69 美元，比 Kimi 便宜 3 倍、比 Fable、Opus 与 5.6 Sol 便宜 10 倍以上，并在五项 STEM 奥赛中达到金牌水平。"
     },
     {
       "sourceId": "smol-ai-news",
@@ -69,7 +69,7 @@
       "publishedAt": "2026-07-30T05:44:39.000Z",
       "category": "tech",
       "source": "Smol AI News",
-      "summary": "OpenAI 大幅降价，GPT-5.6 Luna 降 80%、Terra 降 20%，并推出延迟最多降低 2.5 倍、价格翻倍的 Sol Fast 档位，使代理工作流成本改善约 10 倍；ARC-AGI-3 相关争论同期升温。"
+      "summary": "OpenAI 将 GPT-5.6 Luna 价格下调 80%、Terra 下调 20%，并推出延迟最高降低 2.5 倍、价格翻倍的 Sol Fast 档位，使智能体工作流成本改善约 10 倍。"
     },
     {
       "sourceId": "latent-space",
@@ -79,7 +79,7 @@
       "publishedAt": "2026-10-20T19:31:57.000Z",
       "category": "tech",
       "source": "Latent Space",
-      "summary": "Latent Space 播客对话 SF Compute 的 Evan Conrad，主题为「可编程数据中心」，讨论从 GPU 交易走向物理交割、独立市场机制以及可编程算力的实现路径。"
+      "summary": "SF Compute 的 Evan Conrad 介绍「可编程数据中心」构想：算力从 GPU 交易走向实物交割、独立市场与可编程调度。"
     },
     {
       "sourceId": "mit-tech-review-ai",
@@ -89,7 +89,7 @@
       "publishedAt": "2026-10-13T09:00:00.000Z",
       "category": "tech",
       "source": "MIT Tech Review AI",
-      "summary": "MIT 科技评论报道，AI 实验室正收购倒闭初创公司的数据用于训练模型。创业者 Keelan Miskell 关闭其加密初创公司后，将数字档案售出，代码等资产获利约 2.5 万美元。"
+      "summary": "AI 实验室开始收购已倒闭初创公司的数据用于训练模型。创业者 Keelan Miskell 出售其加密初创公司的数字档案，获得约 2.5 万美元，该公司的用户为匿名用户。"
     },
     {
       "sourceId": "bloomberg-markets",
@@ -99,7 +99,7 @@
       "publishedAt": "2026-10-21T06:55:59.000Z",
       "category": "finance",
       "source": "Bloomberg Markets",
-      "summary": "印尼央行维持基准利率不变，选择继续依靠定向措施支持印尼盾，应对MSCI将其双降级威胁所引发的市场波动。"
+      "summary": "印尼央行维持基准利率不变，选择继续依靠定向措施应对MSCI双降级威胁引发的市场波动，以支撑印尼盾汇率。"
     },
     {
       "sourceId": "bloomberg-markets",
@@ -109,7 +109,7 @@
       "publishedAt": "2026-10-21T06:41:54.000Z",
       "category": "finance",
       "source": "Bloomberg Markets",
-      "summary": "英国通胀升至11个月新高，加大英国央行加息压力；同时英国批准在备受争议的北海气田进行钻探。"
+      "summary": "英国通胀升至11个月来最高水平，市场对英国央行加息的预期升温；英国政府同时批准在有争议的北海气田进行钻探。"
     },
     {
       "sourceId": "bloomberg-markets",
@@ -119,7 +119,7 @@
       "publishedAt": "2026-10-21T06:30:00.000Z",
       "category": "finance",
       "source": "Bloomberg Markets",
-      "summary": "贝莱德称当前公司债收益率处于「一代人难得的高位」，回报来源更具韧性，不依赖降息预期或利差收窄。"
+      "summary": "贝莱德指出，当前公司债收益率处于「一代人难得的高位」，回报不再依赖降息预期或利差收窄，是更具韧性的收益来源。"
     },
     {
       "sourceId": "bloomberg-markets",
@@ -129,7 +129,7 @@
       "publishedAt": "2026-10-21T05:52:15.000Z",
       "category": "finance",
       "source": "Bloomberg Markets",
-      "summary": "英国通胀加速且升幅超出市场预期，富时100指数、英镑、英国国债及油价等资产走势受到关注。"
+      "summary": "英国CPI加速上行且涨幅超出预期，富时100指数、英镑与英国国债市场随之波动，投资者正消化最新通胀数据。"
     },
     {
       "sourceId": "wsj-markets",
@@ -157,7 +157,7 @@
       "publishedAt": "2026-10-21T04:00:04.000Z",
       "category": "finance",
       "source": "Financial Times",
-      "summary": "加密交易所竞相向美国客户提供预测市场产品；在代币价格长期低迷的背景下，数字资产公司正寻求新的盈利方式。"
+      "summary": "数字资产机构在代币价格长期低迷的背景下寻求新收入来源，多家加密交易所竞相向美国客户提供预测市场产品。"
     },
     {
       "sourceId": "bbc-business",
@@ -167,7 +167,7 @@
       "publishedAt": "2026-10-20T05:00:45.000Z",
       "category": "finance",
       "source": "BBC Business",
-      "summary": "在中期选举前，特朗普称美国经济表现强劲，BBC Verify核查通胀、就业与经济增长数据，评估其实际状况。"
+      "summary": "美国中期选举临近，特朗普多次强调美国经济表现；BBC核查栏目从通胀、就业和经济增长三方面检视其说法。"
     },
     {
       "sourceId": "economist-finance",
@@ -639,7 +639,7 @@
       "publishedAt": "2026-10-20T13:25:16.000Z",
       "category": "finance",
       "source": "美国证监会 SEC（官方）",
-      "summary": "美国证监会与法国金融市场管理局（AMF）签署监管合作谅解备忘录，以便利双方在投资顾问和投资服务提供者领域的磋商与信息共享。"
+      "summary": "美国SEC与法国金融市场管理局（AMF）签署监管合作谅解备忘录，便利双方在投资顾问与投资服务提供者领域的磋商与信息共享。"
     },
     {
       "sourceId": "sec-press",
@@ -649,7 +649,7 @@
       "publishedAt": "2026-10-20T12:51:00.000Z",
       "category": "finance",
       "source": "美国证监会 SEC（官方）",
-      "summary": "美国证监会与日本金融厅于2026年10月19日在东京举行秋季金融监管对话，延续双方长期合作。"
+      "summary": "美国SEC与日本金融厅于2026年10月19日在东京举行秋季金融监管对话，该机制延续两国监管机构的长期合作。"
     },
     {
       "sourceId": "sec-press",
@@ -659,7 +659,7 @@
       "publishedAt": "2026-10-19T17:19:43.000Z",
       "category": "finance",
       "source": "美国证监会 SEC（官方）",
-      "summary": "美国证监会宣布将于2026年11月9日举办圆桌会议，讨论机器可读数据与超级智能（SI）的应用及相关风险与成本。"
+      "summary": "美国SEC宣布将于2026年11月9日举办圆桌会议，讨论机器可理解数据的应用以及「超级智能」带来的相关风险与成本。"
     },
     {
       "sourceId": "sec-press",
@@ -867,7 +867,7 @@
       "publishedAt": "2026-10-21T04:15:00.000Z",
       "category": "finance",
       "source": "欧洲央行（官方）",
-      "summary": "欧洲央行执行委员会委员Philip R. Lane就欧元流动性额度与国际货币体系发表讲话。"
+      "summary": "欧洲央行执委菲利普·莱恩发表讲话，主题为欧元流动性互换额度与国际货币体系。"
     },
     {
       "sourceId": "ecb-press",
@@ -877,7 +877,7 @@
       "publishedAt": "2026-10-20T07:00:00.000Z",
       "category": "finance",
       "source": "欧洲央行（官方）",
-      "summary": "欧洲央行执行委员会委员Frank Elderson接受奥地利《新闻报》（Die Presse）采访。"
+      "summary": "欧洲央行执委弗兰克·埃尔德森接受奥地利《新闻报》采访，采访内容由欧洲央行发布。"
     },
     {
       "sourceId": "ecb-press",
@@ -887,7 +887,7 @@
       "publishedAt": "2026-10-19T06:00:00.000Z",
       "category": "finance",
       "source": "欧洲央行（官方）",
-      "summary": "欧洲央行执行委员会委员Frank Elderson就气候与自然风险同经济韧性及竞争力的关系发表讲话。"
+      "summary": "欧洲央行执委弗兰克·埃尔德森发表讲话，主题为从气候与自然风险转向经济韧性与竞争力。"
     },
     {
       "sourceId": "ecb-press",
@@ -1275,7 +1275,7 @@
       "publishedAt": "2026-10-20T11:06:36.000Z",
       "category": "politics",
       "source": "NYT World",
-      "summary": "英国德文郡计划建设欧洲最大数据中心之一，遭到当地居民强烈反对，反对声浪主要源于对环境问题的担忧，反映出英国乡村地区对AI数据中心的不满情绪。"
+      "summary": "英国德文郡计划建设欧洲最大数据中心之一，遭到当地居民强烈反对。随着环境担忧加剧，反对人工智能数据中心的声浪已蔓延至英格兰乡村地区。"
     },
     {
       "sourceId": "nyt-world",
@@ -1285,7 +1285,7 @@
       "publishedAt": "2026-10-20T14:51:18.000Z",
       "category": "politics",
       "source": "NYT World",
-      "summary": "哥伦比亚一座金矿发生坍塌，造成14人死亡。该矿属于哥伦比亚日益增多的小型无证采矿点之一，此类开采活动受全球金价上涨推动而扩张。"
+      "summary": "哥伦比亚一处金矿发生坍塌，造成14人死亡。该矿属于当地日益增多的小型无证采矿点之一，这类开采活动受到全球金价上涨的推动。"
     }
   ]
 }
