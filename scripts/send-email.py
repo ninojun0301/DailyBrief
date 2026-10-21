@@ -149,8 +149,22 @@ for item in data.get("trading", {}).get("watchlist", [])[:6]:
         """
     )
 
+focus_briefs = []
+seen_brief_urls: set[str] = set()
+for item in [
+    *data.get("tech_briefs", []),
+    *data.get("finance_briefs", []),
+    *data.get("politics_briefs", []),
+]:
+    url = str(item.get("url") or "")
+    if not url or url in seen_brief_urls:
+        continue
+    seen_brief_urls.add(url)
+    focus_briefs.append(item)
+focus_briefs.sort(key=lambda item: float(item.get("importance") or 0), reverse=True)
+
 brief_items: list[str] = []
-for item in data.get("finance_briefs", [])[:5]:
+for item in focus_briefs[:6]:
     brief_items.append(
         f"""
         <div style="margin:0 0 16px;padding-bottom:14px;border-bottom:1px solid #e2e8f0;">
@@ -201,7 +215,7 @@ email_html = f"""<!doctype html>
         </tr>
         <tr>
           <td style="padding:8px 30px 22px;">
-            <h2 style="margin:0 0 14px;font-size:19px;color:#0f172a;">财经要点</h2>
+            <h2 style="margin:0 0 14px;font-size:19px;color:#0f172a;">重点资讯</h2>
             {''.join(brief_items)}
           </td>
         </tr>
@@ -239,8 +253,8 @@ for item in tickers:
         f"{format_price(item.get('currentPrice'), item.get('currency'))}, "
         f"当日 {day_text}"
     )
-plain_lines.extend(["", "财经要点："])
-for item in data.get("finance_briefs", [])[:5]:
+plain_lines.extend(["", "重点资讯："])
+for item in focus_briefs[:6]:
     plain_lines.append(f"- {item.get('title', '')}：{item.get('summary', '')}")
 plain_lines.extend(["", f"完整日报：{report_url}", "", risk_caveat])
 plain_text = "\n".join(plain_lines)
