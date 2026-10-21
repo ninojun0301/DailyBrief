@@ -50,8 +50,8 @@ export const WATCHLIST: TickerDef[] = [
   // A-share benchmarks and liquid leaders
   { symbol: "000001.SS", displayName: "上证指数", displayNameEn: "SSE Composite", group: "china-equity" },
   { symbol: "399001.SZ", displayName: "深证成指", displayNameEn: "SZSE Component", group: "china-equity" },
-  { symbol: "399006.SZ", displayName: "创业板指", displayNameEn: "ChiNext Index", group: "china-equity" },
-  { symbol: "000300.SS", displayName: "沪深300", displayNameEn: "CSI 300", group: "china-equity" },
+  { symbol: "159915.SZ", displayName: "创业板ETF", displayNameEn: "ChiNext ETF", group: "china-equity" },
+  { symbol: "510300.SS", displayName: "沪深300ETF", displayNameEn: "CSI 300 ETF", group: "china-equity" },
   { symbol: "600519.SS", displayName: "贵州茅台", displayNameEn: "Kweichow Moutai", group: "china-equity" },
   { symbol: "300750.SZ", displayName: "宁德时代", displayNameEn: "CATL", group: "china-equity" },
   { symbol: "601138.SS", displayName: "工业富联", displayNameEn: "Foxconn Industrial Internet", group: "china-equity" },
@@ -64,7 +64,7 @@ export const WATCHLIST: TickerDef[] = [
   { symbol: "SOL-USD", displayName: "Solana", group: "crypto" },
   // Gold and FX
   { symbol: "GC=F", displayName: "COMEX 黄金期货", displayNameEn: "COMEX Gold Futures", group: "commodity-fx" },
-  { symbol: "XAUUSD=X", displayName: "国际现货黄金", displayNameEn: "Spot Gold (XAU/USD)", group: "commodity-fx" },
+  { symbol: "GLD", displayName: "黄金 ETF (GLD)", displayNameEn: "SPDR Gold Shares (GLD)", group: "commodity-fx" },
   { symbol: "USDCNY=X", displayName: "美元 / 人民币", displayNameEn: "USD / CNY", group: "commodity-fx" },
   // Macro
   { symbol: "^VIX", displayName: "VIX 恐慌指数", displayNameEn: "VIX (Volatility)", group: "macro" },
