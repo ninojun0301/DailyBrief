@@ -6,375 +6,150 @@
       "title": "MadsLorentzen/ai-job-search",
       "url": "https://github.com/MadsLorentzen/ai-job-search",
       "excerpt": "The job search that runs on your machine. AI job application framework built on Claude Code: evaluate postings, tailor CVs, write cover letters, prep interviews. Fork it and own it.",
-      "meta": "Python · ★ 61,390 · 🍴 19,053 · 📈 3,861 stars today",
+      "meta": "Python · ★ 61,420 · 🍴 19,057 · 📈 3,861 stars today",
       "category": "tech",
       "source": "GitHub Trending",
-      "summary": "基于 Claude Code 构建的本地求职框架，整个流程跑在自己机器上：由 AI 评估职位匹配度、按岗位定制简历、生成求职信并准备面试。适合不愿把履历交给第三方 SaaS 的求职者，fork 后即可搭建私有求职流水线。"
+      "summary": "基于 Claude Code 构建的本地求职申请框架：评估职位匹配度、定制改写简历、生成求职信、准备面试，全部流程跑在自己的机器上，数据不外传。适合需要批量投递岗位、又想完全掌控内容的开发者。"
     },
     {
       "sourceId": "github-trending",
       "title": "cloudflare/security-audit-skill",
       "url": "https://github.com/cloudflare/security-audit-skill",
       "excerpt": "A coding-agent skill for multi-phase security audits with independently verified, machine-readable findings",
-      "meta": "JavaScript · ★ 34,709 · 🍴 2,185 · 📈 1,712 stars today",
+      "meta": "JavaScript · ★ 34,723 · 🍴 2,187 · 📈 1,712 stars today",
       "category": "tech",
       "source": "GitHub Trending",
-      "summary": "面向编码 agent 的安全审计技能包，把审计拆成多个阶段执行，产出机器可读的漏洞结论，并支持独立复核以降低误报。适合在代码审查或 CI 流程中让 Claude Code 等 agent 自动执行安全扫描的团队。"
+      "summary": "面向编码 Agent 的安全审计 skill，把审计拆成多个阶段执行，输出机器可读的漏洞结论，并对每条发现做独立复核以压低误报。适合在代码评审或 CI 流程中给 Claude Code 一类 Agent 接入自动化安全扫描。"
     },
     {
       "sourceId": "github-trending",
       "title": "stablyai/orca",
       "url": "https://github.com/stablyai/orca",
       "excerpt": "Orca is the place for working with a fleet of agents (e.g. Grok Bot, Claude Code). Run any coding agent with your own subscription. Available on desktop, mobile and remote runtime.",
-      "meta": "TypeScript · ★ 100,143 · 🍴 6,347 · 📈 1,565 stars today",
+      "meta": "TypeScript · ★ 100,163 · 🍴 6,349 · 📈 1,565 stars today",
       "category": "tech",
       "source": "GitHub Trending",
-      "summary": "统一调度多智能体集群的工作台，可同时运行 Grok Bot、Claude Code 等编码 agent，并使用自己的订阅额度，覆盖桌面端、移动端与远程 runtime。适合需要并行推进多个 agent 任务的开发者与团队。"
+      "summary": "多 Agent 协同工作台，可同时调度 Grok Bot、Claude Code 等不同编码 Agent，并用自己的订阅额度运行。提供桌面端、移动端与远程运行时，适合需要并行管理多个 Agent 任务的团队。"
     },
     {
       "sourceId": "github-trending",
       "title": "DietrichGebert/ponytail",
       "url": "https://github.com/DietrichGebert/ponytail",
       "excerpt": "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote.",
-      "meta": "JavaScript · ★ 170,240 · 🍴 9,263 · 📈 1,208 stars today",
+      "meta": "JavaScript · ★ 170,263 · 🍴 9,264 · 📈 1,208 stars today",
       "category": "tech",
       "source": "GitHub Trending",
-      "summary": "给 AI 编码 agent 加一层「最懒资深工程师」的思维约束：能不改就不改，优先复用与删减，抵制过度抽象和无谓新增。适合被 agent 生成的大量冗余代码困扰、希望控制改动面的开发者。"
+      "summary": "给 AI 编码 Agent 加一层提示约束，让它像最懒的资深工程师那样思考：能不写的新代码就不写，优先复用现成方案。用于抑制过度设计与冗余代码，适合对代码体积和可维护性敏感的项目。"
     },
     {
       "sourceId": "github-trending",
       "title": "Comfy-Org/ComfyUI",
       "url": "https://github.com/Comfy-Org/ComfyUI",
       "excerpt": "The most powerful and modular diffusion model GUI, api and backend with a graph/nodes interface. The fastest local inference engine in the world.",
-      "meta": "Python · ★ 141,007 · 🍴 16,683 · 📈 1,206 stars today",
+      "meta": "Python · ★ 141,018 · 🍴 16,683 · 📈 1,206 stars today",
       "category": "tech",
       "source": "GitHub Trending",
-      "summary": "基于节点图的扩散模型工作台，提供 GUI、API 与后端，把模型加载、采样、条件控制拆成可自由连线的节点，支持高效本地推理。适合需要精细控制生成流程的 AI 绘画用户和做批量生成的工程团队。"
+      "summary": "基于节点图的扩散模型工作流工具，提供 GUI、API 与推理后端，通过连线组合模型加载、采样、图像后处理等模块，在本地搭建可复现的生成流程。适合需要精细控制扩散模型的创作者与研究者。"
     },
     {
       "sourceId": "github-trending",
       "title": "ruvnet/ruflo",
       "url": "https://github.com/ruvnet/ruflo",
       "excerpt": "🌊 The original agent harness. Deploy intelligent multi-player swarms, coordinate autonomous workflows, and build conversational AI systems. Features adaptive memory, self-learning intelligence, federation, vector RAG integration, and native Claude Code / Codex / Hermes and many more Integrated",
-      "meta": "TypeScript · ★ 77,976 · 🍴 9,172 · 📈 684 stars today",
+      "meta": "TypeScript · ★ 77,980 · 🍴 9,173 · 📈 684 stars today",
       "category": "tech",
       "source": "GitHub Trending",
-      "summary": "面向多智能体的编排框架，支持部署协作式 swarm、协调自主工作流并搭建对话式 AI 系统，内置自适应记忆与自学习机制。适合研究多 agent 协同、需要把复杂任务拆分给多个智能体的工程团队。"
+      "summary": "Agent 编排框架，支持部署多智能体 swarm、协调自主工作流、构建对话式 AI 系统，内置自适应记忆与自学习机制。适合需要搭建复杂多 Agent 生产系统、又不愿从零造轮子的开发者。"
     },
     {
       "sourceId": "github-trending",
       "title": "Graphify-Labs/graphify",
       "url": "https://github.com/Graphify-Labs/graphify",
       "excerpt": "Turn any codebase, with its docs, SQL schemas, configs, and PDFs, into a queryable knowledge graph. A /graphify skill for Claude Code, Cursor, Codex, and Gemini CLI: local deterministic AST parsing, every edge explained, no vector store.",
-      "meta": "Python · ★ 130,610 · 🍴 12,560 · 📈 802 stars today",
+      "meta": "Python · ★ 130,623 · 🍴 12,563 · 📈 802 stars today",
       "category": "tech",
       "source": "GitHub Trending",
-      "summary": "把代码库连同文档、SQL schema、配置和 PDF 一起解析成可查询的知识图谱，以 /graphify 技能形式接入 Claude Code、Cursor、Codex、Gemini CLI，采用本地确定性 AST 解析。适合跨文件跨文档检索的大型项目。"
+      "summary": "把代码库连同文档、SQL schema、配置文件和 PDF 一并转成可查询的知识图谱。以 /graphify skill 形式接入 Claude Code、Cursor、Codex、Gemini CLI，本地做确定性的 AST 解析，方便 Agent 跨文件检索上下文。"
     },
     {
       "sourceId": "github-trending",
       "title": "anomalyco/opencode",
       "url": "https://github.com/anomalyco/opencode",
       "excerpt": "The open source coding agent.",
-      "meta": "TypeScript · ★ 219,189 · 🍴 29,240 · 📈 1,240 stars today",
+      "meta": "TypeScript · ★ 219,198 · 🍴 29,243 · 📈 1,240 stars today",
       "category": "tech",
       "source": "GitHub Trending",
-      "summary": "开源编码 agent，可在终端中读写代码库、执行命令并完成多步骤开发任务，作为闭源方案的自托管替代。适合希望掌控代码数据与模型选择、愿意自行配置的开发者和小团队。"
+      "summary": "开源编码 Agent，可读取代码库、编辑文件并执行命令来完成开发任务。适合希望自托管、可审查、不绑定闭源服务的开发者，用作日常编码、重构与调试的助手。"
     },
     {
       "sourceId": "github-trending",
       "title": "msitarzewski/agency-agents",
       "url": "https://github.com/msitarzewski/agency-agents",
       "excerpt": "A complete AI agency at your fingertips - From frontend wizards to Reddit community ninjas, from whimsy injectors to reality checkers. Each agent is a specialized expert with personality, processes, and proven deliverables.",
-      "meta": "Shell · ★ 162,572 · 🍴 26,246 · 📈 562 stars today",
+      "meta": "Shell · ★ 162,579 · 🍴 26,249 · 📈 562 stars today",
       "category": "tech",
       "source": "GitHub Trending",
-      "summary": "一批预设好的角色化 AI agent 合集，从前端专家、社区运营到创意注入与现实校验各有分工，每个都带人格设定和执行流程。适合想按岗位直接调用现成 agent、而不是从零编写 prompt 的用户。"
+      "summary": "预置一整套细分角色的 Agent 合集：从前端开发、社区运营到创意发散与方案把关，每个 Agent 都带专属知识、流程与性格设定。适合用 Agent 模拟一个小团队，分头处理不同职能的任务。"
     },
     {
       "sourceId": "github-trending",
       "title": "headroomlabs-ai/headroom",
       "url": "https://github.com/headroomlabs-ai/headroom",
       "excerpt": "Compress tool outputs, logs, files, and RAG chunks before they reach the LLM. 20% fewer tokens for coding agents, 60-95% fewer tokens for JSON, same answers. Library, proxy, MCP server.",
-      "meta": "Python · ★ 76,880 · 🍴 5,968 · 📈 549 stars today",
+      "meta": "Python · ★ 76,890 · 🍴 5,968 · 📈 549 stars today",
       "category": "tech",
       "source": "GitHub Trending",
-      "summary": "在内容送入 LLM 之前压缩工具输出、日志、文件和 RAG 片段：编码 agent 约省 20% token，JSON 类数据省 60–95%，答案基本不变。提供库、代理和 MCP server 三种接入方式，适合长上下文高成本的 agent 场景。"
+      "summary": "在工具输出、日志、文件和 RAG 片段送入 LLM 之前先做压缩，编码 Agent 可省约 20% token，JSON 类内容可省 60%–95%，答案质量基本不变。提供库、代理和 MCP server 三种接入方式，适合控制上下文成本的团队。"
     },
     {
       "sourceId": "github-trending",
       "title": "anthropics/knowledge-work-plugins",
       "url": "https://github.com/anthropics/knowledge-work-plugins",
       "excerpt": "Open source repository of plugins primarily intended for knowledge workers to use in Claude Cowork",
-      "meta": "Python · ★ 30,901 · 🍴 3,471 · 📈 267 stars today",
+      "meta": "Python · ★ 30,905 · 🍴 3,472 · 📈 267 stars today",
       "category": "tech",
       "source": "GitHub Trending",
-      "summary": "Anthropic 开源的插件集合，主要面向知识工作者在 Claude Cowork 中使用，把文档处理、写作与分析等日常办公任务封装成可安装的插件。适合非工程背景、想快速扩展 Claude 办公能力的用户。"
+      "summary": "Anthropic 开源的插件仓库，面向知识工作者在 Claude Cowork 中使用，把文档处理、资料整理等日常办公流程接进 AI。适合非工程岗位用户按需装配自己的工作流。"
     },
     {
       "sourceId": "github-trending",
       "title": "wshobson/agents",
       "url": "https://github.com/wshobson/agents",
       "excerpt": "Multi-harness agentic plugin marketplace for Claude Code, Codex, Cursor, OpenCode, GitHub Copilot, Google Antigravity, and Pi",
-      "meta": "Python · ★ 41,342 · 🍴 4,399 · 📈 93 stars today",
+      "meta": "Python · ★ 41,351 · 🍴 4,400 · 📈 93 stars today",
       "category": "tech",
       "source": "GitHub Trending",
-      "summary": "跨平台的 agent 插件市场，同一套插件可在 Claude Code、Codex、Cursor、OpenCode、GitHub Copilot、Google Antigravity 等 harness 间复用。适合在多个编码 agent 之间切换、想统一管理扩展的开发者。"
+      "summary": "跨 harness 的 Agent 插件市场，同一套插件可跑在 Claude Code、Codex、Cursor、OpenCode、GitHub Copilot、Google Antigravity 等多个工具上，免去逐个重复配置。适合在多种编码 Agent 之间切换的开发者。"
     },
     {
       "sourceId": "github-trending",
       "title": "sickn33/agentic-awesome-skills",
       "url": "https://github.com/sickn33/agentic-awesome-skills",
       "excerpt": "AAS Core is the local, agent-first control plane for complete catalog discovery, agent-owned selection, stack validation, and planning, backed by 2,600+ agentic skills. Includes CLI, local MCP, catalog, plugins, and Workbench.",
-      "meta": "Python · ★ 48,212 · 🍴 7,026 · 📈 83 stars today",
+      "meta": "Python · ★ 48,219 · 🍴 7,026 · 📈 83 stars today",
       "category": "tech",
       "source": "GitHub Trending",
-      "summary": "本地优先的 agent 控制平面，负责技能目录检索、由 agent 自主挑选技能、校验技术栈并生成执行计划，背后接入 2600 多个 agentic skill，提供 CLI 与本地 MCP。适合需要统一供给技能库的多 agent 团队。"
+      "summary": "面向 Agent 的本地控制平面，覆盖技能目录发现、由 Agent 自主选择技能、技术栈校验与任务规划，底层接 2600+ 个 agentic skills，提供 CLI 与本地 MCP 接口。适合需要给编码 Agent 装配能力集的团队。"
     },
     {
       "sourceId": "github-trending",
       "title": "shiyu-coder/Kronos",
       "url": "https://github.com/shiyu-coder/Kronos",
       "excerpt": "Kronos: A Foundation Model for the Language of Financial Markets",
-      "meta": "Python · ★ 42,471 · 🍴 7,028 · 📈 733 stars today",
+      "meta": "Python · ★ 42,475 · 🍴 7,028 · 📈 733 stars today",
       "category": "tech",
       "source": "GitHub Trending",
-      "summary": "面向金融市场的 foundation model，把 K 线、价格序列等行情数据当作一种「语言」建模，用于走势理解与预测类任务。适合量化研究者和金融 AI 从业者做实验与二次开发。"
+      "summary": "面向金融市场的预训练基础模型，把行情序列当作一门「语言」来建模，可用于走势预测与量化研究，为金融时序任务提供通用底座。适合量化研究员和金融 AI 开发者。"
     },
     {
       "sourceId": "github-trending",
       "title": "vllm-project/vllm",
       "url": "https://github.com/vllm-project/vllm",
       "excerpt": "A high-throughput and memory-efficient inference and serving engine for LLMs",
-      "meta": "Python · ★ 94,551 · 🍴 23,690 · 📈 128 stars today",
+      "meta": "Python · ★ 94,563 · 🍴 23,691 · 📈 128 stars today",
       "category": "tech",
       "source": "GitHub Trending",
-      "summary": "高吞吐、显存高效的 LLM 推理与服务引擎，通过 PagedAttention 等机制优化 KV cache 管理，支持连续批处理与分布式部署。适合自建大模型 API 服务的团队，是替代闭源推理后端的主流开源方案。"
-    },
-    {
-      "sourceId": "v2ex-hot",
-      "title": "内存越来越贵会不会拉高 Linux 的装机率？",
-      "url": "https://www.v2ex.com/t/1247772",
-      "excerpt": "101 回复 · Linux 节点",
-      "publishedAt": "2026-10-11T02:27:30.000Z",
-      "category": "tech",
-      "source": "V2EX"
-    },
-    {
-      "sourceId": "v2ex-hot",
-      "title": "大家还搞 Python 吗 , 感觉现在用的不多了啊",
-      "url": "https://www.v2ex.com/t/1246645",
-      "excerpt": "68 回复 · Python 节点",
-      "publishedAt": "2026-10-06T08:00:57.000Z",
-      "category": "tech",
-      "source": "V2EX"
-    },
-    {
-      "sourceId": "v2ex-hot",
-      "title": "前端想学后端，但是看完这段代码就已经力竭了",
-      "url": "https://www.v2ex.com/t/1250533",
-      "excerpt": "62 回复 · Python 节点",
-      "publishedAt": "2026-10-21T02:40:39.000Z",
-      "category": "tech",
-      "source": "V2EX"
-    },
-    {
-      "sourceId": "v2ex-hot",
-      "title": "想购买 iPad mini 8, 有人打醒我吗？",
-      "url": "https://www.v2ex.com/t/1250420",
-      "excerpt": "59 回复 · Apple 节点",
-      "publishedAt": "2026-10-20T12:43:16.000Z",
-      "category": "tech",
-      "source": "V2EX"
-    },
-    {
-      "sourceId": "v2ex-hot",
-      "title": "Linux 同好，一起移植 win 上的软件",
-      "url": "https://www.v2ex.com/t/1250480",
-      "excerpt": "41 回复 · Linux 节点",
-      "publishedAt": "2026-10-21T00:21:44.000Z",
-      "category": "tech",
-      "source": "V2EX"
-    },
-    {
-      "sourceId": "v2ex-hot",
-      "title": "美版有锁 iPhone 18pro 买回来作为 Wi-Fi 机有啥缺点吗？",
-      "url": "https://www.v2ex.com/t/1250193",
-      "excerpt": "39 回复 · Apple 节点",
-      "publishedAt": "2026-10-20T01:36:25.000Z",
-      "category": "tech",
-      "source": "V2EX"
-    },
-    {
-      "sourceId": "v2ex-hot",
-      "title": "iPhone Duo 应该半年内买不起，突然想买一台 iPad mini 了",
-      "url": "https://www.v2ex.com/t/1250237",
-      "excerpt": "34 回复 · Apple 节点",
-      "publishedAt": "2026-10-20T02:56:42.000Z",
-      "category": "tech",
-      "source": "V2EX"
-    },
-    {
-      "sourceId": "v2ex-hot",
-      "title": "中低端的个人开发者除了送外卖或者自媒体外还有什么出路？",
-      "url": "https://www.v2ex.com/t/1250603",
-      "excerpt": "23 回复 · 程序员 节点",
-      "publishedAt": "2026-10-21T05:25:08.000Z",
-      "category": "tech",
-      "source": "V2EX"
-    },
-    {
-      "sourceId": "v2ex-hot",
-      "title": "没人觉得 cursor 的模型思考很慢嘛，经常思考卡死要手动停止再继续",
-      "url": "https://www.v2ex.com/t/1236767",
-      "excerpt": "18 回复 · Python 节点",
-      "publishedAt": "2026-08-24T04:35:21.000Z",
-      "category": "tech",
-      "source": "V2EX"
-    },
-    {
-      "sourceId": "v2ex-hot",
-      "title": "最近从 Windows10 迁移到 Debian13，感觉直接起飞。",
-      "url": "https://www.v2ex.com/t/1250503",
-      "excerpt": "17 回复 · Linux 节点",
-      "publishedAt": "2026-10-21T01:44:00.000Z",
-      "category": "tech",
-      "source": "V2EX"
-    },
-    {
-      "sourceId": "v2ex-hot",
-      "title": "RUST 语法极其丑陋",
-      "url": "https://www.v2ex.com/t/1221723",
-      "excerpt": "14 回复 · Rust 节点",
-      "publishedAt": "2026-06-21T03:58:46.000Z",
-      "category": "tech",
-      "source": "V2EX"
-    },
-    {
-      "sourceId": "v2ex-hot",
-      "title": "大家用过 deepseek 的搜索服务吗？腾讯又来抄袭了",
-      "url": "https://www.v2ex.com/t/1250560",
-      "excerpt": "11 回复 · 程序员 节点",
-      "publishedAt": "2026-10-21T03:25:42.000Z",
-      "category": "tech",
-      "source": "V2EX"
-    },
-    {
-      "sourceId": "v2ex-hot",
-      "title": "Tkinter 的正确使用方法。。",
-      "url": "https://www.v2ex.com/t/1243855",
-      "excerpt": "11 回复 · Python 节点",
-      "publishedAt": "2026-09-22T02:17:16.000Z",
-      "category": "tech",
-      "source": "V2EX"
-    },
-    {
-      "sourceId": "v2ex-hot",
-      "title": "Python 3.15 正式发布, 添加不少新东西",
-      "url": "https://www.v2ex.com/t/1248327",
-      "excerpt": "10 回复 · Python 节点",
-      "publishedAt": "2026-10-13T03:24:35.000Z",
-      "category": "tech",
-      "source": "V2EX"
-    },
-    {
-      "sourceId": "v2ex-hot",
-      "title": "大家如何看待 ai 文章(博客，公众号，推文帖子)",
-      "url": "https://www.v2ex.com/t/1250578",
-      "excerpt": "9 回复 · 程序员 节点",
-      "publishedAt": "2026-10-21T03:46:05.000Z",
-      "category": "tech",
-      "source": "V2EX"
-    },
-    {
-      "sourceId": "v2ex-hot",
-      "title": "前后端其实只是一个阶段性的岗位",
-      "url": "https://www.v2ex.com/t/1250569",
-      "excerpt": "8 回复 · 程序员 节点",
-      "publishedAt": "2026-10-21T03:35:18.000Z",
-      "category": "tech",
-      "source": "V2EX"
-    },
-    {
-      "sourceId": "v2ex-hot",
-      "title": "[开源] CNEquity：自托管 A 股 Parquet 数据湖（日更 / PIT / 防幸存者偏差 / MCP）",
-      "url": "https://www.v2ex.com/t/1241944",
-      "excerpt": "8 回复 · Python 节点",
-      "publishedAt": "2026-09-14T10:03:37.000Z",
-      "category": "tech",
-      "source": "V2EX"
-    },
-    {
-      "sourceId": "v2ex-hot",
-      "title": "有人用过 macmini 的 文件共享 smb 吗，也忒拉胯了",
-      "url": "https://www.v2ex.com/t/1250146",
-      "excerpt": "7 回复 · Apple 节点",
-      "publishedAt": "2026-10-19T15:23:02.000Z",
-      "category": "tech",
-      "source": "V2EX"
-    },
-    {
-      "sourceId": "v2ex-hot",
-      "title": "[开源自推]我用 Rust 做了一个约 30 MiB 内存的多入口 AI Agent，已经在线跑了半年",
-      "url": "https://www.v2ex.com/t/1231826",
-      "excerpt": "7 回复 · Rust 节点",
-      "publishedAt": "2026-08-03T11:22:03.000Z",
-      "category": "tech",
-      "source": "V2EX"
-    },
-    {
-      "sourceId": "v2ex-hot",
-      "title": "执念，搜狗输入法 for Ubuntu 24/26 兼容助手",
-      "url": "https://www.v2ex.com/t/1250379",
-      "excerpt": "6 回复 · Linux 节点",
-      "publishedAt": "2026-10-20T09:24:39.000Z",
-      "category": "tech",
-      "source": "V2EX"
-    },
-    {
-      "sourceId": "v2ex-hot",
-      "title": "哪里能交流 omarchy",
-      "url": "https://www.v2ex.com/t/1249344",
-      "excerpt": "6 回复 · Linux 节点",
-      "publishedAt": "2026-10-16T05:55:13.000Z",
-      "category": "tech",
-      "source": "V2EX"
-    },
-    {
-      "sourceId": "v2ex-hot",
-      "title": "说个扎心的事实",
-      "url": "https://www.v2ex.com/t/1250596",
-      "excerpt": "5 回复 · 程序员 节点",
-      "publishedAt": "2026-10-21T05:02:31.000Z",
-      "category": "tech",
-      "source": "V2EX"
-    },
-    {
-      "sourceId": "v2ex-hot",
-      "title": "用上 antigravity 和 gemini pro 了",
-      "url": "https://www.v2ex.com/t/1250583",
-      "excerpt": "5 回复 · 程序员 节点",
-      "publishedAt": "2026-10-21T04:21:48.000Z",
-      "category": "tech",
-      "source": "V2EX"
-    },
-    {
-      "sourceId": "v2ex-hot",
-      "title": "美元汇率都 6.68 了",
-      "url": "https://www.v2ex.com/t/1250580",
-      "excerpt": "5 回复 · 程序员 节点",
-      "publishedAt": "2026-10-21T03:53:57.000Z",
-      "category": "tech",
-      "source": "V2EX"
-    },
-    {
-      "sourceId": "v2ex-hot",
-      "title": "libcr 项目组发布 Youtube 下载器 crYGet 0.9.0 for Linux",
-      "url": "https://www.v2ex.com/t/1247496",
-      "excerpt": "5 回复 · Linux 节点",
-      "publishedAt": "2026-10-09T23:28:45.000Z",
-      "category": "tech",
-      "source": "V2EX"
+      "summary": "高吞吐、显存友好的 LLM 推理与服务引擎，借助 PagedAttention 等显存管理技术提升批处理效率，并兼容 OpenAI 接口规范。广泛用于生产环境部署开源大模型，适合需要自建推理服务的团队。"
     },
     {
       "sourceId": "openai-news",
@@ -384,7 +159,7 @@
       "publishedAt": "2026-10-20T10:00:00.000Z",
       "category": "tech",
       "source": "OpenAI News",
-      "summary": "OpenAI 称一家 Schlotzsky’s 与 Cinnabon 加盟商使用 ChatGPT Work 后，现金对账时间减少 94%，菜单调价时间减少 95%，并释放约 10 万美元现金流。"
+      "summary": "OpenAI 案例显示，Schlotzsky’s 与 Cinnabon 独立加盟商 Ted Taylor 使用 ChatGPT Work 后，现金对账时间减少 94%，菜单调价时间减少 95%，并有望释放 10 万美元现金流。"
     },
     {
       "sourceId": "openai-news",
@@ -394,7 +169,7 @@
       "publishedAt": "2026-10-20T07:00:00.000Z",
       "category": "tech",
       "source": "OpenAI News",
-      "summary": "Terminal X 借助 GPT-6.1 的评估智能体，以 54 项标准审查投资输出，对资深投资人判断的匹配度达 88.6%，并多发现 25% 的合规偏离。"
+      "summary": "Terminal X 借助 GPT-6.1 Sol 构建评估智能体，按 54 项标准评分，对资深投资人判断的匹配度达 88.6%，并多识别出 25% 偏离基金投资授权的输出。"
     },
     {
       "sourceId": "openai-news",
@@ -404,7 +179,7 @@
       "publishedAt": "2026-10-20T00:00:00.000Z",
       "category": "tech",
       "source": "OpenAI News",
-      "summary": "OpenAI 宣布收购 Orchestra Bio，将 AI 运营能力引入生命科学研发，帮助生物制药团队加速药物开发。"
+      "summary": "OpenAI 宣布收购 Orchestra Bio，将 AI 驱动的运营能力引入生命科学研发，帮助生物制药团队加速药物开发并推进新疗法。"
     },
     {
       "sourceId": "openai-news",
@@ -657,7 +432,7 @@
       "publishedAt": "2026-10-20T18:17:47.000Z",
       "category": "tech",
       "source": "Hugging Face Blog",
-      "summary": "英伟达发布 Cosmos3-H-Dreams，尝试以生成式模拟还原临床手术场景，为手术相关应用提供可视化环境。"
+      "summary": "英伟达发布 Cosmos3-H-Dreams 模型，通过生成式仿真技术还原临床手术场景，用于手术相关内容的生成与模拟。"
     },
     {
       "sourceId": "huggingface-blog",
@@ -667,7 +442,7 @@
       "publishedAt": "2026-10-20T16:09:19.000Z",
       "category": "tech",
       "source": "Hugging Face Blog",
-      "summary": "Allen AI 发布 FairStress，旨在更深入评估大语言模型在决策过程中的公平性表现。"
+      "summary": "Allen AI 在 Hugging Face 发布 FairStress，提出对大模型决策公平性的更深入评测方法，用于检验模型输出在不同群体间的公平程度。"
     },
     {
       "sourceId": "huggingface-blog",
@@ -677,7 +452,7 @@
       "publishedAt": "2026-10-20T15:19:48.000Z",
       "category": "tech",
       "source": "Hugging Face Blog",
-      "summary": "IBM 研究团队推出 ALTK-Evolve，凭借学习式记忆在客户服务基准测试中登顶，且未依赖前沿大模型。"
+      "summary": "IBM Research 发布 ALTK-Evolve，依靠学习型记忆机制，在未使用前沿模型的情况下登顶 τ²-bench 客服任务排行榜。"
     },
     {
       "sourceId": "huggingface-blog",
@@ -687,7 +462,7 @@
       "publishedAt": "2026-10-20T00:00:00.000Z",
       "category": "tech",
       "source": "Hugging Face Blog",
-      "summary": "Hugging Face 发布与 TorchTPU 相关的内容，介绍在 PyTorch 生态中原生支持 TPU 的进展。"
+      "summary": "Hugging Face 发文介绍与 TorchTPU 的集成，实现在其生态中原生支持谷歌 TPU 硬件。"
     },
     {
       "sourceId": "huggingface-blog",
@@ -697,7 +472,7 @@
       "publishedAt": "2026-10-20T00:00:00.000Z",
       "category": "tech",
       "source": "Hugging Face Blog",
-      "summary": "AnyLanguageModel 发布 1.0 版本，回顾过去一年在苹果平台本地运行语言模型的进展。"
+      "summary": "Hugging Face 发布 AnyLanguageModel 1.0，回顾该 Apple 平台本地模型方案一年来的进展。"
     },
     {
       "sourceId": "huggingface-blog",
@@ -706,8 +481,7 @@
       "excerpt": "",
       "publishedAt": "2026-10-20T00:00:00.000Z",
       "category": "tech",
-      "source": "Hugging Face Blog",
-      "summary": "PyTorch 2.15 更新涉及 MPS 后端，介绍苹果 Metal 性能着色器在 PyTorch 中的支持情况。"
+      "source": "Hugging Face Blog"
     },
     {
       "sourceId": "huggingface-blog",
@@ -931,10 +705,10 @@
       "url": "https://huggingface.co/papers/2610.26203",
       "excerpt": "Graphical User Interface (GUI) agents increasingly act over streaming omni-modal observations spanning screenshots, audio, video, interaction history, and device states. However, exposing this complete context uniformly at every step ignores that relevance is transient and sparse: the signal determi",
       "publishedAt": "2026-10-19T00:00:00.000Z",
-      "meta": "👍 95",
+      "meta": "👍 96",
       "category": "tech",
       "source": "HuggingFace Trending Papers",
-      "summary": "GUI agent 需在截图、音频、视频、交互历史与设备状态的流式全模态观测中行动，而每步都喂入完整上下文忽视了相关性的瞬时性与稀疏性。该工作提出聚焦式全模态 GUI agent，按当前决策动态筛选关键模态信号，压缩冗余输入并提升操作准确率。"
+      "summary": "GUI agent 需在截图、音频、视频、交互历史与设备状态等流式全模态观测上行动，但每步输入完整上下文忽略了相关性短暂且稀疏。论文提出聚焦式全模态 GUI agent，按当前决策动态筛选相关模态信号，减少冗余感知开销。"
     },
     {
       "sourceId": "huggingface-papers",
@@ -942,10 +716,10 @@
       "url": "https://huggingface.co/papers/2610.28578",
       "excerpt": "In this report, we introduce Sage-A1.5, a 35B Mixture-of-Experts agentic model that builds on A1 to advance long-horizon problem solving through adaptive capability composition. Compared with A1, Sage-A1.5 learns not only to solve individual tasks, but also to organize work and revise its approach d",
       "publishedAt": "2026-10-20T00:00:00.000Z",
-      "meta": "👍 52",
+      "meta": "👍 53",
       "category": "tech",
       "source": "HuggingFace Trending Papers",
-      "summary": "Sage-A1.5 是 35B 的 MoE 智能体模型，在 A1 基础上通过自适应能力组合推进长程问题求解。它不只学会解单个任务，还能自主组织工作流程、在执行中修订策略，面向科学探索场景提升长程任务的完成度。"
+      "summary": "Sage-A1.5 是 35B MoE 智能体模型，在 A1 基础上以自适应能力组合推进长程问题求解。相比 A1，它不仅学习解单个任务，还能组织工作、按进展修正方案，把多种能力组合成可执行的长期计划。"
     },
     {
       "sourceId": "huggingface-papers",
@@ -956,7 +730,7 @@
       "meta": "👍 34",
       "category": "tech",
       "source": "HuggingFace Trending Papers",
-      "summary": "游戏引擎与编码 agent 能给出场景布局、运动与相机参数，却缺少把粗结构转为逼真视频的渲染器，且现有渲染器绑定单一引擎表示。SolarRenderer 提出少步生成式参考渲染，在遵循给定结构的同时补全未指定的外观，实现跨引擎的少步渲染。"
+      "summary": "SolarRenderer 面向少步生成式参考渲染：游戏引擎或编码 agent 已给定场景布局、运动与相机，渲染器需遵循该结构并补全未定外观。方法用少步生成得到符合结构约束的逼真视频，且不绑定单一引擎的场景表示。"
     },
     {
       "sourceId": "huggingface-papers",
@@ -964,10 +738,10 @@
       "url": "https://huggingface.co/papers/2610.26855",
       "excerpt": "World models enable embodied agents to anticipate action consequences, yet jointly modeling locomotion and manipulation across diverse embodiments remains challenging due to heterogeneous action spaces and limited multimodal supervision. We present Ropedia W0, the first egocentric loco-manipulation ",
       "publishedAt": "2026-10-19T00:00:00.000Z",
-      "meta": "👍 21",
+      "meta": "👍 24",
       "category": "tech",
       "source": "HuggingFace Trending Papers",
-      "summary": "针对异构动作空间与多模态监督不足导致跨具身联合建模移动与操作困难的问题，提出 Ropedia W0——首个以人类经验扩展的自我中心移动操作世界模型，让具身智能体在多种本体上预测动作后果，统一建模 loco-manipulation。"
+      "summary": "Ropedia W0 是首个跨形态的自我中心移动-操作世界模型，用人类经验扩展具身世界模型。针对异构动作空间与多模态监督不足，统一建模移动与操作的动作后果预测，使不同具身智能体都能预判行为结果。"
     },
     {
       "sourceId": "huggingface-papers",
@@ -975,10 +749,21 @@
       "url": "https://huggingface.co/papers/2610.25078",
       "excerpt": "Model--harness co-evolution has emerged as a prominent paradigm for recursive self-improving (RSI) agents, jointly evolving their execution scaffolds and intrinsic capabilities. We study the persistent yet often overlooked brain--body mismatch problem in this paradigm, where an evolving harness (bod",
       "publishedAt": "2026-10-18T00:00:00.000Z",
-      "meta": "👍 18",
+      "meta": "👍 22",
       "category": "tech",
       "source": "HuggingFace Trending Papers",
-      "summary": "模型与执行框架协同进化已成为递归自我改进 agent 的主流范式，但存在被忽视的「大脑—身体错配」：不断进化的 harness 与模型能力不匹配。CoEvo-RSI 系统研究该失配，并探讨框架进化后哪些模型应当跟进适配。"
+      "summary": "研究模型与 harness 协同进化中的「大脑-身体错配」问题：执行脚手架持续演化，而底层模型能力未必同步，导致递归自我改进失效。论文分析该错配，并探讨 harness 进化后哪些模型应当跟随适配。"
+    },
+    {
+      "sourceId": "huggingface-papers",
+      "title": "S-Agent 2.0: Spatial Reasoning with a General Coding Agent",
+      "url": "https://huggingface.co/papers/2610.28354",
+      "excerpt": "Spatial reasoning asks a model to work out where objects are in 3D space, how they relate to one another, and how they move. Agentic VLMs have recently brought large improvements on such tasks by letting the model actively gather evidence with 3D perception tools instead of answering in a single pas",
+      "publishedAt": "2026-10-20T00:00:00.000Z",
+      "meta": "👍 16",
+      "category": "tech",
+      "source": "HuggingFace Trending Papers",
+      "summary": "S-Agent 2.0 让通用编码 agent 完成空间推理：不再单次作答，而是调用 3D 感知工具主动收集证据，判断物体在三维空间中的位置、相互关系与运动，再基于执行结果给出答案。"
     },
     {
       "sourceId": "huggingface-papers",
@@ -989,18 +774,7 @@
       "meta": "👍 16",
       "category": "tech",
       "source": "HuggingFace Trending Papers",
-      "summary": "企业 agent 需回答来自文档、聊天与图表中持续演化的记录，同一信息的多版本会在协作中累积。MMEnterprise-Bench 构建跨多模态、版本演化的工作区问答基准，考察 agent 识别信息更新与纠正、进行版本感知推理的能力。"
-    },
-    {
-      "sourceId": "huggingface-papers",
-      "title": "S-Agent 2.0: Spatial Reasoning with a General Coding Agent",
-      "url": "https://huggingface.co/papers/2610.28354",
-      "excerpt": "Spatial reasoning asks a model to work out where objects are in 3D space, how they relate to one another, and how they move. Agentic VLMs have recently brought large improvements on such tasks by letting the model actively gather evidence with 3D perception tools instead of answering in a single pas",
-      "publishedAt": "2026-10-20T00:00:00.000Z",
-      "meta": "👍 13",
-      "category": "tech",
-      "source": "HuggingFace Trending Papers",
-      "summary": "空间推理要求判定三维空间中物体的位置、关系与运动。S-Agent 2.0 让通用编码 agent 调用 3D 感知工具主动采集证据，而非单次作答，把空间推理转化为可执行的工具调用流程，在相关任务上取得明显提升。"
+      "summary": "MMEnterprise-Bench 评测企业 agent 在持续演化的多模态工作记录上的问答能力。文档、聊天与图表在协作中被共享、修正，同一信息积累多个版本，基准要求 agent 辨别版本、追踪修订并给出可靠答案。"
     },
     {
       "sourceId": "huggingface-papers",
@@ -1011,18 +785,18 @@
       "meta": "👍 12",
       "category": "tech",
       "source": "HuggingFace Trending Papers",
-      "summary": "扩散式推理中重复去噪并不能保证逐个合理的 token 更新在整体上构成更优答案。论文提出 Draft Refinement Language Models（DRLM）：先用单次去噪产出草稿，再并行地对草稿做上下文一致的整体修正，兼顾推理效率与答案质量。"
+      "summary": "论文指出重复扩散去噪不能保证逐个看似合理的 token 更新合成更好的答案，提出 Draft Refinement 语言模型（DRLM）：先并行草拟答案，再在整体上下文中精炼每个决策，实现并行推理与草稿修正。"
     },
     {
       "sourceId": "huggingface-papers",
-      "title": "ACEdit: Stable Multi-Turn Image Editing via Asymmetric Conditioning",
-      "url": "https://huggingface.co/papers/2610.22328",
-      "excerpt": "Image editing models produce impressive results for individual edits, but their quality often deteriorates over multiple editing turns. Each editing turn introduces small distribution shifts that accumulate over successive edits, creating a gap between the input distributions encountered during the ",
-      "publishedAt": "2026-10-15T00:00:00.000Z",
-      "meta": "👍 11",
+      "title": "Specter: Fast MoE Inference via Quantization-Enabled Multi-Step Speculative Offloading",
+      "url": "https://huggingface.co/papers/2511.14102",
+      "excerpt": "Mixture-of-experts (MoE) models often exceed a single accelerator's memory capacity. Offloading experts to host memory creates a severe PCIe I/O bottleneck because data-dependent routing keeps transfers on the critical path. We present Specter, an inference system that uses quantization to combine s",
+      "publishedAt": "2026-10-20T00:00:00.000Z",
+      "meta": "👍 9",
       "category": "tech",
       "source": "HuggingFace Trending Papers",
-      "summary": "图像编辑模型单次编辑效果出色，但多轮编辑中每轮引入的微小分布偏移会累积，导致质量持续下降。ACEdit 采用非对称条件策略缩小训练与推理的输入分布差距，稳定多轮编辑过程，显著缓解长链编辑的退化。"
+      "summary": "Specter 针对 MoE 模型超出单卡显存、专家卸载到主机内存后 PCIe I/O 成为瓶颈的问题，用量化结合多步投机卸载，把数据相关路由引发的传输移出关键路径，加速 MoE 推理。"
     },
     {
       "sourceId": "huggingface-papers",
@@ -1033,7 +807,7 @@
       "meta": "👍 8",
       "category": "tech",
       "source": "HuggingFace Trending Papers",
-      "summary": "LLM 生成的 kernel 已在服务器 GPU 上表现优异，但边缘部署面临硬件异构、软件栈碎片化与资源受限。EdgeKernelBench 提供面向多种边缘后端的统一 LLM 驱动 kernel 生成与评测基准，覆盖跨后端生成的性能与正确性。"
+      "summary": "EdgeKernelBench 是面向边缘后端的 LLM 内核生成统一基准。边缘硬件异构、软件栈碎片化且资源预算紧张，与服务器 GPU 差异明显；该基准统一评测 LLM 在多种边缘后端生成 kernel 的正确性与性能。"
     },
     {
       "sourceId": "huggingface-papers",
@@ -1044,7 +818,7 @@
       "meta": "👍 8",
       "category": "tech",
       "source": "HuggingFace Trending Papers",
-      "summary": "编码 agent 常在注定无法通过验证的任务上持续消耗算力，而调用前沿模型监控代价高昂。StopLoss 是一个小型外部监控器，从已完成轨迹及其验证器结果中学习失败识别，提前终止无效运行，降低推理成本。"
+      "summary": "编码 agent 常在注定失败的任务上继续消耗算力，让前沿模型全程监控成本又过高。StopLoss 是一个小型外部监控器，从已完成轨迹及其验证器结果中学习识别失败征兆并提前终止运行，减少无效开销。"
     },
     {
       "sourceId": "huggingface-papers",
@@ -1055,18 +829,18 @@
       "meta": "👍 8",
       "category": "tech",
       "source": "HuggingFace Trending Papers",
-      "summary": "LLM agent 推理能力强但 token 消耗与延迟高，小模型 agent 又易陷入停滞。该工作提出进展感知蒸馏，利用教师对任务推进程度的判断指导小模型，缓解长程执行中的停滞，在压缩成本的同时保持任务完成率。"
+      "summary": "针对小语言模型 agent 推理中停滞、token 消耗与延迟高的问题，提出进度感知蒸馏：借助过程信号判断当前步骤是否取得进展，引导小模型跳出无效循环，提升 agent 效率与任务完成率。"
     },
     {
       "sourceId": "huggingface-papers",
-      "title": "Specter: Fast MoE Inference via Quantization-Enabled Multi-Step Speculative Offloading",
-      "url": "https://huggingface.co/papers/2511.14102",
-      "excerpt": "Mixture-of-experts (MoE) models often exceed a single accelerator's memory capacity. Offloading experts to host memory creates a severe PCIe I/O bottleneck because data-dependent routing keeps transfers on the critical path. We present Specter, an inference system that uses quantization to combine s",
+      "title": "DecisionPivot: A Diagnostic Benchmark for Decision Models in LLM Systems",
+      "url": "https://huggingface.co/papers/2610.28522",
+      "excerpt": "Decision models support routing, guardrails, and output verification in LLM systems. However, item accuracy alone cannot establish whether models make correct decisions across controlled variations or assign reliable confidence to their predictions. We introduce DecisionPivot, a diagnostic benchmark",
       "publishedAt": "2026-10-20T00:00:00.000Z",
       "meta": "👍 5",
       "category": "tech",
       "source": "HuggingFace Trending Papers",
-      "summary": "MoE 模型常超出单卡显存，专家卸载到主机内存会因数据相关路由造成严重 PCIe 瓶颈。Specter 将量化与多步投机卸载结合，把专家传输移出关键路径，在有限显存下显著加速 MoE 推理。"
+      "summary": "DecisionPivot 是诊断 LLM 系统中决策模型（路由、护栏、输出验证）的基准。仅看单项准确率不足以判断模型在受控扰动下是否决策一致、置信度是否可靠，该基准据此系统评估决策模型的稳健性。"
     },
     {
       "sourceId": "huggingface-papers",
@@ -1077,29 +851,18 @@
       "meta": "👍 5",
       "category": "tech",
       "source": "HuggingFace Trending Papers",
-      "summary": "On-policy self-distillation（OPSD）让 LLM 无需独立教师即可从特权信息（PI）中学习，但既有工作把 PI 当作固定选择，缺乏对其内容与构造方式的理解。该研究分析并预测 PI 的有效性，为 PI 的设计提供可量化的选择依据。"
+      "summary": "在 on-policy self-distillation 中，特权信息（PI）的内容与构造长期被当作固定设计，其效果缺乏理解。论文提出预测 PI 有效性的方法，用以指导 PI 的选择与构建，提升无独立教师模型的自蒸馏效果。"
     },
     {
       "sourceId": "huggingface-papers",
-      "title": "CyberArena: Benchmarking AI Agents in Live Symmetric Attack-and-Defense Combat",
-      "url": "https://huggingface.co/papers/2610.19005",
-      "excerpt": "AI agents are demonstrating increasingly strong offensive and defensive cybersecurity capabilities in the real world. Current benchmarks mostly evaluate agents in isolation against static targets. Real cyber operations, however, are dynamic and coupled: security postures constantly change as attacke",
-      "publishedAt": "2026-10-13T18:05:26.000Z",
-      "meta": "👍 5",
-      "category": "tech",
-      "source": "HuggingFace Trending Papers",
-      "summary": "现有安全基准多在静态目标上孤立评测 agent，而真实网络攻防是动态耦合的。CyberArena 构建实时对称攻防对抗环境，让 AI agent 在持续变化的攻防态势中同时扮演攻击与防守方，评测其动态适应与对抗能力。"
-    },
-    {
-      "sourceId": "huggingface-papers",
-      "title": "DecisionPivot: A Diagnostic Benchmark for Decision Models in LLM Systems",
-      "url": "https://huggingface.co/papers/2610.28522",
-      "excerpt": "Decision models support routing, guardrails, and output verification in LLM systems. However, item accuracy alone cannot establish whether models make correct decisions across controlled variations or assign reliable confidence to their predictions. We introduce DecisionPivot, a diagnostic benchmark",
-      "publishedAt": "2026-10-20T00:00:00.000Z",
+      "title": "HybridResearcher: Bridging the Structured-Unstructured Boundary for Deep Research Agents",
+      "url": "https://huggingface.co/papers/2610.24899",
+      "excerpt": "While LLM agents are increasingly capable of gathering and synthesizing evidence from a single homogeneous source, such as structured tables or unstructured data, real-world analytical questions frequently span heterogeneous sources. For example, answering one enterprise question may require both a ",
+      "publishedAt": "2026-10-17T00:00:00.000Z",
       "meta": "👍 4",
       "category": "tech",
       "source": "HuggingFace Trending Papers",
-      "summary": "决策模型承担 LLM 系统中的路由、护栏与输出校验，但单项准确率无法反映其在受控变化下是否稳定决策、置信度是否可靠。DecisionPivot 提出诊断型基准，通过系统扰动考察决策正确性与置信度校准。"
+      "summary": "HybridResearcher 面向需同时查询结构化表格与非结构化文本的深度研究任务，让 agent 在异构数据源之间规划检索、对齐证据并综合答案，弥合结构化与非结构化信息之间的边界。"
     },
     {
       "sourceId": "huggingface-papers",
@@ -1110,7 +873,7 @@
       "meta": "👍 4",
       "category": "tech",
       "source": "HuggingFace Trending Papers",
-      "summary": "自我改进 LLM agent 多依赖通用模型，而许多领域应用使用具备专业知识、却仍需人工设计的专用基座模型。论文提出异构 agent 协同进化框架，让不同专长的模型在交互中相互促进、共同提升，减少对人工改进的依赖。"
+      "summary": "针对领域专用基础模型虽具备专业知识却依赖人工改进的问题，论文提出异构智能体协同进化框架，让不同专长的模型与 agent 相互提供反馈、共同自我提升，扩展自我改进 LLM agent 的适用范围。"
     },
     {
       "sourceId": "huggingface-papers",
@@ -1121,18 +884,7 @@
       "meta": "👍 4",
       "category": "tech",
       "source": "HuggingFace Trending Papers",
-      "summary": "LLM agent 在复杂工具环境中常无法识别任务不可行、强行给出无效答案。HERA 针对「agentic abstention」可靠性问题，提出执行框架与环境的协同进化方法，使 agent 学会在无解时正确弃权，提升整体可靠性。"
-    },
-    {
-      "sourceId": "huggingface-papers",
-      "title": "Training Reasoning Models to Generate Diverse Scientific Ideas",
-      "url": "https://huggingface.co/papers/2610.22324",
-      "excerpt": "One of the first steps of a research pipeline is generating ideas. Large Language Models (LLMs) are increasingly used to automate this step, but most of this work optimizes the quality of individual ideas, while overlooking diversity. In our work, we study document-grounded ideation, focusing on inc",
-      "publishedAt": "2026-10-15T00:00:00.000Z",
-      "meta": "👍 4",
-      "category": "tech",
-      "source": "HuggingFace Trending Papers",
-      "summary": "LLM 已用于自动化科研想法生成，但多数工作只优化单个想法质量而忽视多样性。该研究聚焦文档接地的想法生成，训练推理模型在给定文献基础上产出更多样的科学想法，兼顾新颖性与可落地性。"
+      "summary": "HERA 研究 agent 的可靠弃权：LLM agent 在工具环境中常无法识别任务不可行而强行作答。方法让 harness 与环境协同进化，在训练中生成并暴露不可行任务，使 agent 学会判断无解并及时弃权。"
     },
     {
       "sourceId": "huggingface-papers",
@@ -1143,7 +895,7 @@
       "meta": "👍 3",
       "category": "tech",
       "source": "HuggingFace Trending Papers",
-      "summary": "长程终端 agent 可能在单次运行中成功，却在重复运行中失败，随机误差会沿动作与上下文传播。RiseHarness 在冻结模型权重的前提下迭代自我进化 agent harness，缩小能力与可靠执行之间的差距，提升重复运行稳定性。"
+      "summary": "长程终端 agent 单次可解任务却在重复运行中失败，随机错误会沿动作与上下文传播。RiseHarness 在不改动模型权重的前提下迭代演化 agent harness，缩小能力与可靠执行之间的差距，提升多次运行的稳定性。"
     },
     {
       "sourceId": "huggingface-papers",
@@ -1153,7 +905,8 @@
       "publishedAt": "2026-10-20T00:00:00.000Z",
       "meta": "👍 3",
       "category": "tech",
-      "source": "HuggingFace Trending Papers"
+      "source": "HuggingFace Trending Papers",
+      "summary": "Lafa 是十亿参数级连续流语言模型，支持并行生成，并提供离散扩散所缺乏的控制与加速手段。论文给出该规模下构建流式语言模型的有效训练方法，兼顾生成速度与质量。"
     },
     {
       "sourceId": "huggingface-papers",
@@ -1163,15 +916,16 @@
       "publishedAt": "2026-10-20T00:00:00.000Z",
       "meta": "👍 3",
       "category": "tech",
-      "source": "HuggingFace Trending Papers"
+      "source": "HuggingFace Trending Papers",
+      "summary": "Matrix-Game 4.0 探索用视频模型构建实时可玩游戏世界：需要持久世界状态、可执行游戏规则与低延迟交互。方案以可执行 game harness 将游戏执行与视觉生成解耦，并给出下一代技术路线图。"
     },
     {
       "sourceId": "huggingface-papers",
-      "title": "HybridResearcher: Bridging the Structured-Unstructured Boundary for Deep Research Agents",
-      "url": "https://huggingface.co/papers/2610.24899",
-      "excerpt": "While LLM agents are increasingly capable of gathering and synthesizing evidence from a single homogeneous source, such as structured tables or unstructured data, real-world analytical questions frequently span heterogeneous sources. For example, answering one enterprise question may require both a ",
+      "title": "Good Judgment, Bad Advice: Decision-Model Controllers Raise Agent Cost Without Improving Success",
+      "url": "https://huggingface.co/papers/2610.24649",
+      "excerpt": "Agent scaffolds increasingly delegate small decisions (whether to stop, verify, or change approach) to cheaper models. We ask whether a typed decision model, Jev 1.13, consulted only at deterministic decision points, makes a Claude Sonnet 5.5 terminal agent cheaper without making it worse. In a pre-",
       "publishedAt": "2026-10-17T00:00:00.000Z",
-      "meta": "👍 3",
+      "meta": "👍 2",
       "category": "tech",
       "source": "HuggingFace Trending Papers"
     },
@@ -1242,6 +996,26 @@
       "excerpt": "End-to-end visual generation with pixel-space loss has recently achieved competitive performance without the need for learned image tokenizers. In this work, we study whether language-informed supervision can provide a richer training signal than pixel loss for visual generation. We introduce LILIE ",
       "publishedAt": "2026-10-16T00:00:00.000Z",
       "meta": "👍 2",
+      "category": "tech",
+      "source": "HuggingFace Trending Papers"
+    },
+    {
+      "sourceId": "huggingface-papers",
+      "title": "Measuring Mechanistic Uncertainty in Large Language Models via Causal Robustness",
+      "url": "https://huggingface.co/papers/2610.22636",
+      "excerpt": "Large language models (LLMs) are increasingly used in critical domains, where their susceptibility to hallucinations makes reliable and interpretable uncertainty quantification essential. We introduce the concept of mechanistic uncertainty, which characterizes uncertainty through the stability of th",
+      "publishedAt": "2026-10-15T00:00:00.000Z",
+      "meta": "👍 2",
+      "category": "tech",
+      "source": "HuggingFace Trending Papers"
+    },
+    {
+      "sourceId": "huggingface-papers",
+      "title": "Evolving Agent Interfaces",
+      "url": "https://huggingface.co/papers/2610.28601",
+      "excerpt": "Computer-use agents are limited by the interfaces humans give them. An agent may type a spreadsheet cell by cell when a single line of code would do, or print all two thousand lines of a file through a shell to find one function. Both the interfaces and the knowledge of when to use each are built by",
+      "publishedAt": "2026-10-20T00:00:00.000Z",
+      "meta": "👍 1",
       "category": "tech",
       "source": "HuggingFace Trending Papers"
     },
@@ -1697,13 +1471,23 @@
     },
     {
       "sourceId": "latent-space",
+      "title": "[AINews] DeepSeek DeepInfer: Open Source SOTA Inference running 155T toks/day/cluster making $22m/day at ~80% margin for a 81 day payback",
+      "url": "https://www.latent.space/p/ainews-deepseek-deepinfer-open-source",
+      "excerpt": "An open source “bomb” drops from China",
+      "publishedAt": "2026-10-21T06:54:09.000Z",
+      "category": "tech",
+      "source": "Latent Space",
+      "summary": "DeepSeek 发布开源推理方案 DeepInfer，称其为当前最优（SOTA）水平：单集群日均处理 155 万亿 token，日收入约 2200 万美元，利润率约 80%，投资回收期 81 天。"
+    },
+    {
+      "sourceId": "latent-space",
       "title": "AI for the Fortune 2000: How Tenex Builds an AI-Native SDLC — Alex Lieberman & CJ Hess",
       "url": "https://www.latent.space/p/tenex",
       "excerpt": "Listen now (44 mins) | Paying for outcomes, building with agents, and the last mile of enterprise AI adoption",
       "publishedAt": "2026-10-21T05:01:26.000Z",
       "category": "tech",
       "source": "Latent Space",
-      "summary": "Latent Space 播客对话 Tenex 的 Alex Lieberman 与 CJ Hess，讨论为结果付费、用智能体构建软件，以及企业 AI 落地的最后一公里。"
+      "summary": "Latent Space 播客对话 Tenex 的 Alex Lieberman 与 CJ Hess，讨论为财富 2000 强企业构建 AI 原生软件开发生命周期，涵盖按结果付费、以智能体开发及企业 AI 落地最后一公里。"
     },
     {
       "sourceId": "latent-space",
@@ -1713,7 +1497,7 @@
       "publishedAt": "2026-10-20T19:31:57.000Z",
       "category": "tech",
       "source": "Latent Space",
-      "summary": "SF Compute 的 Evan Conrad 介绍可编程数据中心：从 GPU 交易走向实物结算、独立市场与可编程算力。"
+      "summary": "Latent Space 邀请 SF Compute 的 Evan Conrad 讨论可编程数据中心：从 GPU 交易走向实物交割、独立市场与可编程算力。"
     },
     {
       "sourceId": "latent-space",
@@ -1723,7 +1507,7 @@
       "publishedAt": "2026-10-20T05:21:52.000Z",
       "category": "tech",
       "source": "Latent Space",
-      "summary": "Latent Space 的 AI 日报提到 DeepSeek V4.1 Flash 1017、MiniMax M3.1 Flash 与 Mercury 3 等新模型，但称其短期内不会大范围使用。"
+      "summary": "Latent Space 的 AINews 简要提及 DeepSeek V4.1 Flash 1017、MiniMax M3.1 Flash 与 Mercury 3 等模型动态，但指出这些模型短期内还不会得到大规模使用。"
     },
     {
       "sourceId": "latent-space",
@@ -1870,15 +1654,6 @@
       "source": "Latent Space"
     },
     {
-      "sourceId": "latent-space",
-      "title": "Can a Cloud-Native Harness Make Agents Reliable Beyond the Desktop?",
-      "url": "https://www.latent.space/p/stacklok",
-      "excerpt": "Kubernetes co-creators Craig McLuckie and Joe Beda aim to bring agent harnesses fully into the cloud.",
-      "publishedAt": "2026-10-07T14:10:45.000Z",
-      "category": "tech",
-      "source": "Latent Space"
-    },
-    {
       "sourceId": "mit-tech-review-ai",
       "title": "The new economics of enterprise AI",
       "url": "https://www.technologyreview.com/2026/10/20/1146937/the-new-economics-of-enterprise-ai/",
@@ -1886,7 +1661,7 @@
       "publishedAt": "2026-10-20T15:20:25.000Z",
       "category": "tech",
       "source": "MIT Tech Review AI",
-      "summary": "MIT 科技评论指出，企业 AI 正从少数试点走向基础设施化；当每个流程都依赖 AI，关注点将从是否使用转向效率与成本。"
+      "summary": "MIT 科技评论撰文讨论企业 AI 的新经济学：以电力普及作类比，指出当 AI 成为基础设施后，企业关注点将从是否使用转向效率与成本。"
     },
     {
       "sourceId": "mit-tech-review-ai",
@@ -1896,7 +1671,7 @@
       "publishedAt": "2026-10-20T12:00:00.000Z",
       "category": "tech",
       "source": "MIT Tech Review AI",
-      "summary": "MIT 科技评论分析各行业 AI 采用情况，指出科技业只是先行者，其他行业可从其落地经验中借鉴。"
+      "summary": "MIT 科技评论指出，关于职场 AI 的叙事多由硅谷主导，但科技业只是最先采用技术的行业，各行业的 AI 采用趋势可为其他领域提供参考。"
     },
     {
       "sourceId": "mit-tech-review-ai",
@@ -1906,7 +1681,7 @@
       "publishedAt": "2026-10-20T09:00:00.000Z",
       "category": "tech",
       "source": "MIT Tech Review AI",
-      "summary": "MIT 科技评论走访三星位于韩国平泽的新半导体园区；为满足 GPU 所需存储芯片需求，三星正建设大型制造综合体。"
+      "summary": "MIT 科技评论探访三星在韩国平泽新建的大型半导体制造园区。由于 GPU 依赖与处理器封装在一起的专用存储芯片，三星正扩建产能以应对存储需求增长。"
     },
     {
       "sourceId": "mit-tech-review-ai",
@@ -1972,15 +1747,24 @@
       "source": "MIT Tech Review AI"
     },
     {
-      "sourceId": "attentionvc-ai",
-      "title": "How To Use Decision Models for Evals",
-      "url": "https://x.com/HamelHusain/status/2112588257104216294",
-      "excerpt": "Co-authored with Antaripa Saha. Decision models have exploded onto the scene recently, starting with TypeSafe’s Jev, followed by Perplexity’s Decider, Liquid’s d1, Cloudflare’s Clef, and OpenAI’s",
-      "publishedAt": "2026-10-20T16:54:25.000Z",
-      "category": "tech",
-      "meta": "@HamelHusain · 61.6K 粉丝 · 101.6K 阅 · 1.2K 赞 · 108 转",
-      "source": "X 推文 (AttentionVC)",
-      "summary": "Hamel Husain 与 Antaripa Saha 合写的教程，讲如何用 decision model 做 LLM 评估。文中梳理了这一波决策模型工具：TypeSafe 的 Jev、Perplexity 的 Decider、Liquid 的 d1、Cloudflare 的 Clef 以及 OpenAI 的相关方案，属于评测方法论的新动向。"
+      "sourceId": "bloomberg-markets",
+      "title": "US Wants India’s Reliance to Refine More Venezuelan Oil",
+      "url": "https://www.bloomberg.com/news/videos/2026-10-21/us-wants-india-s-reliance-to-refine-more-venezuelan-oil-video",
+      "excerpt": "The US is looking to persuade India’s Reliance Industries to refine more Venezuelan crude as Washington seeks to bring additional supplies to a market rattled by the Iran conflict. Bloomberg's Sudhi Ranjan Sen has more from US Secretary of State Marco Rubio's visit to India. (Source: Bloomberg)",
+      "publishedAt": "2026-10-21T06:48:59.000Z",
+      "category": "finance",
+      "source": "Bloomberg Markets",
+      "summary": "美国正试图说服印度信实工业增加对委内瑞拉原油的炼化量。由于伊朗冲突令市场不安，华盛顿希望增加原油供应。彭博记者Sudhi Ranjan Sen就美国国务卿卢比奥访问印度发回报道。"
+    },
+    {
+      "sourceId": "bloomberg-markets",
+      "title": "UK Debt Tops £3 Trillion as Borrowing Soars Ahead of Budget",
+      "url": "https://www.bloomberg.com/news/articles/2026-10-21/uk-borrowing-exceeds-forecast-in-final-data-before-budget",
+      "excerpt": "Britain’s national debt topped £3 trillion ($4 trillion) for the first time as the government borrowed more than forecast in the first half of the year, according to official figures that underline the challenge Chancellor of the Exchequer John Healey faces at his inaugural budget next week.",
+      "publishedAt": "2026-10-21T06:09:33.000Z",
+      "category": "finance",
+      "source": "Bloomberg Markets",
+      "summary": "英国国家债务首次突破3万亿英镑（约合4万亿美元），上半年政府借款超出预期。官方数据凸显财政大臣John Healey在首份预算案前面临的挑战。"
     },
     {
       "sourceId": "bloomberg-markets",
@@ -1990,7 +1774,7 @@
       "publishedAt": "2026-10-21T06:41:54.000Z",
       "category": "finance",
       "source": "Bloomberg Markets",
-      "summary": "英国通胀升至11个月新高，加大英国央行加息压力；同时英国批准了北海一处争议性气田的钻探项目。"
+      "summary": "英国通胀率升至11个月新高，加大英国央行加息压力。同时，英国批准在北海一处存在争议的天然气田进行钻探。"
     },
     {
       "sourceId": "bloomberg-markets",
@@ -2000,7 +1784,7 @@
       "publishedAt": "2026-10-21T06:40:48.000Z",
       "category": "finance",
       "source": "Bloomberg Markets",
-      "summary": "彭博视频节目「Horizons」中东与非洲版，2026年10月21日播出，暂无更多内容细节。"
+      "summary": "彭博视频栏目「Horizons」播出中东与非洲专场（2026年10月21日），暂无更多内容细节。"
     },
     {
       "sourceId": "bloomberg-markets",
@@ -2019,7 +1803,7 @@
       "publishedAt": "2026-10-21T06:30:00.000Z",
       "category": "finance",
       "source": "Bloomberg Markets",
-      "summary": "贝莱德指出，当前美国公司债收益率处于「一代人以来高位」，其回报不依赖降息预期或利差收窄，因而更具韧性。"
+      "summary": "贝莱德表示，当前公司债收益率处于「一代人以来的高位」，可提供更具韧性的回报来源，无需依赖降息预期或利差收窄。"
     },
     {
       "sourceId": "bloomberg-markets",
@@ -2029,17 +1813,7 @@
       "publishedAt": "2026-10-21T06:17:40.000Z",
       "category": "finance",
       "source": "Bloomberg Markets",
-      "summary": "本季最强风暴之一「超级台风灿平」预计未来数日内影响东亚，台湾与中国大陆部分主要城市将遭遇强风暴雨。"
-    },
-    {
-      "sourceId": "bloomberg-markets",
-      "title": "UK Borrowing Exceeds Forecast in Final Data Before Budget",
-      "url": "https://www.bloomberg.com/news/articles/2026-10-21/uk-borrowing-exceeds-forecast-in-final-data-before-budget",
-      "excerpt": "Britain borrowed more than forecast in the first six months of the fiscal year, highlighting the constraints facing Chancellor of the Exchequer John Healey ahead of his inaugural budget next week.",
-      "publishedAt": "2026-10-21T06:09:33.000Z",
-      "category": "finance",
-      "source": "Bloomberg Markets",
-      "summary": "英国本财年前六个月借款超出预期，为财政大臣John Healey下周首份预算案前的最后一份数据，显示其面临财政约束。"
+      "summary": "本季最强风暴之一超强台风「灿皮」预计数日内影响中国与台湾部分地区，带来强降雨和狂风，台湾与中国大陆主要城市正严阵以待。"
     },
     {
       "sourceId": "bloomberg-markets",
@@ -2049,7 +1823,7 @@
       "publishedAt": "2026-10-21T05:56:55.000Z",
       "category": "finance",
       "source": "Bloomberg Markets",
-      "summary": "Getty Images Holdings已启动预打包破产程序，并达成重组支持协议，将注入新资金并使这家图片库公司私有化。"
+      "summary": "Getty Images Holdings启动预打包破产程序，已达成重组支持协议；该协议将向其注入新资金，并推动这家图片档案与图库影像公司私有化。"
     },
     {
       "sourceId": "bloomberg-markets",
@@ -2068,7 +1842,7 @@
       "publishedAt": "2026-10-21T05:52:15.000Z",
       "category": "finance",
       "source": "Bloomberg Markets",
-      "summary": "富时100实时博客：英国通胀加速且升幅超出预期，市场关注英镑、英国国债及油价走势。"
+      "summary": "英国通胀加速且升幅高于市场预期，富时100指数直播博客追踪英镑、英国国债及股市的即时反应。"
     },
     {
       "sourceId": "bloomberg-markets",
@@ -2078,7 +1852,7 @@
       "publishedAt": "2026-10-21T05:50:53.000Z",
       "category": "finance",
       "source": "Bloomberg Markets",
-      "summary": "中东关键原油基准价格跌至近三个月低点，显示尽管伊朗加大对航运袭击，该地区出口仍具韧性。"
+      "summary": "中东关键原油基准价格跌至近三个月最低，显示尽管伊朗对航运的袭击加剧，该地区原油出口仍具韧性。"
     },
     {
       "sourceId": "bloomberg-markets",
@@ -2158,15 +1932,6 @@
       "url": "https://www.bloomberg.com/news/articles/2026-10-21/belgian-government-facing-push-to-sell-5-7-bnp-paribas-stake",
       "excerpt": "Belgium is ramping up efforts to divest from stakes it amassed in banks during the global financial crisis, with some in the government pushing to prioritize the sale of its 5.7% stake in BNP Paribas SA.",
       "publishedAt": "2026-10-21T05:05:43.000Z",
-      "category": "finance",
-      "source": "Bloomberg Markets"
-    },
-    {
-      "sourceId": "bloomberg-markets",
-      "title": "SpaceX 3Q Earnings Beat, SpaceX and Tesla Discuss Potential Merger",
-      "url": "https://www.bloomberg.com/news/videos/2026-10-21/the-asia-trade-10-21-2026-video",
-      "excerpt": "\"Bloomberg: The Asia Trade\" brings you everything you need to know to get ahead as the trading day begins in Asia. Bloomberg TV is live from Tokyo and Sydney with Shery Ahn and Haidi Stroud-Watts, getting insight and analysis from newsmakers and industry leaders on the biggest stories shaping global",
-      "publishedAt": "2026-10-21T04:50:31.000Z",
       "category": "finance",
       "source": "Bloomberg Markets"
     },
@@ -2368,7 +2133,7 @@
       "publishedAt": "2026-10-21T06:09:20.000Z",
       "category": "finance",
       "source": "Financial Times",
-      "summary": "美国国务卿卢比奥访问印度，会见穆克什·安巴尼，关注印度大型炼油厂项目；白宫在中期选举前正应对高油价问题。"
+      "summary": "美国国务卿卢比奥访问印度并会见穆克什·安巴尼，焦点是印度大型炼油厂；在中期选举前，白宫正应对高企的燃料价格。"
     },
     {
       "sourceId": "ft-companies",
@@ -2584,8 +2349,7 @@
       "excerpt": "Musk says special committees within both companies have been formed to look at a possible mega-merger.",
       "publishedAt": "2026-10-21T05:48:46.000Z",
       "category": "finance",
-      "source": "BBC Business",
-      "summary": "马斯克表示正考虑特斯拉与SpaceX合并，两家公司均已成立特别委员会评估这一潜在巨型合并交易。"
+      "source": "BBC Business"
     },
     {
       "sourceId": "bbc-business",
@@ -2595,7 +2359,7 @@
       "publishedAt": "2026-10-21T06:36:39.000Z",
       "category": "finance",
       "source": "BBC Business",
-      "summary": "同时担任特斯拉与SpaceX首席执行官的马斯克表示，两家公司合并「收益巨大」，若成行将是史上最大规模并购，但未披露具体细节。"
+      "summary": "同时担任特斯拉与SpaceX首席执行官的马斯克表示，两家公司合并是「好主意」，称「有很多可以获益之处」；若成行，这将是史上规模最大的并购。"
     },
     {
       "sourceId": "bbc-business",
@@ -3120,6 +2884,771 @@
       "source": "The Economist Finance"
     },
     {
+      "sourceId": "federal-reserve-monetary",
+      "title": "Minutes of the Board's discount rate meetings on August 17, September 9, and September 16, 2026",
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20261013a.htm",
+      "excerpt": "Minutes of the Board's discount rate meetings on August 17, September 9, and September 16, 2026",
+      "publishedAt": "2026-10-13T18:00:00.000Z",
+      "category": "finance",
+      "source": "美联储（官方）"
+    },
+    {
+      "sourceId": "federal-reserve-monetary",
+      "title": "Minutes of the Federal Open Market Committee, September 15-16, 2026",
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20261007a.htm",
+      "excerpt": "Minutes of the Federal Open Market Committee, September 15-16, 2026",
+      "publishedAt": "2026-10-07T18:00:00.000Z",
+      "category": "finance",
+      "source": "美联储（官方）"
+    },
+    {
+      "sourceId": "federal-reserve-monetary",
+      "title": "Federal Reserve issues FOMC statement",
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260916a.htm",
+      "excerpt": "Federal Reserve issues FOMC statement",
+      "publishedAt": "2026-09-16T18:00:00.000Z",
+      "category": "finance",
+      "source": "美联储（官方）"
+    },
+    {
+      "sourceId": "federal-reserve-monetary",
+      "title": "Federal Reserve Board and Federal Open Market Committee release economic projections from the September 15-16 FOMC meeting",
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260916b.htm",
+      "excerpt": "Federal Reserve Board and Federal Open Market Committee release economic projections from the September 15-16 FOMC meeting",
+      "publishedAt": "2026-09-16T18:00:00.000Z",
+      "category": "finance",
+      "source": "美联储（官方）"
+    },
+    {
+      "sourceId": "federal-reserve-monetary",
+      "title": "Minutes of the Board's discount rate meetings on July 20 and July 29, 2026",
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260825a.htm",
+      "excerpt": "Minutes of the Board's discount rate meetings on July 20 and July 29, 2026",
+      "publishedAt": "2026-08-25T18:00:00.000Z",
+      "category": "finance",
+      "source": "美联储（官方）"
+    },
+    {
+      "sourceId": "federal-reserve-monetary",
+      "title": "Minutes of the Federal Open Market Committee, July 28–29, 2026",
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260819a.htm",
+      "excerpt": "Minutes of the Federal Open Market Committee, July 28–29, 2026",
+      "publishedAt": "2026-08-19T18:00:00.000Z",
+      "category": "finance",
+      "source": "美联储（官方）"
+    },
+    {
+      "sourceId": "federal-reserve-monetary",
+      "title": "Federal Reserve issues FOMC statement",
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260729a.htm",
+      "excerpt": "Federal Reserve issues FOMC statement",
+      "publishedAt": "2026-07-29T18:00:00.000Z",
+      "category": "finance",
+      "source": "美联储（官方）"
+    },
+    {
+      "sourceId": "federal-reserve-monetary",
+      "title": "Minutes of the Board's discount rate meetings on June 8 and June 17, 2026",
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260714a.htm",
+      "excerpt": "Minutes of the Board's discount rate meetings on June 8 and June 17, 2026",
+      "publishedAt": "2026-07-14T18:00:00.000Z",
+      "category": "finance",
+      "source": "美联储（官方）"
+    },
+    {
+      "sourceId": "federal-reserve-monetary",
+      "title": "Federal Reserve announces the leadership and objectives of its task forces to advance the conduct of monetary policy",
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260709a.htm",
+      "excerpt": "Federal Reserve announces the leadership and objectives of its task forces to advance the conduct of monetary policy",
+      "publishedAt": "2026-07-09T19:00:00.000Z",
+      "category": "finance",
+      "source": "美联储（官方）"
+    },
+    {
+      "sourceId": "federal-reserve-monetary",
+      "title": "Minutes of the Federal Open Market Committee, June 16-17, 2026",
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260708a.htm",
+      "excerpt": "Minutes of the Federal Open Market Committee, June 16-17, 2026",
+      "publishedAt": "2026-07-08T18:00:00.000Z",
+      "category": "finance",
+      "source": "美联储（官方）"
+    },
+    {
+      "sourceId": "federal-reserve-monetary",
+      "title": "Federal Reserve issues FOMC statement",
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260617a.htm",
+      "excerpt": "Federal Reserve issues FOMC statement",
+      "publishedAt": "2026-06-17T18:00:00.000Z",
+      "category": "finance",
+      "source": "美联储（官方）"
+    },
+    {
+      "sourceId": "federal-reserve-monetary",
+      "title": "Federal Reserve Board and Federal Open Market Committee release economic projections from the June 16-17 FOMC meeting",
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260617b.htm",
+      "excerpt": "Federal Reserve Board and Federal Open Market Committee release economic projections from the June 16-17 FOMC meeting",
+      "publishedAt": "2026-06-17T18:00:00.000Z",
+      "category": "finance",
+      "source": "美联储（官方）"
+    },
+    {
+      "sourceId": "federal-reserve-monetary",
+      "title": "Minutes of the Board's discount rate meeting on April 20 and 29, 2026",
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260526a.htm",
+      "excerpt": "Minutes of the Board's discount rate meeting on April 20 and 29, 2026",
+      "publishedAt": "2026-05-26T18:00:00.000Z",
+      "category": "finance",
+      "source": "美联储（官方）"
+    },
+    {
+      "sourceId": "federal-reserve-monetary",
+      "title": "Minutes of the Federal Open Market Committee, April 28-29, 2026",
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260520a.htm",
+      "excerpt": "Minutes of the Federal Open Market Committee, April 28-29, 2026",
+      "publishedAt": "2026-05-20T18:00:00.000Z",
+      "category": "finance",
+      "source": "美联储（官方）"
+    },
+    {
+      "sourceId": "federal-reserve-monetary",
+      "title": "Federal Reserve issues FOMC statement",
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260429a.htm",
+      "excerpt": "Federal Reserve issues FOMC statement",
+      "publishedAt": "2026-04-29T18:00:00.000Z",
+      "category": "finance",
+      "source": "美联储（官方）"
+    },
+    {
+      "sourceId": "sec-press",
+      "title": "SEC and AMF Announce Supervisory MOU To Enhance Cooperation for Investment Advisers and Investment Service Providers",
+      "url": "https://www.sec.gov/newsroom/press-releases/2026-108-sec-amf-announce-supervisory-mou-enhance-cooperation-investment-advisers-investment-service",
+      "excerpt": "The U.S. Securities and Exchange Commission (SEC) and the French Autorité des Marchés Financiers (AMF) announced that they have entered into a Memorandum of Understanding (MOU) designed to facilitate consultation and information-sharing in the…",
+      "publishedAt": "2026-10-20T13:25:16.000Z",
+      "category": "finance",
+      "source": "美国证监会 SEC（官方）"
+    },
+    {
+      "sourceId": "sec-press",
+      "title": "SEC, FSA Hold Autumn Financial Regulatory Dialogue",
+      "url": "https://www.sec.gov/newsroom/press-releases/2026-107-sec-fsa-hold-autumn-financial-regulatory-dialogue",
+      "excerpt": "The U.S. Securities and Exchange Commission (SEC) and the Financial Services Agency of Japan (FSA) convened the Autumn SEC-FSA Financial Regulatory Dialogue in Tokyo on Oct. 19, 2026.The SEC–FSA Dialogue builds upon longstanding efforts between the two…",
+      "publishedAt": "2026-10-20T12:51:00.000Z",
+      "category": "finance",
+      "source": "美国证监会 SEC（官方）"
+    },
+    {
+      "sourceId": "sec-press",
+      "title": "SEC Announces Roundtable on Machine-Understandable Data in the Age of Super Intelligence",
+      "url": "https://www.sec.gov/newsroom/press-releases/2026-106-sec-announces-roundtable-machine-understandable-data-age-super-intelligence",
+      "excerpt": "The Securities and Exchange Commission announced today that it will host a roundtable on November 9, 2026, to discuss the use of machine-understandable data and Super Intelligence (SI) and related risks and costs.“In the age of SI, high-quality…",
+      "publishedAt": "2026-10-19T17:19:43.000Z",
+      "category": "finance",
+      "source": "美国证监会 SEC（官方）"
+    },
+    {
+      "sourceId": "sec-press",
+      "title": "SEC Small Business Advisory Committee to Discuss IPO Modernization and Regulation Crowdfunding",
+      "url": "https://www.sec.gov/newsroom/press-releases/2026-105-sec-small-business-advisory-committee-discuss-ipo-modernization-regulation-crowdfunding",
+      "excerpt": "The Securities and Exchange Commission’s Small Business Capital Formation Advisory Committee announced that it will hold a meeting on Tuesday, October 27, 2026, at 10 a.m. to continue discussing IPO modernization and explore potential policy…",
+      "publishedAt": "2026-10-14T14:30:47.000Z",
+      "category": "finance",
+      "source": "美国证监会 SEC（官方）"
+    },
+    {
+      "sourceId": "sec-press",
+      "title": "SEC Proposes Expanding Securities Eligible for Cross Trading by Registered Funds",
+      "url": "https://www.sec.gov/newsroom/press-releases/2026-104-sec-proposes-expanding-securities-eligible-cross-trading-registered-funds",
+      "excerpt": "The Securities and Exchange Commission today proposed amendments to the Investment Company Act “cross-trading rule,” which permits transactions in securities between a registered fund and its affiliates under certain conditions. The proposed amendments…",
+      "publishedAt": "2026-10-09T14:59:00.000Z",
+      "category": "finance",
+      "source": "美国证监会 SEC（官方）"
+    },
+    {
+      "sourceId": "sec-press",
+      "title": "SEC Seeks Final Judgment Against Former Western Asset Co-CIO Ken Leech in Cherry Picking Case",
+      "url": "https://www.sec.gov/newsroom/press-releases/2026-103-sec-seeks-final-judgment-against-former-western-asset-co-cio-ken-leech-cherry-picking-case",
+      "excerpt": "The Securities and Exchange Commission today moved for entry of a final judgment by consent against Stephen Kenneth Leech II, the former co-chief investment officer of registered investment adviser Western Asset Management Company LLC, whom the SEC…",
+      "publishedAt": "2026-10-06T20:30:24.000Z",
+      "category": "finance",
+      "source": "美国证监会 SEC（官方）"
+    },
+    {
+      "sourceId": "sec-press",
+      "title": "SEC to Host Virtual National Compliance Outreach Seminar for Investment Companies and Investment Advisers",
+      "url": "https://www.sec.gov/newsroom/press-releases/2026-102-sec-host-virtual-national-compliance-outreach-seminar-investment-companies-investment-advisers",
+      "excerpt": "The Securities and Exchange Commission’s Compliance Outreach Program announced today that it will host a virtual national seminar for investment companies and investment advisers on November 19, 2026. The purpose of the event is to help chief compliance…",
+      "publishedAt": "2026-10-06T14:37:55.000Z",
+      "category": "finance",
+      "source": "美国证监会 SEC（官方）"
+    },
+    {
+      "sourceId": "sec-press",
+      "title": "SEC Coordinates with Global Financial Regulators to Raise Fraud Awareness During World Investor Week",
+      "url": "https://www.sec.gov/newsroom/press-releases/2026-101-sec-coordinates-global-financial-regulators-raise-fraud-awareness-during-world-investor-week",
+      "excerpt": "The Securities and Exchange Commission, in coordination with other U.S. and global financial regulators, today issued a joint investor bulletin as part of World Investor Week (WIW). The bulletin encourages investors to be resilient in changing…",
+      "publishedAt": "2026-10-05T12:47:36.000Z",
+      "category": "finance",
+      "source": "美国证监会 SEC（官方）"
+    },
+    {
+      "sourceId": "sec-press",
+      "title": "SEC Proposal Would Address How Investment Advisers and Funds Can Custody Crypto Assets Under the Federal Securities Laws",
+      "url": "https://www.sec.gov/newsroom/press-releases/2026-100-sec-proposal-would-address-how-investment-advisers-funds-can-custody-crypto-assets-under-federal",
+      "excerpt": "The Securities and Exchange Commission today proposed new rules and amendments to provide a tailored framework for the custody of crypto assets for registered investment advisers and regulated funds, i.e. registered investment companies and business…",
+      "publishedAt": "2026-10-01T16:16:07.000Z",
+      "category": "finance",
+      "source": "美国证监会 SEC（官方）"
+    },
+    {
+      "sourceId": "sec-press",
+      "title": "SEC’s Division of Examinations Announces New Exam Handbook",
+      "url": "https://www.sec.gov/newsroom/press-releases/2026-99-secs-division-examinations-announces-new-exam-handbook",
+      "excerpt": "The Securities and Exchange Commission’s Division of Examinations today published its new handbook, “The SEC Exam Handbook: A Practical Guide on Process and Engagement,” which replaces and expands upon the previous examination brochure by providing…",
+      "publishedAt": "2026-10-01T15:03:35.000Z",
+      "category": "finance",
+      "source": "美国证监会 SEC（官方）"
+    },
+    {
+      "sourceId": "sec-press",
+      "title": "SEC Charges Meyer Global Management and Its CEO With Defrauding Retail Investors in Private Funds That Held Interests in SpaceX and Other Pre-IPO Securities",
+      "url": "https://www.sec.gov/newsroom/press-releases/2026-98-sec-charges-meyer-global-management-its-ceo-defrauding-retail-investors-private-funds-held-interests",
+      "excerpt": "The Securities and Exchange Commission today charged private fund adviser Meyer Global Management LLC (MGM) and its CEO, Owen E.H. Meyer, with defrauding investors and MGM-managed funds in connection with investments in SpaceX and other pre-IPO…",
+      "publishedAt": "2026-09-30T18:30:01.000Z",
+      "category": "finance",
+      "source": "美国证监会 SEC（官方）"
+    },
+    {
+      "sourceId": "sec-press",
+      "title": "SEC Charges Two Individuals With Orchestrating Fraud Scheme That Targeted Veterans",
+      "url": "https://www.sec.gov/newsroom/press-releases/2026-97-sec-charges-two-individuals-orchestrating-fraud-scheme-targeted-veterans",
+      "excerpt": "The Securities and Exchange Commission today announced charges against Christopher Kenji Dinelli and Jacob David “Kobe” Frankel for allegedly orchestrating a fraud scheme that raised more than $8.7 million from 35 investors through their fund, Beyond…",
+      "publishedAt": "2026-09-30T16:42:15.000Z",
+      "category": "finance",
+      "source": "美国证监会 SEC（官方）"
+    },
+    {
+      "sourceId": "sec-press",
+      "title": "SEC Proposes Amendments to Expand Responsible Retailization of Private Markets",
+      "url": "https://www.sec.gov/newsroom/press-releases/2026-96-sec-proposes-amendments-expand-responsible-retailization-private-markets",
+      "excerpt": "The Securities and Exchange Commission today voted to propose rule amendments that would facilitate capital formation in the public and private markets by expanding retail investor choice and promoting innovation in regulated fund structures while…",
+      "publishedAt": "2026-09-30T15:45:00.000Z",
+      "category": "finance",
+      "source": "美国证监会 SEC（官方）"
+    },
+    {
+      "sourceId": "sec-press",
+      "title": "SEC Charges Multiple Entities in Fraud Schemes Totaling at Least $15 Million That Used WhatsApp and Other Platforms to Lure Investors",
+      "url": "https://www.sec.gov/newsroom/press-releases/2026-95-sec-charges-multiple-entities-fraud-schemes-totaling-least-15-million-used-whatsapp-other-platforms",
+      "excerpt": "The Securities and Exchange Commission today charged multiple entities that are likely operated by individuals located overseas for defrauding hundreds of retail investors, including many in the U.S., through so-called investment confidence scams where…",
+      "publishedAt": "2026-09-29T13:55:53.000Z",
+      "category": "finance",
+      "source": "美国证监会 SEC（官方）"
+    },
+    {
+      "sourceId": "sec-press",
+      "title": "SEC Charges Registered Investment Adviser Zoe Financial for Failure to Disclose Conflict of Interest",
+      "url": "https://www.sec.gov/newsroom/press-releases/2026-94-sec-charges-registered-investment-adviser-zoe-financial-failure-disclose-conflict-interest",
+      "excerpt": "The Securities and Exchange Commission today announced settled charges against New York-based investment adviser Zoe Financial Inc. for failing to fully and fairly disclose material facts concerning conflicts of interest to its clients and prospective…",
+      "publishedAt": "2026-09-28T17:46:30.000Z",
+      "category": "finance",
+      "source": "美国证监会 SEC（官方）"
+    },
+    {
+      "sourceId": "sec-press",
+      "title": "SEC Publishes Updated Market Statistics, Highlighting Increase in IPOs and Proceeds Raised",
+      "url": "https://www.sec.gov/newsroom/press-releases/2026-93-sec-publishes-updated-market-statistics-highlighting-increase-ipos-proceeds-raised",
+      "excerpt": "The Securities and Exchange Commission’s Division of Economic and Risk Analysis (DERA) published updated statistics and data visualizations covering key segments of the U.S. capital markets, including a notable increase in the number of initial public…",
+      "publishedAt": "2026-09-23T18:27:00.000Z",
+      "category": "finance",
+      "source": "美国证监会 SEC（官方）"
+    },
+    {
+      "sourceId": "sec-press",
+      "title": "SEC Charges South Florida Resident and His Company for Alleged Investment Scheme Defrauding Law Enforcement",
+      "url": "https://www.sec.gov/newsroom/press-releases/2026-92-sec-charges-south-florida-resident-his-company-alleged-investment-scheme-defrauding-law-enforcement",
+      "excerpt": "The Securities and Exchange Commission today charged CMI Capital LLC and its founder and manager, Michael D. Williams, for an alleged fraudulent investment scheme that raised approximately $860,000 from at least 18 investors, many of whom are current or…",
+      "publishedAt": "2026-09-23T16:00:00.000Z",
+      "category": "finance",
+      "source": "美国证监会 SEC（官方）"
+    },
+    {
+      "sourceId": "sec-press",
+      "title": "SEC Censures OTC Link LLC for Repeated Compliance Failures Related to Regulation SCI",
+      "url": "https://www.sec.gov/newsroom/press-releases/2026-91-sec-censures-otc-link-llc-repeated-compliance-failures-related-regulation-sci",
+      "excerpt": "The Securities and Exchange Commission today censured New York-based broker dealer OTC Link LLC and ordered it to pay a $575,000 civil penalty for longstanding violations of Regulation Systems Compliance and Integrity (SCI).According to the SEC’s settled…",
+      "publishedAt": "2026-09-22T16:41:11.000Z",
+      "category": "finance",
+      "source": "美国证监会 SEC（官方）"
+    },
+    {
+      "sourceId": "sec-press",
+      "title": "SEC Issues “Innovation Exemption” to Facilitate the Trading of Tokenized NMS Stock and Request for Comment",
+      "url": "https://www.sec.gov/newsroom/press-releases/2026-90-sec-issues-innovation-exemption-facilitate-trading-tokenized-nms-stock-request-comment",
+      "excerpt": "The SEC is taking a significant step forward, within its statutory authority, to bring America’s capital markets into the digital age by facilitating onchain trading of certain tokenized stocks.",
+      "publishedAt": "2026-09-17T12:55:00.000Z",
+      "category": "finance",
+      "source": "美国证监会 SEC（官方）"
+    },
+    {
+      "sourceId": "sec-press",
+      "title": "SEC Proposes Rescission of Shareholder Proposal Rule and Reforms to Proxy Solicitation Process",
+      "url": "https://www.sec.gov/newsroom/press-releases/2026-89-sec-proposes-rescission-shareholder-proposal-rule-reforms-proxy-solicitation-process",
+      "excerpt": "The Securities and Exchange Commission today proposed to rescind Rule 14a-8 under the Securities Exchange Act of 1934, which exceeds the scope of the Commission's statutory authority and intrudes into matters of state law.The Commission outlined…",
+      "publishedAt": "2026-09-16T14:00:00.000Z",
+      "category": "finance",
+      "source": "美国证监会 SEC（官方）"
+    },
+    {
+      "sourceId": "sec-press",
+      "title": "SEC Grants Exemptive Relief from Certain Inline XBRL Filing or Submission Requirements",
+      "url": "https://www.sec.gov/newsroom/press-releases/2026-88-sec-grants-exemptive-relief-certain-inline-xbrl-filing-or-submission-requirements",
+      "excerpt": "The Securities and Exchange Commission issued an order granting exemptive relief from certain Inline XBRL requirements adopted on Dec. 16, 2024. More specifically, the Commission is granting exemptive relief from filing or submitting the following in…",
+      "publishedAt": "2026-09-14T16:47:00.000Z",
+      "category": "finance",
+      "source": "美国证监会 SEC（官方）"
+    },
+    {
+      "sourceId": "sec-press",
+      "title": "Joint Readout of Principals’ Meeting of U.S. and UK Authorities Regarding Central Counterparty Resolution",
+      "url": "https://www.sec.gov/newsroom/press-releases/2026-87-joint-readout-principals-meeting-us-uk-authorities-regarding-central-counterparty-resolution",
+      "excerpt": "Senior officials from the Securities and Exchange Commission, Federal Deposit Insurance Corporation, Commodity Futures Trading Commission, Federal Reserve Board, and Bank of England convened for a tabletop exercise on Sept. 3, 2026, to discuss certain…",
+      "publishedAt": "2026-09-11T15:00:00.000Z",
+      "category": "finance",
+      "source": "美国证监会 SEC（官方）"
+    },
+    {
+      "sourceId": "sec-press",
+      "title": "SEC Charges Founder and His Two New Jersey-Based Companies in Alleged $16 Million Ponzi Scheme",
+      "url": "https://www.sec.gov/newsroom/press-releases/2026-86-sec-charges-founder-his-two-new-jersey-based-companies-alleged-16-million-ponzi-scheme",
+      "excerpt": "The Securities and Exchange Commission today charged Ernest Ossei Boateng and two New Jersey-based companies he controls, Intercontinental Wealth Network LLC and I Wealth Network LP, for allegedly raising approximately $16 million from more than 200…",
+      "publishedAt": "2026-09-10T17:45:22.000Z",
+      "category": "finance",
+      "source": "美国证监会 SEC（官方）"
+    },
+    {
+      "sourceId": "sec-press",
+      "title": "SEC Proposes Rescission of Political Contribution Rule for Investment Advisers",
+      "url": "https://www.sec.gov/newsroom/press-releases/2026-85-sec-proposes-rescission-political-contribution-rule-investment-advisers",
+      "excerpt": "The Securities and Exchange Commission today issued a proposal to rescind its “pay-to-play” rule that prohibits investment advisers from providing compensated investment advisory services to a government client for two years…",
+      "publishedAt": "2026-09-03T20:30:00.000Z",
+      "category": "finance",
+      "source": "美国证监会 SEC（官方）"
+    },
+    {
+      "sourceId": "sec-press",
+      "title": "SEC Investor Advisory Committee to Host Sept. 10 Meeting",
+      "url": "https://www.sec.gov/newsroom/press-releases/2026-84-sec-investor-advisory-committee-host-sept-10-meeting",
+      "excerpt": "The Securities and Exchange Commission’s Investor Advisory Committee will host a public meeting at the SEC Headquarters in Washington D.C. on Sept. 10 at 10 a.m. ET to discuss artificial intelligence technologies in the public markets and the SEC’s…",
+      "publishedAt": "2026-09-03T14:27:49.000Z",
+      "category": "finance",
+      "source": "美国证监会 SEC（官方）"
+    },
+    {
+      "sourceId": "ecb-press",
+      "title": "Philip R. Lane: Euro liquidity lines and the international monetary system",
+      "url": "https://www.ecb.europa.eu//press/key/date/2026/html/ecb.sp261021~401d6c4b70.en.html",
+      "excerpt": "",
+      "publishedAt": "2026-10-21T04:15:00.000Z",
+      "category": "finance",
+      "source": "欧洲央行（官方）"
+    },
+    {
+      "sourceId": "ecb-press",
+      "title": "Frank Elderson: Interview with Die Presse",
+      "url": "https://www.ecb.europa.eu//press/inter/date/2026/html/ecb.in261020~97e2e4bc38.en.html",
+      "excerpt": "",
+      "publishedAt": "2026-10-20T07:00:00.000Z",
+      "category": "finance",
+      "source": "欧洲央行（官方）"
+    },
+    {
+      "sourceId": "ecb-press",
+      "title": "Frank Elderson: From climate and nature risks to economic resilience and competitiveness",
+      "url": "https://www.ecb.europa.eu//press/key/date/2026/html/ecb.sp261019~f0a3e053de.en.html",
+      "excerpt": "",
+      "publishedAt": "2026-10-19T06:00:00.000Z",
+      "category": "finance",
+      "source": "欧洲央行（官方）"
+    },
+    {
+      "sourceId": "ecb-press",
+      "title": "Christine Lagarde: IMFC Statement",
+      "url": "https://www.ecb.europa.eu//press/key/date/2026/html/ecb.sp261017~7015ea3099.en.html",
+      "excerpt": "",
+      "publishedAt": "2026-10-17T05:00:00.000Z",
+      "category": "finance",
+      "source": "欧洲央行（官方）"
+    },
+    {
+      "sourceId": "ecb-press",
+      "title": "Frank Elderson: Ensuring resilience in the face of uncertainty",
+      "url": "https://www.ecb.europa.eu//press/key/date/2026/html/ecb.sp261014~e4ca33588e.en.html",
+      "excerpt": "",
+      "publishedAt": "2026-10-14T00:00:00.000Z",
+      "category": "finance",
+      "source": "欧洲央行（官方）"
+    },
+    {
+      "sourceId": "ecb-press",
+      "title": "Philip R. Lane: The AI opportunity for Europe",
+      "url": "https://www.ecb.europa.eu//press/key/date/2026/html/ecb.sp261013~9db9bf4fd6.en.html",
+      "excerpt": "",
+      "publishedAt": "2026-10-13T18:30:00.000Z",
+      "category": "finance",
+      "source": "欧洲央行（官方）"
+    },
+    {
+      "sourceId": "ecb-press",
+      "title": "Meeting of 9-10 September 2026",
+      "url": "https://www.ecb.europa.eu//press/accounts/2026/html/ecb.mg261008~a10153d090.en.html",
+      "excerpt": "",
+      "publishedAt": "2026-10-08T11:30:00.000Z",
+      "category": "finance",
+      "source": "欧洲央行（官方）"
+    },
+    {
+      "sourceId": "ecb-press",
+      "title": "Piero Cipollone: Interview with Corriere della Sera",
+      "url": "https://www.ecb.europa.eu//press/inter/date/2026/html/ecb.in261008~3184e7d0d0.en.html",
+      "excerpt": "",
+      "publishedAt": "2026-10-08T06:00:00.000Z",
+      "category": "finance",
+      "source": "欧洲央行（官方）"
+    },
+    {
+      "sourceId": "ecb-press",
+      "title": "Results of the September 2026 survey on credit terms and conditions in euro-denominated securities financing and OTC derivatives markets (SESFOD)",
+      "url": "https://www.ecb.europa.eu//press/pr/date/2026/html/ecb.pr261007~6447350434.en.html",
+      "excerpt": "",
+      "publishedAt": "2026-10-07T08:00:00.000Z",
+      "category": "finance",
+      "source": "欧洲央行（官方）"
+    },
+    {
+      "sourceId": "ecb-press",
+      "title": "Frank Elderson: Effective supervision through timely remediation",
+      "url": "https://www.ecb.europa.eu//press/key/date/2026/html/ecb.sp261006_1~0df91e4e44.en.html",
+      "excerpt": "",
+      "publishedAt": "2026-10-06T13:00:00.000Z",
+      "category": "finance",
+      "source": "欧洲央行（官方）"
+    },
+    {
+      "sourceId": "ecb-press",
+      "title": "Piero Cipollone: Money in the digital age: digital euro, tokenisation and the role of central banks",
+      "url": "https://www.ecb.europa.eu//press/key/date/2026/html/ecb.sp261006~0da978f159.en.html",
+      "excerpt": "",
+      "publishedAt": "2026-10-06T13:00:00.000Z",
+      "category": "finance",
+      "source": "欧洲央行（官方）"
+    },
+    {
+      "sourceId": "ecb-press",
+      "title": "Philip R. Lane: Interview with Ansa",
+      "url": "https://www.ecb.europa.eu//press/inter/date/2026/html/ecb.in261006~bc94400297.en.html",
+      "excerpt": "",
+      "publishedAt": "2026-10-06T07:00:00.000Z",
+      "category": "finance",
+      "source": "欧洲央行（官方）"
+    },
+    {
+      "sourceId": "ecb-press",
+      "title": "Philip R. Lane: Diagnostic Challenges for ECB Monetary Policy",
+      "url": "https://www.ecb.europa.eu//press/key/date/2026/html/ecb.sp261005~1d8d998ef4.en.html",
+      "excerpt": "",
+      "publishedAt": "2026-10-05T08:00:00.000Z",
+      "category": "finance",
+      "source": "欧洲央行（官方）"
+    },
+    {
+      "sourceId": "ecb-press",
+      "title": "Decisions taken by the Governing Council of the ECB (in addition to decisions setting interest rates)",
+      "url": "https://www.ecb.europa.eu//press/govcdec/otherdec/2026/html/ecb.gc261002~54c6b5672b.en.html",
+      "excerpt": "",
+      "publishedAt": "2026-10-02T13:00:00.000Z",
+      "category": "finance",
+      "source": "欧洲央行（官方）"
+    },
+    {
+      "sourceId": "ecb-press",
+      "title": "Boris Vujčić: Resilience, integration and competitiveness: building the future of European banking",
+      "url": "https://www.ecb.europa.eu//press/key/date/2026/html/ecb.sp261002_1~419efe18e0.en.html",
+      "excerpt": "",
+      "publishedAt": "2026-10-02T11:30:00.000Z",
+      "category": "finance",
+      "source": "欧洲央行（官方）"
+    },
+    {
+      "sourceId": "boe-news",
+      "title": "Banknote imagery advisory group minutes – 15 July 2026",
+      "url": "https://www.bankofengland.co.uk/minutes/2026/july/banknote-advisory-minutes-15-july",
+      "excerpt": "Meeting held 15 July 2026",
+      "publishedAt": "2026-10-16T11:00:00.000Z",
+      "category": "finance",
+      "source": "英国央行（官方）"
+    },
+    {
+      "sourceId": "boe-news",
+      "title": "David Roberts CV and questionnaire for the Treasury Select Committee",
+      "url": "https://www.bankofengland.co.uk/news/2026/october/david-roberts-tsc-reappointment",
+      "excerpt": "Published for the Treasury Select Committee",
+      "publishedAt": "2026-10-15T09:52:41.000Z",
+      "category": "finance",
+      "source": "英国央行（官方）"
+    },
+    {
+      "sourceId": "boe-news",
+      "title": "Minutes of the SONIA Stakeholder Advisory Group - 25 September 2026",
+      "url": "https://www.bankofengland.co.uk/minutes/2026/september/sonia-stakeholder-advisory-group-25-september-2026",
+      "excerpt": "The SONIA Stakeholder Advisory Group supports the Bank’s administration of SONIA by providing advice and technical input to the Bank and the SONIA Oversight Committee",
+      "publishedAt": "2026-10-15T08:27:59.000Z",
+      "category": "finance",
+      "source": "英国央行（官方）"
+    },
+    {
+      "sourceId": "boe-news",
+      "title": "Minutes of the Money Market Committee meeting – September 2026",
+      "url": "https://www.bankofengland.co.uk/minutes/2026/september/money-markets-committee-minutes-september-2026",
+      "excerpt": "The Money Markets Committee is a forum for market participants and authorities to discuss the UK unsecured deposits and funding market and securities lending and repo markets.",
+      "publishedAt": "2026-10-13T15:04:27.000Z",
+      "category": "finance",
+      "source": "英国央行（官方）"
+    },
+    {
+      "sourceId": "boe-news",
+      "title": "CMORG holds sector-wide cloud outage simulation exercise",
+      "url": "https://www.bankofengland.co.uk/news/2026/october/cmorg-holds-sector-wide-cloud-outage-simulation-exercise",
+      "excerpt": "The Cross-Market Operational Resilience Group (CMORG) yesterday (8 October 2026) completed its biennial simulation exercise, known as SIMEX26, focused this year on a global cloud services disruption.",
+      "publishedAt": "2026-10-09T09:00:00.000Z",
+      "category": "finance",
+      "source": "英国央行（官方）"
+    },
+    {
+      "sourceId": "boe-news",
+      "title": "Bank of England announces the four animals that will feature on our next series of banknotes",
+      "url": "https://www.bankofengland.co.uk/news/2026/october/boe-announces-the-four-animals-that-will-feature-on-next-series-of-banknotes",
+      "excerpt": "The Atlantic puffin, barn owl, buff-tailed bumblebee and European hedgehog will represent UK wildlife and feature as the central images on our next series of banknotes.",
+      "publishedAt": "2026-10-07T23:01:00.000Z",
+      "category": "finance",
+      "source": "英国央行（官方）"
+    },
+    {
+      "sourceId": "boe-news",
+      "title": "Minutes of the London FXJSC Legal Sub Committee Meeting – 16 June 2026",
+      "url": "https://www.bankofengland.co.uk/minutes/2026/june/fxjsc-legal-sub-committee-meeting-16-june-26",
+      "excerpt": "The Bank of England provides the Secretariat to the London Foreign Exchange Joint Standing Committee (FXJSC) Legal Sub-Committee. The FXJSC is made up of market participants, infrastructure providers and the UK financial regulators.",
+      "publishedAt": "2026-10-07T13:36:25.000Z",
+      "category": "finance",
+      "source": "英国央行（官方）"
+    },
+    {
+      "sourceId": "boe-news",
+      "title": "Minutes of the London FXJSC Operations Sub-Committee Meeting – 16 June 2026",
+      "url": "https://www.bankofengland.co.uk/minutes/2026/june/fxjsc-operations-sub-committee-meeting-16-june-2026",
+      "excerpt": "The Bank of England chairs the London Foreign Exchange Joint Standing Committee (FXJSC) Operations and Legal Sub-Committees. The FXJSC is made up of market participants, infrastructure providers and the UK financial regulators.",
+      "publishedAt": "2026-10-07T09:49:25.000Z",
+      "category": "finance",
+      "source": "英国央行（官方）"
+    },
+    {
+      "sourceId": "boe-news",
+      "title": "Minutes of the London FXJSC Main Committee Meeting – 24 June 2026",
+      "url": "https://www.bankofengland.co.uk/minutes/2026/june/fxjsc-main-committee-meeting-24-june-2026",
+      "excerpt": "The Bank of England chairs the London Foreign Exchange Joint Standing Committee (FXJSC), which is a forum for discussion of the wholesale foreign exchange market. The FXJSC is made up of market participants, infrastructure providers and the UK financial regulators.",
+      "publishedAt": "2026-10-07T09:08:40.000Z",
+      "category": "finance",
+      "source": "英国央行（官方）"
+    },
+    {
+      "sourceId": "boe-news",
+      "title": "Regulatory thresholds set to shift to automatic increases",
+      "url": "https://www.bankofengland.co.uk/news/2026/october/regulatory-thresholds-set-to-shift-to-automatic-increases",
+      "excerpt": "Proportionality is set to be improved for firms as over 100 regulatory thresholds could be automatically increased periodically.",
+      "publishedAt": "2026-10-07T09:00:00.000Z",
+      "category": "finance",
+      "source": "英国央行（官方）"
+    },
+    {
+      "sourceId": "boe-news",
+      "title": "Minutes of the UK Money Markets Code Sub-Committee – September 2026",
+      "url": "https://www.bankofengland.co.uk/minutes/2026/september/uk-money-markets-committee-minutes-september-2026",
+      "excerpt": "The Money Markets Committee is a forum for market participants and authorities to discuss the UK unsecured deposits and funding market and securities lending and repo markets.",
+      "publishedAt": "2026-10-06T13:07:03.000Z",
+      "category": "finance",
+      "source": "英国央行（官方）"
+    },
+    {
+      "sourceId": "boe-news",
+      "title": "Appointment of members of the Enforcement Decision Making Committee (EDMC)",
+      "url": "https://www.bankofengland.co.uk/news/2026/october/appointment-of-members-of-the-edmc",
+      "excerpt": "Following an external recruitment process, the Bank of England has appointed Carlos Conceicao and Alexander Justham as members of its Enforcement Decision Making Committee, with effect from September 2026.",
+      "publishedAt": "2026-10-02T08:00:00.000Z",
+      "category": "finance",
+      "source": "英国央行（官方）"
+    },
+    {
+      "sourceId": "boe-news",
+      "title": "Minutes of the Meeting of the Court of Directors held on 16 July 2026",
+      "url": "https://www.bankofengland.co.uk/minutes/2026/july/court-minutes-16-july-2026",
+      "excerpt": "The Bank's Court of Directors acts as a unitary board, setting the organisation's strategy and budget and taking key decisions on resourcing and appointments. Required to meet a minimum seven times per year, it has five executive members from the Bank and up to nine non-executive members.",
+      "publishedAt": "2026-10-01T13:00:00.000Z",
+      "category": "finance",
+      "source": "英国央行（官方）"
+    },
+    {
+      "sourceId": "boe-news",
+      "title": "Financial Policy Committee Record – September 2026",
+      "url": "https://www.bankofengland.co.uk/financial-policy-committee-record/2026/september-2026",
+      "excerpt": "Our Financial Policy Committee (FPC) meets to identify risks to financial stability and agree policy actions aimed at safeguarding the resilience of the UK financial system.",
+      "publishedAt": "2026-09-30T09:30:00.000Z",
+      "category": "finance",
+      "source": "英国央行（官方）"
+    },
+    {
+      "sourceId": "boe-news",
+      "title": "Minutes of the Market Participants Group meeting – 24 September 2026",
+      "url": "https://www.bankofengland.co.uk/minutes/2026/september/market-participants-group-meeting-25-september-2026",
+      "excerpt": "The Market Participants Group (MPG) is a senior-level forum for financial market participants to share their views on relevant themes and narratives in financial markets with members of the Bank of England’s Monetary Policy Committee.",
+      "publishedAt": "2026-09-25T06:30:00.000Z",
+      "category": "finance",
+      "source": "英国央行（官方）"
+    },
+    {
+      "sourceId": "boe-news",
+      "title": "Foreign Currency Reserves 2026 – Market Notice 22 September 2026",
+      "url": "https://www.bankofengland.co.uk/markets/market-notices/2026/september/foreign-currency-reserves-2026-market-notice-22-september-2026",
+      "excerpt": "Not for distribution, directly or indirectly, in or into the United States, Canada, Australia, Japan or any other jurisdiction where it is unlawful to distribute this announcement",
+      "publishedAt": "2026-09-22T15:30:00.000Z",
+      "category": "finance",
+      "source": "英国央行（官方）"
+    },
+    {
+      "sourceId": "boe-news",
+      "title": "Bank of England announces new office space in Leeds",
+      "url": "https://www.bankofengland.co.uk/news/2026/september/bank-of-england-announces-new-office-space-in-leeds",
+      "excerpt": "The Bank of England has secured a new long-term premises in Leeds, marking a major milestone in its commitment to build its presence in the region.",
+      "publishedAt": "2026-09-21T12:00:00.000Z",
+      "category": "finance",
+      "source": "英国央行（官方）"
+    },
+    {
+      "sourceId": "boe-news",
+      "title": "Foreign Currency Reserves 2026 – Market Notice 21 September 2026",
+      "url": "https://www.bankofengland.co.uk/markets/market-notices/2026/september/foreign-currency-reserves-2026-market-notice-21-september-2026",
+      "excerpt": "Not for distribution, directly or indirectly, in or into the United States, Canada, Australia, Japan or any other jurisdiction where it is unlawful to distribute this announcement",
+      "publishedAt": "2026-09-21T11:30:00.000Z",
+      "category": "finance",
+      "source": "英国央行（官方）"
+    },
+    {
+      "sourceId": "boe-news",
+      "title": "Minutes of the Transaction and Post-trade Reporting Harmonisation Taskforce - July 2026",
+      "url": "https://www.bankofengland.co.uk/minutes/2026/july/minutes-of-the-transaction-and-post-trade-reporting-harmonisation-taskforce-july-2026",
+      "excerpt": "The Transaction and Post-trade Reporting Harmonisation Taskforce, through its three working groups, will help inform the design of the Bank and FCA’s long-term approach to harmonising UK MiFIR, UK EMIR and UK SFTR reporting requirements",
+      "publishedAt": "2026-09-18T11:00:00.000Z",
+      "category": "finance",
+      "source": "英国央行（官方）"
+    },
+    {
+      "sourceId": "boe-news",
+      "title": "Transcript of the Governor's pooled broadcast interview given on 17 September 2026",
+      "url": "https://www.bankofengland.co.uk/news/2026/september/the-governor-interview-transcript-17-september-2026",
+      "excerpt": "Following the publication of the Monetary Policy Summary and minutes of the Monetary Policy Committee meeting",
+      "publishedAt": "2026-09-17T13:30:00.000Z",
+      "category": "finance",
+      "source": "英国央行（官方）"
+    },
+    {
+      "sourceId": "boe-news",
+      "title": "Monetary Policy Committee dates for 2027",
+      "url": "https://www.bankofengland.co.uk/news/2026/september/mpc-dates-for-2027",
+      "excerpt": "2027 confirmed dates",
+      "publishedAt": "2026-09-17T13:30:00.000Z",
+      "category": "finance",
+      "source": "英国央行（官方）"
+    },
+    {
+      "sourceId": "boe-news",
+      "title": "Exchange of letters between the Governor and the Chancellor regarding CPI Inflation - September 2026",
+      "url": "https://www.bankofengland.co.uk/letter/2026/cpi-inflation-september-2026",
+      "excerpt": "Exchange of letters between the Governor and the Chancellor",
+      "publishedAt": "2026-09-17T11:00:00.000Z",
+      "category": "finance",
+      "source": "英国央行（官方）"
+    },
+    {
+      "sourceId": "boe-news",
+      "title": "Exchange of letters between the Governor and the Chancellor regarding QT and the APF - September 2026",
+      "url": "https://www.bankofengland.co.uk/letter/2026/exchange-of-letters-between-the-governor-and-the-chancellor-regarding-qt-and-the-apf",
+      "excerpt": "Exchange of letters between the Governor and the Chancellor",
+      "publishedAt": "2026-09-17T11:00:00.000Z",
+      "category": "finance",
+      "source": "英国央行（官方）"
+    },
+    {
+      "sourceId": "boe-news",
+      "title": "Asset Purchase Facility: Gilt Sales – Market Notice 17 September 2026",
+      "url": "https://www.bankofengland.co.uk/markets/market-notices/2026/asset-purchase-facility-gilt-sales-market-notice-17-september-2026",
+      "excerpt": "This Market Notice outlines the Bank Executive’s approach to implementing the Monetary Policy Committee’s (MPC) decision to unwind the gilts held for monetary policy purposes in the Asset Purchase Facility (APF). As part of this, Bank APF auctions will be paused while the Bank reviews a model of sel",
+      "publishedAt": "2026-09-17T11:00:00.000Z",
+      "category": "finance",
+      "source": "英国央行（官方）"
+    },
+    {
+      "sourceId": "boe-news",
+      "title": "Bank rate maintained at 3.75% - September 2026 Monetary Policy Summary and Minutes",
+      "url": "https://www.bankofengland.co.uk/monetary-policy-summary-and-minutes/2026/september-2026",
+      "excerpt": "The Bank of England’s Monetary Policy Committee is responsible for making decisions about Bank Rate.",
+      "publishedAt": "2026-09-17T11:00:00.000Z",
+      "category": "finance",
+      "source": "英国央行（官方）"
+    },
+    {
+      "sourceId": "boe-news",
+      "title": "Chancellor announces Bank of England appointments",
+      "url": "https://www.bankofengland.co.uk/news/2026/september/chancellor-announces-boe-appointments",
+      "excerpt": "His Majesty the King and the Chancellor have appointed three new non-executive directors to the Bank of England’s Court of Directors",
+      "publishedAt": "2026-09-16T14:03:08.000Z",
+      "category": "finance",
+      "source": "英国央行（官方）"
+    },
+    {
+      "sourceId": "boe-news",
+      "title": "Statistical Notice 2026/08 - Changes to the criteria for monthly form BT reporting",
+      "url": "https://www.bankofengland.co.uk/statistics/notice/2026/statistical-notice-2026-08",
+      "excerpt": "Statistical Notices update the definitions and guidance contained in the Banking Statistics Yellow Folder",
+      "publishedAt": "2026-09-15T09:21:31.000Z",
+      "category": "finance",
+      "source": "英国央行（官方）"
+    },
+    {
+      "sourceId": "boe-news",
+      "title": "Minutes of the Securities Lending Committee meeting – March 2026",
+      "url": "https://www.bankofengland.co.uk/minutes/2026/march/minutes-of-the-securities-lending-committee-meeting-march-2026",
+      "excerpt": "The Securities Lending Committee is a forum for market participants and authorities to discuss the UK securities lending market.",
+      "publishedAt": "2026-09-15T08:09:58.000Z",
+      "category": "finance",
+      "source": "英国央行（官方）"
+    },
+    {
+      "sourceId": "boe-news",
+      "title": "Announcement of the publication of the Governor's interview transcript",
+      "url": "https://www.bankofengland.co.uk/news/2026/september/statement-announcing-governors-interview",
+      "excerpt": "Statement from the Bank of England",
+      "publishedAt": "2026-09-10T09:00:00.000Z",
+      "category": "finance",
+      "source": "英国央行（官方）"
+    },
+    {
+      "sourceId": "boe-news",
+      "title": "Delay to the November 2026 RTGS standards release",
+      "url": "https://www.bankofengland.co.uk/news/2026/august/delay-to-the-november-2026-rtgs-standards-release",
+      "excerpt": "Bank of England statement",
+      "publishedAt": "2026-08-27T13:16:29.000Z",
+      "category": "finance",
+      "source": "英国央行（官方）"
+    },
+    {
       "sourceId": "bbc-world",
       "title": "US envoy arrives in Russia ahead of meeting with Putin as Zelensky says intelligence sharing 'works now'",
       "url": "https://www.bbc.co.uk/news/articles/cq5ynkx3xy11o?at_medium=RSS&at_campaign=rss",
@@ -3127,36 +3656,7 @@
       "publishedAt": "2026-10-21T06:37:55.000Z",
       "category": "politics",
       "source": "BBC World",
-      "summary": "美国特使威特科夫抵达俄罗斯圣彼得堡，将会见普京，讨论结束俄乌持续多年冲突的提案。泽连斯基表示，与美方的情报共享「现在已运作」，此前他与美国国务卿鲁比奥通话。"
-    },
-    {
-      "sourceId": "bbc-world",
-      "title": "France is divided over who to blame for weekend riots and what to learn from them",
-      "url": "https://www.bbc.co.uk/news/articles/cq0me4g9p970o?at_medium=RSS&at_campaign=rss",
-      "excerpt": "In France and beyond there is widespread disagreement over what led to some of the worst unrest seen in French cities in modern history.",
-      "publishedAt": "2026-10-21T01:22:51.000Z",
-      "category": "politics",
-      "source": "BBC World"
-    },
-    {
-      "sourceId": "bbc-world",
-      "title": "Elon Musk considering Tesla-SpaceX merger",
-      "url": "https://www.bbc.co.uk/news/articles/cmlyl09xjke4o?at_medium=RSS&at_campaign=rss",
-      "excerpt": "Musk says special committees within both companies have been formed to look at a possible mega-merger.",
-      "publishedAt": "2026-10-21T05:48:46.000Z",
-      "category": "politics",
-      "source": "BBC World",
-      "summary": "马斯克表示正在考虑特斯拉与SpaceX的合并，两家公司均已成立专门委员会研究这一可能的巨型并购交易。他同时担任两家公司首席执行官。"
-    },
-    {
-      "sourceId": "bbc-world",
-      "title": "Pakistan arrests man hunted by US over $126m postage fraud case",
-      "url": "https://www.bbc.co.uk/news/articles/ckdd8m1z1z3yo?at_medium=RSS&at_campaign=rss",
-      "excerpt": "Faheem Akram allegedly sold more than 5 million fake postage labels for a fixed price of $2 a piece.",
-      "publishedAt": "2026-10-21T05:46:33.000Z",
-      "category": "politics",
-      "source": "BBC World",
-      "summary": "巴基斯坦逮捕了被美国通缉的嫌犯法希姆·阿克拉姆，其涉嫌一宗1.26亿美元的邮政欺诈案。他被指以每枚2美元的固定价格售出逾500万枚假邮票标签。"
+      "summary": "美国特使威特科夫抵达圣彼得堡，将会见普京讨论结束俄乌冲突的方案；泽连斯基称情报共享机制「现在已运作」。"
     },
     {
       "sourceId": "bbc-world",
@@ -3166,6 +3666,36 @@
       "publishedAt": "2026-10-20T20:00:57.000Z",
       "category": "politics",
       "source": "BBC World"
+    },
+    {
+      "sourceId": "bbc-world",
+      "title": "Katya Adler: France divided over who to blame for riots and what to learn from them",
+      "url": "https://www.bbc.co.uk/news/articles/cq0me4g9p970o?at_medium=RSS&at_campaign=rss",
+      "excerpt": "In France and beyond there is widespread disagreement over what led to some of the worst unrest seen in French cities in modern history.",
+      "publishedAt": "2026-10-21T06:50:40.000Z",
+      "category": "politics",
+      "source": "BBC World",
+      "summary": "经历法国现代史上最严重的城市骚乱之一后，法国国内外对骚乱成因以及应从中吸取何种教训仍存在广泛分歧。"
+    },
+    {
+      "sourceId": "bbc-world",
+      "title": "Elon Musk considering Tesla-SpaceX merger",
+      "url": "https://www.bbc.co.uk/news/articles/cmlyl09xjke4o?at_medium=RSS&at_campaign=rss",
+      "excerpt": "Musk says special committees within both companies have been formed to look at a possible mega-merger.",
+      "publishedAt": "2026-10-21T05:48:46.000Z",
+      "category": "politics",
+      "source": "BBC World",
+      "summary": "马斯克表示正考虑特斯拉与SpaceX合并，两家公司均已成立特别委员会，评估这一可能成为史上规模最大的合并交易。"
+    },
+    {
+      "sourceId": "bbc-world",
+      "title": "Pakistan arrests man hunted by US over $126m postage fraud case",
+      "url": "https://www.bbc.co.uk/news/articles/ckdd8m1z1z3yo?at_medium=RSS&at_campaign=rss",
+      "excerpt": "Faheem Akram allegedly sold more than 5 million fake postage labels for a fixed price of $2 a piece.",
+      "publishedAt": "2026-10-21T05:46:33.000Z",
+      "category": "politics",
+      "source": "BBC World",
+      "summary": "巴基斯坦逮捕美方通缉的法希姆·阿克拉姆，其涉嫌以每枚2美元出售逾500万枚假邮票，涉案金额达1.26亿美元。"
     },
     {
       "sourceId": "bbc-world",
@@ -3346,7 +3876,7 @@
       "publishedAt": "2026-10-21T06:36:39.000Z",
       "category": "politics",
       "source": "BBC World",
-      "summary": "同时担任特斯拉与SpaceX首席执行官的马斯克表示，两家公司合并「有诸多好处」，若达成将是史上最大规模并购。他称这是「好主意」，但未透露具体时间表。"
+      "summary": "同时担任特斯拉与SpaceX首席执行官的马斯克称，两家公司合并「大有裨益」，若成行将是史上最大规模合并。"
     },
     {
       "sourceId": "bbc-world",
@@ -3530,13 +4060,13 @@
     },
     {
       "sourceId": "guardian-world",
-      "title": "Helen Haines live coverage: Helen Haines’s second leg amputated but she is stable and ‘a fighter’, husband says",
+      "title": "Helen Haines’s second leg amputated but she is stable and ‘a fighter’, husband says – as it happened",
       "url": "https://www.theguardian.com/australia-news/live/2026/oct/21/helen-haines-independent-mp-alleged-attack-wangaratta-vigils-court-ntwnfb",
       "excerpt": "Independent MP was struck by a car on Monday and her alleged attacker appeared in court on Wednesday ‘Deeply appalled’: politicians condemn alleged attack after Helen Haines critically injured Helen Haines, the principled MP respected across parliament Anthony Albanese has described the police inter",
       "publishedAt": "2026-10-21T06:33:51.000Z",
       "category": "politics",
       "source": "The Guardian",
-      "summary": "澳大利亚独立议员海伦·海恩斯周一在旺加拉塔被汽车撞击后，第二条腿已截肢，目前情况稳定。其丈夫称她「是一名斗士」，涉嫌袭击者已于周三出庭。"
+      "summary": "澳大利亚独立议员海伦·海恩斯周一遭车撞后第二条腿被截肢，目前情况稳定，其丈夫称她是一名「斗士」。"
     },
     {
       "sourceId": "guardian-world",
@@ -3546,7 +4076,7 @@
       "publishedAt": "2026-10-21T06:27:19.000Z",
       "category": "politics",
       "source": "The Guardian",
-      "summary": "涉嫌袭击议员海伦·海恩斯的男子被拒绝保释。澳大利亚联邦警察局长谴责该国政治环境「躁动不安」，并称议员们普遍担忧辱骂与恐吓行为增多。"
+      "summary": "涉嫌驾车撞击澳独立议员海伦·海恩斯的男子被拒绝保释，澳联邦警察总监称当前政治环境「燥热」，议员普遍担忧辱骂与恐吓增多。"
     },
     {
       "sourceId": "guardian-world",
@@ -3745,7 +4275,7 @@
       "publishedAt": "2026-10-21T06:27:41.000Z",
       "category": "politics",
       "source": "NYT World",
-      "summary": "美国国务卿鲁比奥访问印度，以加强经济联系。他将在孟买会见亚洲多位富豪，与此同时华盛顿正就与印度的贸易协议继续谈判，美印关系仍显紧张。"
+      "summary": "美国国务卿卢比奥访问印度以加强经济联系，将在孟买会见亚洲最富有的人士，美印贸易协议谈判仍在进行。"
     },
     {
       "sourceId": "nyt-world",
@@ -3761,9 +4291,10 @@
       "title": "The Mayor of a City in Haiti Warned of a Massacre. No One Listened.",
       "url": "https://www.nytimes.com/2026/10/20/world/americas/mayor-kenscoff-haiti-gangs-massacre.html",
       "excerpt": "The mayor of Kenscoff, a town near Haiti’s capital, wrote government officials hundreds of letters to warn of gang threats. Then dozens of people died, and he did, too.",
-      "publishedAt": "2026-10-20T23:31:30.000Z",
+      "publishedAt": "2026-10-21T06:55:45.000Z",
       "category": "politics",
-      "source": "NYT World"
+      "source": "NYT World",
+      "summary": "海地首都太子港附近肯斯科夫市市长曾向政府官员致信数百封，警告帮派威胁；此后当地数十人死亡，该市长本人亦遇害。"
     },
     {
       "sourceId": "nyt-world",
@@ -3800,7 +4331,7 @@
       "publishedAt": "2026-10-21T06:39:10.000Z",
       "category": "politics",
       "source": "NYT World",
-      "summary": "中国发布人工智能技术出口规则草案，拟加强对顶尖AI模型出口的管控。报道称，该草案显示中国试图在国家安全风险与保持对美技术领先之间取得平衡。"
+      "summary": "中国起草人工智能技术出口管理规则，显示其试图在国家安全风险与赶超美国的目标之间取得平衡。"
     },
     {
       "sourceId": "nyt-world",
@@ -3945,7 +4476,7 @@
       "publishedAt": "2026-10-21T05:43:24.000Z",
       "category": "politics",
       "source": "NPR World",
-      "summary": "乌克兰总统泽连斯基表示，针对俄罗斯导弹袭击的预警系统已恢复运作。他称这一变化是在与美方沟通后实现的，其中包括与美国国务卿鲁比奥通电话。"
+      "summary": "泽连斯基表示，针对俄罗斯导弹袭击的预警系统已恢复运作，此前他与美方进行了沟通，其中包括与美国国务卿卢比奥通电话。"
     },
     {
       "sourceId": "npr-world",
@@ -3954,8 +4485,7 @@
       "excerpt": "Fresh curfews were being imposed across the city centers of Paris and Lyon on Tuesday after the first quiet night since France's most destructive rioting in years.",
       "publishedAt": "2026-10-21T05:37:28.000Z",
       "category": "politics",
-      "source": "NPR World",
-      "summary": "法国宣布在巴黎及里昂等城市中心实施夜间宵禁，「需要多久就持续多久」。此前法国经历多年来最具破坏性的骚乱，周二迎来首个平静夜晚。"
+      "source": "NPR World"
     },
     {
       "sourceId": "npr-world",
@@ -4301,13 +4831,23 @@
     },
     {
       "sourceId": "aljazeera",
+      "title": "Man United’s Carrick doesn’t ‘need reassurance’ despite team’s horror start",
+      "url": "https://www.aljazeera.com/sports/2026/10/21/man-uniteds-carrick-doesnt-need-reassurance-despite-teams-horror-start?traffic_source=rss",
+      "excerpt": "Manchester United manager's troubles grow as seven players are out injured before a Champions League trip to Como.",
+      "publishedAt": "2026-10-21T06:39:25.000Z",
+      "category": "politics",
+      "source": "Al Jazeera",
+      "summary": "曼联主帅卡里克在球队开局糟糕、七名球员受伤的情况下带队赴欧冠客场对科莫，他表示自己不需要外界安抚。"
+    },
+    {
+      "sourceId": "aljazeera",
       "title": "Who owns India’s textile traditions in age of AI-enabled mass production?",
       "url": "https://www.aljazeera.com/features/2026/10/21/who-owns-indias-textile-traditions-in-age-of-ai-enabled-mass-production?traffic_source=rss",
       "excerpt": "Technological tools meant to preserve a craft are now able to digitally reproduce it without involving the craftsperson.",
       "publishedAt": "2026-10-21T06:22:04.000Z",
       "category": "politics",
       "source": "Al Jazeera",
-      "summary": "报道探讨在AI驱动的大规模生产时代，印度传统纺织工艺的归属问题。原本用于保存手工艺的技术工具，如今可在不涉及工匠的情况下对工艺进行数字化复制。"
+      "summary": "在人工智能驱动的量产时代，原本用于保护印度纺织传统工艺的技术工具，如今可在不涉及工匠的情况下进行数字复制，由此引发工艺归属之问。"
     },
     {
       "sourceId": "aljazeera",
@@ -4317,7 +4857,7 @@
       "publishedAt": "2026-10-21T06:15:19.000Z",
       "category": "politics",
       "source": "Al Jazeera",
-      "summary": "曼城在哈兰德与塞梅尼奥均有伤缺阵的情况下，客场以5比1大胜雅典。福登独中三元上演帽子戏法，帮助球队从此前负于巴黎圣日耳曼的失利中反弹。"
+      "summary": "福登上演帽子戏法，曼城在哈兰德与塞梅尼奥受伤的情况下仍以5比1大胜雅典，从此前负于巴黎圣日耳曼的失利中反弹。"
     },
     {
       "sourceId": "aljazeera",
@@ -4327,7 +4867,7 @@
       "publishedAt": "2026-10-21T06:00:47.000Z",
       "category": "politics",
       "source": "Al Jazeera",
-      "summary": "加沙儿童面临日益严重的食品短缺，物价上涨且援助被削减。当地家庭表示，商业供应中断使他们难以给孩子提供有营养的餐食。"
+      "summary": "加沙儿童面临日益严重的食品短缺，商业供应中断、价格上涨且援助被削减，家庭称难以给孩子提供营养餐食。"
     },
     {
       "sourceId": "aljazeera",
@@ -4336,8 +4876,7 @@
       "excerpt": "The loss, up from $13bn in the same period last year, was driven by accounting charges, according to the report.",
       "publishedAt": "2026-10-21T05:33:20.000Z",
       "category": "politics",
-      "source": "Al Jazeera",
-      "summary": "据《华尔街日报》报道，Anthropic在2026年上半年亏损800亿美元，较去年同期的130亿美元大幅扩大，亏损主要源于会计计提项目。"
+      "source": "Al Jazeera"
     },
     {
       "sourceId": "aljazeera",
@@ -4516,15 +5055,6 @@
       "url": "https://www.aljazeera.com/news/2026/10/20/the-gambia-to-pay-reparations-to-ex-dictators-victims-from-sale-of-us-mansion?traffic_source=rss",
       "excerpt": "The Gambia confirmed it received $2.5m from the sale of a US mansion belonging to former president Jammeh.",
       "publishedAt": "2026-10-20T22:51:35.000Z",
-      "category": "politics",
-      "source": "Al Jazeera"
-    },
-    {
-      "sourceId": "aljazeera",
-      "title": "‘I don’t care how it’s done’: Trump pressures Ukraine to cut peace deal",
-      "url": "https://www.aljazeera.com/news/2026/10/20/i-dont-care-how-its-done-trump-pressures-ukraine-to-cut-peace-deal?traffic_source=rss",
-      "excerpt": "The US president's remarks come amid a deepening feud with Ukraine's President Volodymyr Zelenskyy.",
-      "publishedAt": "2026-10-20T22:20:13.000Z",
       "category": "politics",
       "source": "Al Jazeera"
     },
