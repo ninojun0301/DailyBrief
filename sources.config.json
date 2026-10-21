@@ -19,7 +19,7 @@
     "url": "https://www.v2ex.com/api/topics/show.json",
     "category": "tech",
     "subcategory": "cn-community",
-    "enabled": true,
+    "enabled": false,
     "locales": [
       "zh"
     ]
@@ -31,7 +31,7 @@
     "url": "https://linux.do/top.rss?period=daily",
     "category": "tech",
     "subcategory": "cn-community",
-    "enabled": true,
+    "enabled": false,
     "locales": [
       "zh"
     ],
@@ -199,7 +199,7 @@
     "url": "https://reply-vc-90459984647.us-central1.run.app/v1/articles/leaderboard?window=3d&category=ai&lang=en&limit=30",
     "category": "tech",
     "subcategory": "x-viral",
-    "enabled": true,
+    "enabled": false,
     "locales": [
       "zh",
       "en"
@@ -461,6 +461,81 @@
       "zh",
       "en"
     ]
+  },
+  {
+    "id": "federal-reserve-monetary",
+    "name": "美联储（官方）",
+    "type": "rss",
+    "url": "https://www.federalreserve.gov/feeds/press_monetary.xml",
+    "category": "finance",
+    "subcategory": "news",
+    "enabled": true,
+    "lang": "en",
+    "locales": [
+      "zh",
+      "en"
+    ],
+    "notes": "Federal Reserve monetary-policy primary source."
+  },
+  {
+    "id": "sec-press",
+    "name": "美国证监会 SEC（官方）",
+    "type": "rss",
+    "url": "https://www.sec.gov/news/pressreleases.rss",
+    "category": "finance",
+    "subcategory": "news",
+    "enabled": true,
+    "lang": "en",
+    "locales": [
+      "zh",
+      "en"
+    ],
+    "notes": "SEC press releases and enforcement updates."
+  },
+  {
+    "id": "cftc-press",
+    "name": "美国商品期货交易委员会（官方）",
+    "type": "rss",
+    "url": "https://www.cftc.gov/RSS/RSSGP/rssgp.xml",
+    "category": "finance",
+    "subcategory": "news",
+    "enabled": true,
+    "lang": "en",
+    "locales": [
+      "zh",
+      "en"
+    ],
+    "notes": "CFTC press releases; relevant to derivatives, gold, and crypto regulation."
+  },
+  {
+    "id": "ecb-press",
+    "name": "欧洲央行（官方）",
+    "type": "rss",
+    "url": "https://www.ecb.europa.eu/rss/press.html",
+    "category": "finance",
+    "subcategory": "news",
+    "enabled": true,
+    "lang": "en",
+    "locales": [
+      "zh",
+      "en"
+    ],
+    "notes": "ECB official press releases."
+  },
+  {
+    "id": "boe-news",
+    "name": "英国央行（官方）",
+    "type": "rss",
+    "url": "https://www.bankofengland.co.uk/rss/news",
+    "category": "finance",
+    "subcategory": "news",
+    "enabled": true,
+    "lang": "en",
+    "locales": [
+      "zh",
+      "en"
+    ],
+    "notes": "Bank of England official news and policy releases."
   },
   {
     "id": "reddit-wallstreetbets",

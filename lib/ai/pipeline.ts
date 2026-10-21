@@ -52,6 +52,37 @@ const PER_CATEGORY_LIMIT: Record<Category, number> = {
 
 const MAX_AGE_DAYS = 14;
 
+const SOURCE_PRIORITY: Record<string, number> = {
+  "federal-reserve-monetary": 100,
+  "sec-press": 100,
+  "cftc-press": 100,
+  "ecb-press": 100,
+  "boe-news": 100,
+  "bloomberg-markets": 80,
+  "wsj-markets": 80,
+  "ft-companies": 80,
+  "economist-finance": 75,
+  "bbc-business": 70,
+  "reuters": 85,
+};
+
+const OFFICIAL_SOURCE_IDS = new Set([
+  "federal-reserve-monetary",
+  "sec-press",
+  "cftc-press",
+  "ecb-press",
+  "boe-news",
+]);
+
+function sourceTier(sourceId: string): "official" | "major-media" | "community" | "other" {
+  if (OFFICIAL_SOURCE_IDS.has(sourceId)) return "official";
+  if (sourceId === "v2ex-hot" || sourceId === "linuxdo" || sourceId === "reddit-stocks") {
+    return "community";
+  }
+  if ((SOURCE_PRIORITY[sourceId] ?? 0) >= 70) return "major-media";
+  return "other";
+}
+
 /**
  * Pick `limit` items from `items` so every source gets a fair shot.
  *
@@ -87,7 +118,9 @@ function selectRoundRobin(
     );
   }
 
-  const buckets = Array.from(bySource.values());
+  const buckets = Array.from(bySource.entries())
+    .sort(([a], [b]) => (SOURCE_PRIORITY[b] ?? 50) - (SOURCE_PRIORITY[a] ?? 50))
+    .map(([, items]) => items);
   const out: ArticleInput[] = [];
   let madeProgress = true;
   while (out.length < limit && madeProgress) {
@@ -213,6 +246,7 @@ export async function generateDailyReport(
     url: a.url,
     source: a.source,
     category: a.category,
+    source_tier: sourceTier(a.sourceId),
     excerpt: (a.excerpt ?? "").slice(0, 200),
     published: a.publishedAt?.toISOString() ?? "",
   }));
