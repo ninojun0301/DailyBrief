@@ -138,7 +138,7 @@ for group in group_order:
     )
 
 watch_items: list[str] = []
-for item in data.get("trading", {}).get("watchlist", [])[:5]:
+for item in data.get("trading", {}).get("watchlist", [])[:6]:
     stance = str(item.get("stance") or "中性")
     watch_items.append(
         f"""

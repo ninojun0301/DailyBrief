@@ -478,6 +478,20 @@
     "notes": "Federal Reserve monetary-policy primary source."
   },
   {
+    "id": "fii-announcements",
+    "name": "工业富联公告（交易所披露）",
+    "type": "api",
+    "url": "https://np-anotice-stock.eastmoney.com/api/security/ann?stock_list=601138",
+    "category": "finance",
+    "subcategory": "news",
+    "enabled": true,
+    "lang": "zh",
+    "locales": [
+      "zh"
+    ],
+    "notes": "Issuer announcements for Industrial Fulian (601138), mirrored from exchange disclosures."
+  },
+  {
     "id": "sec-press",
     "name": "美国证监会 SEC（官方）",
     "type": "rss",

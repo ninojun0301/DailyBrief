@@ -552,6 +552,15 @@ export function renderHtml(
     politics: sumItems(raw.politics),
     community: sumItems(techCommunitySubs),
   };
+  const defaultTab = trading
+    ? "trading"
+    : counts.tech > 0
+      ? "tech"
+      : counts.finance > 0
+        ? "finance"
+        : counts.politics > 0
+          ? "politics"
+          : "community";
 
   return `<!doctype html>
 <html lang="${REPORT_LOCALE === "en" ? "en" : "zh-CN"}">
@@ -1199,24 +1208,24 @@ export function renderHtml(
   </header>
 
   <nav class="tabs" role="tablist">
-    <button class="tab active" data-tab="tech">${CATEGORY_LABELS.tech}<span class="count">${counts.tech}</span></button>
-    ${trading ? `<button class="tab" data-tab="trading">${STR.catTrading}<span class="count">${trading.tickers.length}</span></button>` : ""}
-    <button class="tab" data-tab="politics">${CATEGORY_LABELS.politics}<span class="count">${counts.politics}</span></button>
-    <button class="tab" data-tab="finance">${CATEGORY_LABELS.finance}<span class="count">${counts.finance}</span></button>
-    ${techCommunitySubs.length > 0 ? `<button class="tab" data-tab="community">${STR.catCommunity}<span class="count">${counts.community}</span></button>` : ""}
+    ${trading ? `<button class="tab ${defaultTab === "trading" ? "active" : ""}" data-tab="trading">${STR.catTrading}<span class="count">${trading.tickers.length}</span></button>` : ""}
+    ${counts.tech > 0 ? `<button class="tab ${defaultTab === "tech" ? "active" : ""}" data-tab="tech">${CATEGORY_LABELS.tech}<span class="count">${counts.tech}</span></button>` : ""}
+    ${counts.politics > 0 ? `<button class="tab ${defaultTab === "politics" ? "active" : ""}" data-tab="politics">${CATEGORY_LABELS.politics}<span class="count">${counts.politics}</span></button>` : ""}
+    ${counts.finance > 0 ? `<button class="tab ${defaultTab === "finance" ? "active" : ""}" data-tab="finance">${CATEGORY_LABELS.finance}<span class="count">${counts.finance}</span></button>` : ""}
+    ${counts.community > 0 ? `<button class="tab ${defaultTab === "community" ? "active" : ""}" data-tab="community">${STR.catCommunity}<span class="count">${counts.community}</span></button>` : ""}
   </nav>
 
-  <section class="panel active" data-panel="tech">
+  ${trading ? `<section class="panel ${defaultTab === "trading" ? "active" : ""}" data-panel="trading">${renderTradingPanel(trading)}</section>` : ""}
+  ${counts.tech > 0 ? `<section class="panel ${defaultTab === "tech" ? "active" : ""}" data-panel="tech">
     ${renderRawCategoryPanel("tech", techMainSubs)}
-  </section>
-  ${trading ? `<section class="panel" data-panel="trading">${renderTradingPanel(trading)}</section>` : ""}
-  <section class="panel" data-panel="politics">
+  </section>` : ""}
+  ${counts.politics > 0 ? `<section class="panel ${defaultTab === "politics" ? "active" : ""}" data-panel="politics">
     ${renderRawCategoryPanel("politics", raw.politics)}
-  </section>
-  <section class="panel" data-panel="finance">
+  </section>` : ""}
+  ${counts.finance > 0 ? `<section class="panel ${defaultTab === "finance" ? "active" : ""}" data-panel="finance">
     ${renderRawCategoryPanel("finance", raw.finance)}
-  </section>
-  ${techCommunitySubs.length > 0 ? `<section class="panel" data-panel="community">
+  </section>` : ""}
+  ${counts.community > 0 ? `<section class="panel ${defaultTab === "community" ? "active" : ""}" data-panel="community">
     ${renderRawCategoryPanel("tech", techCommunitySubs)}
   </section>` : ""}
 

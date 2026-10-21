@@ -6,6 +6,7 @@ import path from "node:path";
 import { sources, REPORT_LOCALE } from "../lib/sources/registry";
 import { fetchSource } from "../lib/sources/dispatch";
 import {
+  filterFocusedArticles,
   generateDailyReport,
   type ArticleInput,
 } from "../lib/ai/pipeline";
@@ -245,11 +246,15 @@ async function main() {
 
   const date = todayKey();
   console.log(`[daily] ${date} — fetching sources…\n`);
-  const articles = await fetchAll();
-  console.log(`\n[daily] total articles: ${articles.length}`);
-  if (articles.length === 0) {
+  const fetchedArticles = await fetchAll();
+  console.log(`\n[daily] total fetched articles: ${fetchedArticles.length}`);
+  if (fetchedArticles.length === 0) {
     throw new Error("no articles fetched — aborting");
   }
+  const articles = filterFocusedArticles(fetchedArticles);
+  console.log(
+    `[daily] focused articles for 工业富联 / 黄金 / BTC / ETH / SOL: ${articles.length}`,
+  );
 
   // Enrich GH Trending, papers, finance news, and politics with summaries.
   await enrichGhTrending(articles);
