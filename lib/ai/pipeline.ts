@@ -193,7 +193,51 @@ function selectRoundRobin(
   return out;
 }
 
-async function callOnce(userPayloadJson: string): Promise<DailyReport> {
+function hasStaleExplicitPrice(
+  article: ArticleInput,
+  marketContext?: TradingSection | null,
+): boolean {
+  if (!marketContext || !article.publishedAt) return false;
+  if (Date.now() - article.publishedAt.getTime() < 86_400_000) return false;
+  const text = `${article.title} ${article.excerpt ?? ""}`;
+  if (
+    !/(站上|突破|跌破|报|现价|上涨|下跌|current|tops?|drops?|rises?|falls?|hits?|above|below)/i.test(
+      text,
+    )
+  ) {
+    return false;
+  }
+  const numbers = [
+    ...text.matchAll(
+      /(?:\$|USD\s*)?(\d{1,3}(?:,\d{3})+(?:\.\d+)?|\d{2,5}(?:\.\d+)?)/gi,
+    ),
+  ]
+    .map((match) => Number(match[1].replace(/,/g, "")))
+    .filter((value) => Number.isFinite(value) && value > 0);
+
+  return marketContext.tickers.some((ticker) => {
+    const relevant =
+      (ticker.symbol === "XAU-SPOT" && /gold|黄金|xau/i.test(text)) ||
+      (ticker.symbol === "BTC-USD" && /\bBTC\b|bitcoin|比特币/i.test(text)) ||
+      (ticker.symbol === "ETH-USD" && /\bETH\b|ethereum|以太坊/i.test(text)) ||
+      (ticker.symbol === "SOL-USD" && /\bSOL\b|solana|索拉纳/i.test(text)) ||
+      (ticker.symbol === "601138.SS" && /601138|工业富联|foxconn/i.test(text));
+    if (!relevant || !Number.isFinite(ticker.currentPrice)) return false;
+    return numbers.some((price) => {
+      const ratio = price / ticker.currentPrice;
+      return (
+        ratio >= 0.5 &&
+        ratio <= 1.5 &&
+        Math.abs(price - ticker.currentPrice) / ticker.currentPrice > 0.015
+      );
+    });
+  });
+}
+
+async function callOnce(
+  userPayloadJson: string,
+  marketContextJson: string,
+): Promise<DailyReport> {
   // Claude Code CLI's built-in system prompt biases the model toward
   // conversational markdown output. Anchor the format expectation in the
   // user message (instruction recency wins) *and* explicitly demand every
@@ -219,6 +263,15 @@ async function callOnce(userPayloadJson: string): Promise<DailyReport> {
           "**Quote rule (important!)**: For any quotation INSIDE a JSON string, use single quotes ' or curly quotes '\" — **never** raw double quotes \", which break JSON parsing.",
           "No trailing commas.",
           "",
+          "Authoritative current-market snapshot (prices and generated_at):",
+          marketContextJson,
+          "",
+          "Market consistency rules:",
+          "- Current prices in the market snapshot override every price mentioned in candidate articles.",
+          "- Never describe an article's historical price as the current price or say the asset is currently above/below it when the snapshot differs materially.",
+          "- If a candidate contains an older price that conflicts with the snapshot, either omit it or explicitly label it as historical with its publication date.",
+          "- The hero headline must agree with the current-market snapshot.",
+          "",
           `Candidate news (JSON array, ${userPayloadJson.length} chars):`,
           userPayloadJson,
         ].join("\n")
@@ -237,6 +290,14 @@ async function callOnce(userPayloadJson: string): Promise<DailyReport> {
           "BriefItem 字段：title、url（必须从候选条目原样选取）、source、summary、importance(1-10)。",
           "**引号规则（重要！）**：JSON 字符串内的中文引用请使用**中文全角引号**「」或者 “”，**绝对不要**用英文双引号 \" —— 那会导致 JSON 解析失败。例：写 商务部回应「内卷」 而不是 商务部回应\"内卷\"。",
           "不要使用单引号、不要末尾多余逗号。",
+          "",
+          "权威实时行情快照（当前价格与生成时间）：",
+          marketContextJson,
+          "",
+          "行情一致性规则：",
+          "- 当前价格必须以行情快照为准，候选新闻中的价格不能覆盖快照。",
+          "- 不得把旧新闻中的历史价格写成“现价、站上、突破、仍处于”等当前状态；若与快照明显冲突，应删除或注明历史日期。",
+          "- 头条必须与实时行情快照一致。",
           "",
           "候选新闻（JSON 数组，共 " + userPayloadJson.length + " 字符）：",
           userPayloadJson,
@@ -286,6 +347,7 @@ async function callOnce(userPayloadJson: string): Promise<DailyReport> {
 
 export async function generateDailyReport(
   articles: ArticleInput[],
+  marketContext?: TradingSection | null,
 ): Promise<{ report: DailyReport; tokensUsed: number }> {
   const focusedArticles = filterFocusedArticles(articles);
   const grouped: Record<Category, ArticleInput[]> = {
@@ -298,8 +360,16 @@ export async function generateDailyReport(
   const compact = (Object.keys(grouped) as Category[]).flatMap((c) =>
     selectRoundRobin(grouped[c], PER_CATEGORY_LIMIT[c]),
   );
+  const freshCompact = compact.filter(
+    (article) => !hasStaleExplicitPrice(article, marketContext),
+  );
+  if (freshCompact.length !== compact.length) {
+    console.log(
+      `[daily] removed ${compact.length - freshCompact.length} stale price claim(s) before digest`,
+    );
+  }
 
-  if (compact.length === 0) {
+  if (freshCompact.length === 0) {
     return {
       report: {
         hero_headline: "工业富联、黄金与加密市场日报",
@@ -315,7 +385,7 @@ export async function generateDailyReport(
     };
   }
 
-  const userPayload = compact.map((a, i) => ({
+  const userPayload = freshCompact.map((a, i) => ({
     n: i + 1,
     title: a.title,
     url: a.url,
@@ -326,10 +396,25 @@ export async function generateDailyReport(
     published: a.publishedAt?.toISOString() ?? "",
   }));
   const userPayloadJson = JSON.stringify(userPayload);
+  const marketContextJson = JSON.stringify(
+    marketContext
+      ? {
+          generated_at: marketContext.generated_at,
+          tickers: marketContext.tickers.map((ticker) => ({
+            symbol: ticker.symbol,
+            displayName: ticker.displayName,
+            currentPrice: ticker.currentPrice,
+            currency: ticker.currency,
+            pct1Day: ticker.pct1Day,
+            pct5Day: ticker.pct5Day,
+          })),
+        }
+      : {},
+  );
 
   let report: DailyReport;
   try {
-    report = await callOnce(userPayloadJson);
+    report = await callOnce(userPayloadJson, marketContextJson);
   } catch (firstErr) {
     // One retry — claude CLI occasionally wraps in narration on the first
     // pass but obeys when the same prompt is repeated.
@@ -338,7 +423,7 @@ export async function generateDailyReport(
         firstErr instanceof Error ? firstErr.message : String(firstErr)
       }`,
     );
-    report = await callOnce(userPayloadJson);
+    report = await callOnce(userPayloadJson, marketContextJson);
   }
 
   // Max subscription has no per-call token meter — we expose 0 for schema
