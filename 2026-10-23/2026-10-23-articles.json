@@ -6,7 +6,7 @@
       "title": "沃什讲话压低美联储10月加息预期，黄金期货突破4200美元",
       "url": "https://finance.sina.com.cn/stock/usstock/c/2026-10-19/doc-inivtynk0813091.shtml",
       "excerpt": "截至北京时间10月19日12：51，现货黄金上涨0.4%，报每盎司4180.29美元；美国黄金期货上涨0.5%，报4200.92美元，突破4200美元关口。此前，市场因美国通胀 ... date: 3 days ago",
-      "publishedAt": "2026-10-19T16:14:35.986Z",
+      "publishedAt": "2026-10-19T16:20:39.712Z",
       "category": "finance",
       "publisher": "新浪财经",
       "meta": "AnySearch · 权威媒体",
@@ -20,7 +20,7 @@
       "publishedAt": "2026-10-20T07:00:00.000Z",
       "category": "tech",
       "source": "OpenAI News",
-      "summary": "Terminal X 借助 GPT-6.1 Sol，使其评估智能体依据 54 项标准评分表打分，对资深投资人判断的匹配度达 88.6%，并能多识别 25% 偏离基金授权范围的输出。"
+      "summary": "Terminal X借助GPT-6.1，其输出与资深投资人判断的一致率达88.6%；其Eval Agent按54项标准评分，对基金授权偏离的检出率提升25%。"
     },
     {
       "sourceId": "openai-news",
@@ -30,7 +30,7 @@
       "publishedAt": "2026-10-14T07:00:00.000Z",
       "category": "tech",
       "source": "OpenAI News",
-      "summary": "AI 实验室 Third Moment Research 使用 GPT-6 Astra、GPT-6.1 Sol、Codex 及网络安全工具 Daybreak，构建可连续运行 36 小时以上、规模达 1 万个智能体的系统，并称智能体可随使用而改进。"
+      "summary": "Third Moment Research利用GPT-6 Astra、GPT-6.1 Sol、Codex及网络安全工具Daybreak，构建可连续运行36小时以上、规模达1万个智能体的系统，并能随使用持续改进。"
     },
     {
       "sourceId": "openai-news",
@@ -40,7 +40,7 @@
       "publishedAt": "2026-10-09T07:00:00.000Z",
       "category": "tech",
       "source": "OpenAI News",
-      "summary": "Asana 在 Codex 中使用 GPT-6 Astra 改造其浏览器智能体，测试中模型成本降低 76 倍、速度提升 5 倍，以便向客户提供能力更强的模型。"
+      "summary": "Asana在Codex中使用GPT-6 Astra改造其浏览器智能体，测试中模型成本降低76倍、速度提升5倍，从而向客户提供能力更强的模型。"
     },
     {
       "sourceId": "tldr-ai",
@@ -50,7 +50,7 @@
       "publishedAt": "2026-09-30T00:00:00.000Z",
       "category": "tech",
       "source": "TLDR AI",
-      "summary": "TLDR AI 当日简报聚焦三项话题：OpenAI 的「Dots」项目、GPT-6.1 Sol 模型，以及「软件工厂」相关进展。"
+      "summary": "TLDR AI当日简讯涉及OpenAI「Dots」、GPT-6.1 Sol以及「软件工厂」等话题，摘要信息有限。"
     },
     {
       "sourceId": "smol-ai-news",
@@ -60,7 +60,7 @@
       "publishedAt": "2026-08-06T05:44:39.000Z",
       "category": "tech",
       "source": "Smol AI News",
-      "summary": "Meta 的 Muse Spark 1.2 快速跻身前沿梯队，在 Vals Index 排名前五，每次测试成本 0.69 美元，比 Kimi 便宜 3 倍、比 Fable、Opus 和 5.6 Sol 便宜 10 倍以上，并在五项 STEM 奥林匹克竞赛中达到金牌水平。"
+      "summary": "Meta的Muse Spark 1.2快速升至前沿水平，在Vals Index排名前五，测试成本为每项0.69美元，比Kimi便宜3倍，比Fable、Opus与5.6 Sol便宜10倍以上；在五项STEM奥赛中取得金牌级成绩。"
     },
     {
       "sourceId": "smol-ai-news",
@@ -70,7 +70,7 @@
       "publishedAt": "2026-07-30T05:44:39.000Z",
       "category": "tech",
       "source": "Smol AI News",
-      "summary": "OpenAI 大幅下调 GPT-5.6 Luna 价格 80%、Terra 降价 20%，并推出延迟最多降低 2.5 倍但价格翻倍的 Sol Fast 层级，使智能体工作流成本约改善 10 倍；ARC-AGI-3 相关讨论亦受关注。"
+      "summary": "OpenAI大幅下调价格，GPT-5.6 Luna降价80%、Terra降价20%，并推出延迟最多降低2.5倍、价格翻倍的Sol Fast档位，使智能体工作流成本改善约10倍；ARC-AGI-3相关争论持续。"
     },
     {
       "sourceId": "latent-space",
@@ -80,7 +80,7 @@
       "publishedAt": "2026-10-22T07:42:44.000Z",
       "category": "tech",
       "source": "Latent Space",
-      "summary": "OpenAI 的「Patch the Planet」计划参与发现 PHP 核心中的 PHP2Shell 漏洞，该漏洞据称影响约 70% 的网站；相关工作使用 GPT-5.6 Sol，并进行了为期两个月的协同响应。"
+      "summary": "OpenAI的「Patch the Planet」计划是发现核心PHP中PHP2Shell漏洞的两方之一，该漏洞影响约70%的网站，发现过程使用GPT-5.6 Sol，双方经两个月协调响应。"
     },
     {
       "sourceId": "latent-space",
@@ -90,7 +90,7 @@
       "publishedAt": "2026-10-20T19:31:57.000Z",
       "category": "tech",
       "source": "Latent Space",
-      "summary": "SF Compute 的 Evan Conrad 在访谈中介绍「可编程数据中心」构想：从 GPU 交易转向实物交割、独立市场与可编程算力的演进路径。"
+      "summary": "SF Compute的Evan Conrad介绍「可编程数据中心」构想：从GPU交易走向实物交割、独立市场与可编程算力。"
     },
     {
       "sourceId": "bloomberg-markets",
@@ -100,7 +100,7 @@
       "publishedAt": "2026-10-22T11:29:09.000Z",
       "category": "finance",
       "source": "Bloomberg Markets",
-      "summary": "美股周四下跌，中东冲突担忧升温推高油价期货并加剧通胀担忧，距离美国中期选举不足两周；Meta股价因投资者消化其业绩而下挫。"
+      "summary": "美股周四走低：中东冲突担忧升温推高油价，加剧通胀忧虑；距离美国中期选举不到两周，Meta因财报遭投资者抛售而重挫。"
     },
     {
       "sourceId": "bloomberg-markets",
@@ -110,7 +110,7 @@
       "publishedAt": "2026-10-21T23:56:16.000Z",
       "category": "finance",
       "source": "Bloomberg Markets",
-      "summary": "金价跌至两个多月来最低，中东局势升级推升油价，在美联储政策会议前加剧通胀担忧，股市抛售进一步放大市场波动。"
+      "summary": "金价跌至两个多月来最低位：中东局势升级推高油价，在美联储议息会议前加剧通胀担忧，股市抛售也放大了市场波动。"
     },
     {
       "sourceId": "bloomberg-markets",
@@ -120,7 +120,7 @@
       "publishedAt": "2026-10-22T11:06:46.000Z",
       "category": "finance",
       "source": "Bloomberg Markets",
-      "summary": "黑石集团第三季度利润同比下降9.2%，高利率抑制交易撮合活动，当季投放资金规模为今年最低。"
+      "summary": "黑石集团第三季度利润下降9.2%。利率走高抑制了交易活动，当季投放的资金规模降至今年最低水平。"
     },
     {
       "sourceId": "bloomberg-markets",
@@ -130,7 +130,7 @@
       "publishedAt": "2026-10-22T12:16:20.000Z",
       "category": "finance",
       "source": "Bloomberg Markets",
-      "summary": "挪威银行业游说机构称，诈骗者诱导部分挪威人购买黄金并将其存放在森林中，此类投资诈骗案件正在增多。"
+      "summary": "挪威银行业游说机构称，诈骗者诱使部分挪威人购买黄金，并将黄金留在森林中；这类投资欺诈案件正在增多。"
     },
     {
       "sourceId": "wsj-markets",
@@ -158,7 +158,7 @@
       "publishedAt": "2026-10-22T15:00:03.000Z",
       "category": "finance",
       "source": "Financial Times",
-      "summary": "美国官员正鼓励借款人将以比特币等加密资产持仓作为住房抵押贷款的担保品，引发对加密资产抵押房贷风险的讨论。"
+      "summary": "美国监管官员正鼓励购房者以所持加密资产作为住房贷款的抵押品，这一做法引发市场对加密资产抵押贷款风险的关注。"
     },
     {
       "sourceId": "bbc-business",
@@ -168,7 +168,7 @@
       "publishedAt": "2026-10-21T10:20:15.000Z",
       "category": "finance",
       "source": "BBC Business",
-      "summary": "BBC记者Faisal Islam分析称，周三公布的经济数据凸显财政大臣John Healey在敲定预算最后细节时面临的政策约束。"
+      "summary": "BBC记者Faisal Islam指出，周三公布的通胀与政府借贷数据，凸显财政大臣John Healey在敲定预算案时面临的政策约束。"
     },
     {
       "sourceId": "bbc-business",
@@ -178,7 +178,7 @@
       "publishedAt": "2026-10-21T10:16:17.000Z",
       "category": "finance",
       "source": "BBC Business",
-      "summary": "英国国家统计局数据显示，截至9月的一年中，英国通胀率由3.1%升至3.5%，政府借贷规模同为一年来最高，预算案将于下周公布。"
+      "summary": "英国国家统计局数据显示，截至9月的年度通胀率由3.1%升至3.5%，政府借贷同期也升至一年来最高，预算案将于下周公布。"
     },
     {
       "sourceId": "bbc-business",
@@ -188,17 +188,7 @@
       "publishedAt": "2026-10-21T08:35:47.000Z",
       "category": "finance",
       "source": "BBC Business",
-      "summary": "英国9月通胀率上升，主要受汽油和柴油价格上涨推动。"
-    },
-    {
-      "sourceId": "economist-finance",
-      "title": "Sam Bankman-Fried says he has paid his debts",
-      "url": "https://www.economist.com/finance-and-economics/2026/10/22/sam-bankman-fried-says-he-has-paid-his-debts",
-      "excerpt": "The crypto tycoon speaks with The Economist from prison in California",
-      "publishedAt": "2026-10-22T15:51:39.000Z",
-      "category": "finance",
-      "source": "The Economist Finance",
-      "summary": "加密货币企业家、FTX创始人Sam Bankman-Fried在加利福尼亚州监狱中接受《经济学人》采访，称自己已偿还债务。"
+      "summary": "英国9月通胀上升，主要由汽油和柴油价格上涨推动。"
     },
     {
       "sourceId": "economist-finance",
@@ -661,7 +651,7 @@
       "publishedAt": "2026-10-20T13:25:16.000Z",
       "category": "finance",
       "source": "美国证监会 SEC（官方）",
-      "summary": "美国证监会（SEC）与法国金融市场管理局（AMF）宣布签署监管谅解备忘录，旨在便利双方在投资顾问和投资服务提供商领域的磋商与信息共享。"
+      "summary": "美国证交会（SEC）与法国金融市场管理局（AMF）宣布签署监管合作谅解备忘录，旨在便利双方在投资顾问和投资服务领域的磋商与信息共享。"
     },
     {
       "sourceId": "sec-press",
@@ -670,7 +660,8 @@
       "excerpt": "The U.S. Securities and Exchange Commission (SEC) and the Financial Services Agency of Japan (FSA) convened the Autumn SEC-FSA Financial Regulatory Dialogue in Tokyo on Oct. 19, 2026.The SEC–FSA Dialogue builds upon longstanding efforts between the two…",
       "publishedAt": "2026-10-20T12:51:00.000Z",
       "category": "finance",
-      "source": "美国证监会 SEC（官方）"
+      "source": "美国证监会 SEC（官方）",
+      "summary": "美国证交会与日本金融厅于2026年10月19日在东京举行秋季金融监管对话，延续双方长期合作。"
     },
     {
       "sourceId": "sec-press",
@@ -887,7 +878,7 @@
       "publishedAt": "2026-10-21T08:00:00.000Z",
       "category": "finance",
       "source": "欧洲央行（官方）",
-      "summary": "欧洲央行执委会成员Piero Cipollone发表讲话，主题为「Pontes」与「Appia」两个项目，称其可为银行释放机遇。"
+      "summary": "欧洲央行官员Piero Cipollone发表讲话，题为「Pontes与Appia：为银行释放机遇」，原文未提供更多内容细节。"
     },
     {
       "sourceId": "ecb-press",
@@ -897,7 +888,7 @@
       "publishedAt": "2026-10-21T04:15:00.000Z",
       "category": "finance",
       "source": "欧洲央行（官方）",
-      "summary": "欧洲央行执委会成员Philip R. Lane发表讲话，主题为欧元流动性额度与国际货币体系。"
+      "summary": "欧洲央行官员Philip R. Lane就欧元流动性额度与国际货币体系发表讲话，原文未提供更多内容细节。"
     },
     {
       "sourceId": "ecb-press",
