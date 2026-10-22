@@ -29,6 +29,7 @@ export interface WatchlistPick {
 }
 
 export interface TradingCommentary {
+  daily_view: string;
   market_overview: string;
   watchlist: WatchlistPick[];
   risk_caveat: string;
@@ -46,13 +47,15 @@ const SYSTEM_PROMPT_ZH = `你是一名专业、克制、中性的中文技术指
 1. 使用专业术语描述指标读数：金叉/死叉/MACD 红柱/绿柱/超买/超卖/突破/支撑/动量/趋势/背离 等。
 2. 所有结论必须**基于输入的实际数字**（价格、SMA、RSI、MACD、信号、近期 % 变化等），不允许凭空概括。
 3. watchlist 必须**为输入中的每一个标的分別输出一条记录**，stance 必须反映真实技术面，不得为了平衡而伪造方向。
-4. market_overview 只覆盖三个重点：工业富联、黄金（期货与 ETF）、加密（BTC / ETH / SOL）。
+4. market_overview 只覆盖三个重点：工业富联、国际现货黄金、加密（BTC / ETH / SOL）。
 5. risk_caveat 必须包含「过去走势不代表未来表现」与「仅供技术指标解读参考」的明确声明。
+6. daily_view 是你对当日行情的专业结论，控制在 40-80 字：先给偏强/偏弱/震荡判断，再点明最关键矛盾与接下来需要验证的信号，语言精炼，不写目标价，不构成投资建议。
 
 输入：JSON 数组，每个元素是某 ticker 的技术分析对象，字段包括 symbol、displayName、group、currentPrice、pct1Day、pct5Day、pct52WeekHigh、pct52WeekLow、sma20/sma50/sma200、rsi14、macd/macdSignal/macdHistogram、trend、rsiState、signals。
 
 输出严格 JSON 对象（不要 markdown、不要任何前后缀），三个字段都**必填且非空**：
 {
+  "daily_view": "<40-80 字专业且精炼的当日行情观点>",
   "market_overview": "<300-400 字段落，不能省略>",
   "watchlist": [
     { "symbol": "<必须从输入精确复制>", "display_name": "<中文+(英文代码) 或 仅中文>", "stance": "偏上行" | "偏下行" | "中性", "rationale": "<80-150 字，必须引用具体技术指标数字>" },
@@ -62,7 +65,7 @@ const SYSTEM_PROMPT_ZH = `你是一名专业、克制、中性的中文技术指
 }
 
 **关于 watchlist（这是历史上最容易出错的字段，请严格执行）**：
-- watchlist **必须正好包含输入中的全部 6 个 ticker，每个 symbol 恰好一次**。
+- watchlist **必须正好包含输入中的全部 5 个 ticker，每个 symbol 恰好一次**。
 - 少任何一个 ticker 都是**输出格式错误**，下游会自动拒绝并重新调用你，浪费一次配额。
 - "stance" 是当前技术 setup 的方向标签——纯描述、纯客观——不是涨跌预测，不是行动建议。你只是在说"这只标的当前的指标状态偏上行 / 偏下行 / 中性"。
 - 工业富联、黄金、BTC、ETH、SOL 都是用户明确要求跟踪的对象，不能省略；行情平静时也应逐项如实描述并标注「中性」。
@@ -78,13 +81,15 @@ const SYSTEM_PROMPT_EN = `You are a professional, restrained, neutral English-la
 1. Use technical terminology to describe readings: golden-cross / death-cross / MACD bullish/bearish histogram / overbought / oversold / breakout / support / momentum / trend / divergence, etc.
 2. Every conclusion MUST be **grounded in actual input numbers** (price, SMA, RSI, MACD, signals, recent % moves) — no generalizing without data.
 3. The watchlist MUST include **every supplied ticker exactly once**, with stances reflecting the real technical setup rather than forced balance.
-4. market_overview must cover only the three focus areas: Industrial Fulian, gold (futures and ETF), and crypto (BTC / ETH / SOL).
+4. market_overview must cover only the three focus areas: Industrial Fulian, international spot gold, and crypto (BTC / ETH / SOL).
 5. risk_caveat MUST explicitly include "past performance does not guarantee future results" and "for technical-indicator interpretation only".
+6. daily_view is your concise professional conclusion in 40-80 words: state the current bullish/bearish/range-bound setup, the key tension, and the next confirming signal. No price target and no investment advice.
 
 Input: a JSON array of ticker analysis objects with fields symbol, displayName, group, currentPrice, pct1Day, pct5Day, pct52WeekHigh, pct52WeekLow, sma20/sma50/sma200, rsi14, macd/macdSignal/macdHistogram, trend, rsiState, signals.
 
 Output STRICTLY a JSON object (no markdown, no prefix/suffix). All three fields must be **populated and non-empty**:
 {
+  "daily_view": "<40-80 word concise professional market view>",
   "market_overview": "<300-400 word paragraph; do not skip>",
   "watchlist": [
     { "symbol": "<copied exactly from input>", "display_name": "<readable name>", "stance": "Bullish" | "Bearish" | "Neutral", "rationale": "<80-150 words; must cite specific indicator numbers>" },
@@ -94,10 +99,10 @@ Output STRICTLY a JSON object (no markdown, no prefix/suffix). All three fields 
 }
 
 **About watchlist (historically the most error-prone field — execute strictly)**:
-- watchlist MUST contain **all six supplied tickers, each symbol exactly once**.
+- watchlist MUST contain **all five supplied tickers, each symbol exactly once**.
 - Omitting any ticker is **a format error** — downstream auto-rejects and re-invokes you, wasting a quota call.
 - "stance" is a label for the **current technical setup** — pure description, pure observation — not a price prediction or an action recommendation. You are merely saying "this ticker's current indicator state is Bullish / Bearish / Neutral".
-- Industrial Fulian, gold, BTC, ETH, and SOL are explicit user requirements and may not be omitted. Describe all six even when the market is quiet.
+- Industrial Fulian, spot gold, BTC, ETH, and SOL are explicit user requirements and may not be omitted. Describe all five even when the market is quiet.
 - Under no circumstances may you return an empty array. An empty watchlist is not the safer choice — it is wrong.
 
 **Quote rule (important!)**: For any quotation INSIDE a JSON string, use single quotes ' or curly quotes '" — **never** raw double-quotes, which break JSON parsing.
@@ -166,7 +171,7 @@ export async function generateTradingCommentary(
       ? [
           `**Output language: ENGLISH ONLY.** Every string value in the JSON — market_overview, every pick's display_name and rationale, risk_caveat — MUST be written entirely in English. Do not use any Chinese characters anywhere in the output. Even if some input ticker names appear in Chinese (e.g. "黄金期货"), translate them to English in the display_name field (e.g. "Gold Futures").`,
           "",
-          `**Hard output constraint**: the response MUST be a single valid JSON object (starts with \`{\`, ends with \`}\`, no markdown, no prefix/suffix). **The watchlist field MUST contain one complete WatchlistPick object for every supplied ticker (six total)**, each shaped like \`{ "symbol": "...", "display_name": "<English name>", "stance": "Bullish"|"Bearish"|"Neutral", "rationale": "80-150 word English summary citing concrete indicator numbers" }\`. **DO NOT write the watchlist as a string array of ticker symbols** and do not omit any requested asset.`,
+          `**Hard output constraint**: the response MUST be a single valid JSON object (starts with \`{\`, ends with \`}\`, no markdown, no prefix/suffix). It MUST include a non-empty \`daily_view\` of 40-80 English words with the concise market conclusion. **The watchlist field MUST contain one complete WatchlistPick object for every supplied ticker (five total)**, each shaped like \`{ "symbol": "...", "display_name": "<English name>", "stance": "Bullish"|"Bearish"|"Neutral", "rationale": "80-150 word English summary citing concrete indicator numbers" }\`. **DO NOT write the watchlist as a string array of ticker symbols** and do not omit any requested asset.`,
           "",
           contextLines.length > 0
             ? `Auxiliary context (**you MUST reference at least one of these in market_overview**):\n${contextLines.map((l) => `  - ${l}`).join("\n")}\n`
@@ -174,12 +179,12 @@ export async function generateTradingCommentary(
           `Candidate assets (${payload.length} entries, JSON array):`,
           JSON.stringify(payload),
           "",
-          `Output a JSON object per the system-prompt schema. watchlist must contain all six complete WatchlistPick objects (symbol / display_name / stance / rationale fields). Omitting a ticker or using a string array is forbidden.`,
+          `Output a JSON object per the system-prompt schema. Include daily_view. watchlist must contain all five complete WatchlistPick objects (symbol / display_name / stance / rationale fields). Omitting a ticker or using a string array is forbidden.`,
         ]
           .filter(Boolean)
           .join("\n")
       : [
-          `**输出硬约束**：响应必须是单一合法 JSON 对象（以 \`{\` 开头以 \`}\` 结尾，不要 markdown、不要前后缀）。**watchlist 字段必须为输入中的全部 6 个标的各输出一个完整对象**，每个对象形如 \`{ "symbol": "...", "display_name": "...", "stance": "偏上行"|"偏下行"|"中性", "rationale": "80-150 字中文，引用具体指标数字" }\`。**禁止把 watchlist 写成 ticker symbol 字符串数组，也禁止遗漏工业富联、黄金、BTC、ETH、SOL。**`,
+          `**输出硬约束**：响应必须是单一合法 JSON 对象（以 \`{\` 开头以 \`}\` 结尾，不要 markdown、不要前后缀）。必须包含非空的 \`daily_view\`（40-80 字，直接给出当日行情结论、核心矛盾和下一步验证信号）。**watchlist 字段必须为输入中的全部 5 个标的各输出一个完整对象**，每个对象形如 \`{ "symbol": "...", "display_name": "...", "stance": "偏上行"|"偏下行"|"中性", "rationale": "80-150 字中文，引用具体指标数字" }\`。**禁止把 watchlist 写成 ticker symbol 字符串数组，也禁止遗漏工业富联、国际现货黄金、BTC、ETH、SOL。**`,
           "",
           contextLines.length > 0
             ? `辅助背景（**必须在 market_overview 里至少引用一项**）：\n${contextLines.map((l) => `  - ${l}`).join("\n")}\n`
@@ -187,12 +192,16 @@ export async function generateTradingCommentary(
           `候选资产（共 ${payload.length} 个，JSON 数组）：`,
           JSON.stringify(payload),
           "",
-          `请按 system prompt 的 schema 输出 JSON 对象。watchlist 必须覆盖全部 6 个标的，并为每个标的输出完整对象（含 symbol / display_name / stance / rationale 四个字段），绝不允许遗漏或使用字符串数组。`,
+          `请按 system prompt 的 schema 输出 JSON 对象。必须提供精炼的 daily_view。watchlist 必须覆盖全部 5 个标的，并为每个标的输出完整对象（含 symbol / display_name / stance / rationale 四个字段），绝不允许遗漏或使用字符串数组。`,
         ]
           .filter(Boolean)
           .join("\n");
 
   const fallback: TradingCommentary = {
+    daily_view:
+      REPORT_LOCALE === "en"
+        ? "The focus assets remain mixed; wait for price confirmation rather than extrapolating one session's move."
+        : "目标资产走势分化，当前更适合等待价格与动能共同确认，不宜根据单日波动外推趋势。",
     market_overview: "",
     watchlist: [],
     risk_caveat:
@@ -209,8 +218,8 @@ export async function generateTradingCommentary(
   const MAX_ATTEMPTS = 3;
   const RETRY_HINT =
     REPORT_LOCALE === "en"
-      ? `\n\n⚠️ Important: the previous attempt had an invalid watchlist. This retry MUST include all six supplied assets exactly once, each with its own rationale.`
-      : `\n\n⚠️ 重要：上一次 watchlist 格式错误。本次必须覆盖全部 6 个标的且每个只出现一次，每个标的都要有独立解读。`;
+      ? `\n\n⚠️ Important: the previous attempt had an invalid watchlist. This retry MUST include all five supplied assets exactly once, each with its own rationale.`
+      : `\n\n⚠️ 重要：上一次 watchlist 格式错误。本次必须覆盖全部 5 个标的且每个只出现一次，每个标的都要有独立解读。`;
 
   for (let attempt = 1; attempt <= MAX_ATTEMPTS; attempt++) {
     const promptForAttempt = attempt === 1 ? userPrompt : userPrompt + RETRY_HINT;
@@ -272,7 +281,11 @@ async function callOnce(
   // string array when over-anchored on the ticker-count wording
   // wording) all trigger retry.
   const overview = parsed.market_overview ?? "";
+  const dailyView = parsed.daily_view ?? "";
   const picks = parsed.watchlist ?? [];
+  if (dailyView.length < 20) {
+    throw new Error(`daily_view too short (${dailyView.length} chars)`);
+  }
   if (overview.length < 100) {
     throw new Error(`market_overview too short (${overview.length} chars)`);
   }
@@ -296,6 +309,7 @@ async function callOnce(
     );
   }
   return {
+    daily_view: dailyView,
     market_overview: overview,
     watchlist: picks as WatchlistPick[],
     risk_caveat: parsed.risk_caveat ?? fallback.risk_caveat,

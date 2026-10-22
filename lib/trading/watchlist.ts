@@ -52,15 +52,9 @@ export const WATCHLIST: TickerDef[] = [
     group: "china-equity",
   },
   {
-    symbol: "GC=F",
-    displayName: "COMEX 黄金期货",
-    displayNameEn: "COMEX Gold Futures",
-    group: "commodity-fx",
-  },
-  {
-    symbol: "GLD",
-    displayName: "黄金 ETF (GLD)",
-    displayNameEn: "SPDR Gold Shares (GLD)",
+    symbol: "XAU-SPOT",
+    displayName: "国际现货黄金",
+    displayNameEn: "International Spot Gold",
     group: "commodity-fx",
   },
   {

@@ -50,6 +50,11 @@ interface YahooChartResp {
   };
 }
 
+interface GoldApiResp {
+  price?: number;
+  updatedAt?: string;
+}
+
 /**
  * Fetch daily OHLCV + meta from Yahoo Finance public chart API.
  * No key required. Works for stocks, ETFs, indices, crypto (BTC-USD),
@@ -60,7 +65,11 @@ interface YahooChartResp {
 export async function fetchTickerData(
   symbol: string,
 ): Promise<TickerRawData | null> {
-  const url = `https://query2.finance.yahoo.com/v8/finance/chart/${encodeURIComponent(symbol)}?range=1y&interval=1d`;
+  // Yahoo has no dependable XAU/USD history endpoint. Use liquid COMEX gold
+  // candles for the technical structure and replace the displayed quote with
+  // the current international spot price from the dedicated gold API.
+  const yahooSymbol = symbol === "XAU-SPOT" ? "GC=F" : symbol;
+  const url = `https://query2.finance.yahoo.com/v8/finance/chart/${encodeURIComponent(yahooSymbol)}?range=1y&interval=1d`;
   const res = await fetch(url, { headers: HEADERS });
   if (!res.ok) return null;
   const data = (await res.json()) as YahooChartResp;
@@ -87,8 +96,8 @@ export async function fetchTickerData(
     });
   }
 
-  return {
-    symbol: r.meta.symbol ?? symbol,
+  const result: TickerRawData = {
+    symbol: symbol === "XAU-SPOT" ? symbol : r.meta.symbol ?? symbol,
     currency: r.meta.currency ?? "",
     exchangeName: r.meta.exchangeName ?? "",
     regularMarketPrice:
@@ -97,4 +106,23 @@ export async function fetchTickerData(
     fiftyTwoWeekLow: r.meta.fiftyTwoWeekLow ?? 0,
     candles,
   };
+
+  if (symbol === "XAU-SPOT") {
+    const spotRes = await fetch("https://api.gold-api.com/price/XAU", {
+      headers: HEADERS,
+    });
+    if (!spotRes.ok) return null;
+    const spot = (await spotRes.json()) as GoldApiResp;
+    if (typeof spot.price !== "number" || !Number.isFinite(spot.price)) {
+      return null;
+    }
+    return {
+      ...result,
+      currency: "USD",
+      exchangeName: "SPOT",
+      regularMarketPrice: spot.price,
+    };
+  }
+
+  return result;
 }

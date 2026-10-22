@@ -71,11 +71,12 @@ data = json.loads(data_path.read_text(encoding="utf-8")) if data_path.exists() e
 
 headline = str(data.get("hero_headline") or "今日全球简报")
 overview = str(data.get("daily_overview") or "今日简报已生成，点击文末链接查看完整内容。")
+daily_view = str(data.get("trading", {}).get("daily_view") or "").strip()
 report_url = f"{report_home}/{report_date}/{report_date}.html"
 
 group_titles = {
-    "china-equity": "A股 / 中概 / 港股",
-    "commodity-fx": "黄金 / 外汇",
+    "china-equity": "工业富联",
+    "commodity-fx": "国际现货黄金",
     "crypto": "加密货币",
 }
 group_order = ["china-equity", "commodity-fx", "crypto"]
@@ -201,6 +202,16 @@ email_html = f"""<!doctype html>
             <p style="margin:0;font-size:15px;line-height:1.85;color:#334155;">{escape(overview)}</p>
           </td>
         </tr>
+        {
+          f'''<tr>
+          <td style="padding:2px 30px 20px;">
+            <div style="padding:18px 20px;background:#fff8e7;border:1px solid #f0d38a;border-left:4px solid #c58a12;border-radius:8px;">
+              <div style="font-size:12px;font-weight:700;letter-spacing:1px;color:#8a5a08;margin-bottom:6px;">今日专业观点</div>
+              <div style="font-size:15px;line-height:1.8;color:#3f3f46;">{escape(daily_view)}</div>
+            </div>
+          </td>
+        </tr>''' if daily_view else ""
+        }
         <tr>
           <td style="padding:4px 30px 10px;">
             <h2 style="margin:0 0 16px;font-size:19px;color:#0f172a;">重点行情</h2>
@@ -242,8 +253,10 @@ plain_lines = [
     "",
     overview,
     "",
-    "重点行情：",
 ]
+if daily_view:
+    plain_lines.extend(["今日专业观点：", daily_view, ""])
+plain_lines.append("重点行情：")
 for item in tickers:
     if item.get("group") not in group_titles:
         continue

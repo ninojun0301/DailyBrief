@@ -48,6 +48,7 @@ const TEXTS_ZH = {
   summaryLabelNews: "中文摘要",
   summaryLabelIntro: "中文介绍",
   tradingMarketOverview: "市场总览",
+  tradingDailyView: "今日专业观点",
   tradingTodayFocus: "今日关注",
   tradingAllAssets: "全部资产",
   tradingRiskCaveat: "风险提示",
@@ -98,6 +99,7 @@ const TEXTS_EN: typeof TEXTS_ZH = {
   summaryLabelNews: "Summary",
   summaryLabelIntro: "Summary",
   tradingMarketOverview: "Market Overview",
+  tradingDailyView: "Professional View",
   tradingTodayFocus: "Today's Focus",
   tradingAllAssets: "All Assets",
   tradingRiskCaveat: "Risk Disclaimer",
@@ -1467,9 +1469,19 @@ function renderTradingPanel(trading: TradingSection): string {
   }).join("");
 
   const overview = escapeHtml(trading.market_overview ?? "");
+  const dailyView = escapeHtml(trading.daily_view ?? "");
   const risk = escapeHtml(trading.risk_caveat ?? "");
 
-  return `<section class="trading-overview-card">
+  return `${
+    dailyView
+      ? `<section class="trading-overview-card">
+    <span class="eyebrow">${STR.tradingDailyView}</span>
+    <p class="overview-text trading-overview-text">${dailyView}</p>
+  </section>`
+      : ""
+  }
+
+  <section class="trading-overview-card">
     <span class="eyebrow">${STR.tradingMarketOverview}</span>
     <p class="overview-text trading-overview-text">${overview}</p>
   </section>
