@@ -49,6 +49,7 @@ const TEXTS_ZH = {
   summaryLabelIntro: "中文介绍",
   tradingMarketOverview: "市场总览",
   tradingDailyView: "今日专业观点",
+  tradingActionAssessment: "操作判断",
   tradingTodayFocus: "今日关注",
   tradingAllAssets: "全部资产",
   tradingRiskCaveat: "风险提示",
@@ -100,6 +101,7 @@ const TEXTS_EN: typeof TEXTS_ZH = {
   summaryLabelIntro: "Summary",
   tradingMarketOverview: "Market Overview",
   tradingDailyView: "Professional View",
+  tradingActionAssessment: "Action Assessment",
   tradingTodayFocus: "Today's Focus",
   tradingAllAssets: "All Assets",
   tradingRiskCaveat: "Risk Disclaimer",
@@ -1470,6 +1472,10 @@ function renderTradingPanel(trading: TradingSection): string {
 
   const overview = escapeHtml(trading.market_overview ?? "");
   const dailyView = escapeHtml(trading.daily_view ?? "");
+  const action = trading.action_assessment;
+  const actionDip = escapeHtml(action?.dip_buying ?? "");
+  const actionSell = escapeHtml(action?.selling ?? "");
+  const actionSummary = escapeHtml(action?.summary ?? "");
   const risk = escapeHtml(trading.risk_caveat ?? "");
 
   return `${
@@ -1477,6 +1483,16 @@ function renderTradingPanel(trading: TradingSection): string {
       ? `<section class="trading-overview-card">
     <span class="eyebrow">${STR.tradingDailyView}</span>
     <p class="overview-text trading-overview-text">${dailyView}</p>
+  </section>`
+      : ""
+  }
+
+  ${
+    actionSummary
+      ? `<section class="trading-overview-card">
+    <span class="eyebrow">${STR.tradingActionAssessment}</span>
+    <p class="overview-text trading-overview-text"><strong>抄底：${actionDip}</strong> · <strong>卖出：${actionSell}</strong></p>
+    <p class="overview-text trading-overview-text">${actionSummary}</p>
   </section>`
       : ""
   }

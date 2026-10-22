@@ -28,8 +28,15 @@ export interface WatchlistPick {
   rationale: string;
 }
 
+export interface ActionAssessment {
+  dip_buying: "不适合抄底" | "仅小仓试探" | "可分批关注";
+  selling: "暂不卖出" | "部分减仓" | "优先控制风险";
+  summary: string;
+}
+
 export interface TradingCommentary {
   daily_view: string;
+  action_assessment: ActionAssessment;
   market_overview: string;
   watchlist: WatchlistPick[];
   risk_caveat: string;
@@ -39,9 +46,14 @@ export interface TradingCommentaryInput {
   tickers: TickerAnalysis[];
   cryptoFearGreed?: FearGreedSnapshot;
   cryptoGlobal?: CryptoGlobalStats;
+  focusedNews?: Array<{
+    title: string;
+    source: string;
+    summary?: string;
+  }>;
 }
 
-const SYSTEM_PROMPT_ZH = `你是一名专业、克制、中性的中文技术指标解读员。你的任务是基于公开行情数据计算出的技术指标，写一份**客观的技术状态描述报告**——你不是投顾，不预测涨跌，只复述指标读数和走势形态。任何使用本报告的读者都已经知道并接受这一定位。
+const SYSTEM_PROMPT_ZH = `你是一名专业、克制、中性的中文市场分析员。你的任务是把公开行情指标与当日权威资讯结合，写一份**条件式的市场与风险判断报告**。你不提供个性化投顾服务，也不承诺或确定预测涨跌，但必须基于证据明确回答「是否适合抄底」和「已有仓位是否需要减仓」。
 
 **严格规则**：
 1. 使用专业术语描述指标读数：金叉/死叉/MACD 红柱/绿柱/超买/超卖/突破/支撑/动量/趋势/背离 等。
@@ -50,12 +62,18 @@ const SYSTEM_PROMPT_ZH = `你是一名专业、克制、中性的中文技术指
 4. market_overview 只覆盖三个重点：工业富联、国际现货黄金、加密（BTC / ETH / SOL）。
 5. risk_caveat 必须包含「过去走势不代表未来表现」与「仅供技术指标解读参考」的明确声明。
 6. daily_view 是你对当日行情的专业结论，控制在 40-80 字：先给偏强/偏弱/震荡判断，再点明最关键矛盾与接下来需要验证的信号，语言精炼，不写目标价，不构成投资建议。
+7. action_assessment 必须直接回答两个问题：一是「现在是否适合抄底」，二是「已有仓位是否需要卖出/减仓」。判断要同时引用当日新闻、价格相对均线、RSI/MACD 与关键价位，并给出具体的验证或失效条件；必须区分空仓者与已有仓位者，并在 summary 中点名工业富联、黄金、BTC、ETH、SOL 之间的关键差异，不能只给笼统结论。
 
 输入：JSON 数组，每个元素是某 ticker 的技术分析对象，字段包括 symbol、displayName、group、currentPrice、pct1Day、pct5Day、pct52WeekHigh、pct52WeekLow、sma20/sma50/sma200、rsi14、macd/macdSignal/macdHistogram、trend、rsiState、signals。
 
-输出严格 JSON 对象（不要 markdown、不要任何前后缀），三个字段都**必填且非空**：
+输出严格 JSON 对象（不要 markdown、不要任何前后缀），所有字段都**必填且非空**：
 {
   "daily_view": "<40-80 字专业且精炼的当日行情观点>",
+  "action_assessment": {
+    "dip_buying": "不适合抄底" | "仅小仓试探" | "可分批关注",
+    "selling": "暂不卖出" | "部分减仓" | "优先控制风险",
+    "summary": "<80-180 字，点名目标标的，明确空仓与已有仓位分别怎么做、触发条件和风险点>"
+  },
   "market_overview": "<300-400 字段落，不能省略>",
   "watchlist": [
     { "symbol": "<必须从输入精确复制>", "display_name": "<中文+(英文代码) 或 仅中文>", "stance": "偏上行" | "偏下行" | "中性", "rationale": "<80-150 字，必须引用具体技术指标数字>" },
@@ -73,9 +91,9 @@ const SYSTEM_PROMPT_ZH = `你是一名专业、克制、中性的中文技术指
 
 **引号规则（重要！）**：JSON 字符串内的中文引用一律使用全角引号「」或""，**绝不**使用英文双引号——否则 JSON 解析失败。
 
-**输出顺序建议**：在你的回复里先生成 watchlist 数组（最重要、最容易遗漏），再生成 market_overview，最后 risk_caveat。这样即使输出被截断也保留了 picks。`;
+**输出顺序建议**：先给出 daily_view 和 action_assessment，再生成 watchlist，最后生成 market_overview 与 risk_caveat。`;
 
-const SYSTEM_PROMPT_EN = `You are a professional, restrained, neutral English-language technical-indicator interpreter. Your job is to write an **objective technical-state report** based on the public-market data's computed indicators — you are NOT an investment advisor, you do not predict price direction, you only describe indicator readings and chart structure. Any reader of this report already knows and accepts this framing.
+const SYSTEM_PROMPT_EN = `You are a professional, restrained market analyst. Combine computed market indicators with the supplied authoritative news to produce a **conditional market and risk assessment**. You do not provide personalized advisory services or claim certainty, but you must answer whether dip-buying is appropriate and whether an existing position should be reduced.
 
 **Strict rules**:
 1. Use technical terminology to describe readings: golden-cross / death-cross / MACD bullish/bearish histogram / overbought / oversold / breakout / support / momentum / trend / divergence, etc.
@@ -84,12 +102,18 @@ const SYSTEM_PROMPT_EN = `You are a professional, restrained, neutral English-la
 4. market_overview must cover only the three focus areas: Industrial Fulian, international spot gold, and crypto (BTC / ETH / SOL).
 5. risk_caveat MUST explicitly include "past performance does not guarantee future results" and "for technical-indicator interpretation only".
 6. daily_view is your concise professional conclusion in 40-80 words: state the current bullish/bearish/range-bound setup, the key tension, and the next confirming signal. No price target and no investment advice.
+7. action_assessment must answer two questions directly: whether dip-buying is appropriate now, and whether existing positions need selling/reduction. Use the supplied news, moving averages, RSI/MACD, and key price levels; give explicit confirmation and invalidation conditions, distinguish a new entry from an existing position, and name the key differences among Industrial Fulian, gold, BTC, ETH, and SOL.
 
 Input: a JSON array of ticker analysis objects with fields symbol, displayName, group, currentPrice, pct1Day, pct5Day, pct52WeekHigh, pct52WeekLow, sma20/sma50/sma200, rsi14, macd/macdSignal/macdHistogram, trend, rsiState, signals.
 
-Output STRICTLY a JSON object (no markdown, no prefix/suffix). All three fields must be **populated and non-empty**:
+Output STRICTLY a JSON object (no markdown, no prefix/suffix). All fields must be **populated and non-empty**:
 {
   "daily_view": "<40-80 word concise professional market view>",
+  "action_assessment": {
+    "dip_buying": "avoid dip-buying" | "small probe only" | "staged entry acceptable",
+    "selling": "hold" | "reduce partially" | "prioritize risk control",
+    "summary": "<80-180 words naming the focus assets and covering new entries, existing positions, triggers and risks>"
+  },
   "market_overview": "<300-400 word paragraph; do not skip>",
   "watchlist": [
     { "symbol": "<copied exactly from input>", "display_name": "<readable name>", "stance": "Bullish" | "Bearish" | "Neutral", "rationale": "<80-150 words; must cite specific indicator numbers>" },
@@ -107,7 +131,7 @@ Output STRICTLY a JSON object (no markdown, no prefix/suffix). All three fields 
 
 **Quote rule (important!)**: For any quotation INSIDE a JSON string, use single quotes ' or curly quotes '" — **never** raw double-quotes, which break JSON parsing.
 
-**Output-order suggestion**: in your response, generate the watchlist array FIRST (most important, most easily missed), then market_overview, then risk_caveat. This preserves picks even if the response is truncated.`;
+**Output-order suggestion**: produce daily_view and action_assessment first, then watchlist, then market_overview and risk_caveat.`;
 
 const SYSTEM_PROMPT =
   REPORT_LOCALE === "en" ? SYSTEM_PROMPT_EN : SYSTEM_PROMPT_ZH;
@@ -115,7 +139,7 @@ const SYSTEM_PROMPT =
 export async function generateTradingCommentary(
   input: TradingCommentaryInput,
 ): Promise<TradingCommentary> {
-  const { tickers, cryptoFearGreed, cryptoGlobal } = input;
+  const { tickers, cryptoFearGreed, cryptoGlobal, focusedNews = [] } = input;
   // Slim payload — drop fields that don't help the model (no need to send
   // exchangeName/currency etc. — those are display-only)
   const payload = tickers.map((a) => ({
@@ -161,6 +185,12 @@ export async function generateTradingCommentary(
     contextLines.push(label);
   }
 
+  const newsPayload = focusedNews.slice(0, 10).map((item) => ({
+    title: item.title,
+    source: item.source,
+    summary: (item.summary ?? "").slice(0, 180),
+  }));
+
   // user prompt header = highest instruction-recency precedence. The
   // SYSTEM_PROMPT requires every supplied focus ticker. Restating the
   // system prompt that constraint sometimes loses to the RLHF "no
@@ -171,28 +201,34 @@ export async function generateTradingCommentary(
       ? [
           `**Output language: ENGLISH ONLY.** Every string value in the JSON — market_overview, every pick's display_name and rationale, risk_caveat — MUST be written entirely in English. Do not use any Chinese characters anywhere in the output. Even if some input ticker names appear in Chinese (e.g. "黄金期货"), translate them to English in the display_name field (e.g. "Gold Futures").`,
           "",
-          `**Hard output constraint**: the response MUST be a single valid JSON object (starts with \`{\`, ends with \`}\`, no markdown, no prefix/suffix). It MUST include a non-empty \`daily_view\` of 40-80 English words with the concise market conclusion. **The watchlist field MUST contain one complete WatchlistPick object for every supplied ticker (five total)**, each shaped like \`{ "symbol": "...", "display_name": "<English name>", "stance": "Bullish"|"Bearish"|"Neutral", "rationale": "80-150 word English summary citing concrete indicator numbers" }\`. **DO NOT write the watchlist as a string array of ticker symbols** and do not omit any requested asset.`,
+          `**Hard output constraint**: the response MUST be a single valid JSON object (starts with \`{\`, ends with \`}\`, no markdown, no prefix/suffix). It MUST include a non-empty \`daily_view\` of 40-80 English words and an \`action_assessment\` object with \`dip_buying\`, \`selling\`, and an 80-180 word \`summary\`. **The watchlist field MUST contain one complete WatchlistPick object for every supplied ticker (five total)**, each shaped like \`{ "symbol": "...", "display_name": "<English name>", "stance": "Bullish"|"Bearish"|"Neutral", "rationale": "80-150 word English summary citing concrete indicator numbers" }\`. **DO NOT write the watchlist as a string array of ticker symbols** and do not omit any requested asset.`,
           "",
           contextLines.length > 0
             ? `Auxiliary context (**you MUST reference at least one of these in market_overview**):\n${contextLines.map((l) => `  - ${l}`).join("\n")}\n`
             : "",
+          newsPayload.length > 0
+            ? `Today's focused, authoritative news (use these facts in the action assessment; do not invent details):\n${JSON.stringify(newsPayload)}`
+            : "No additional relevant news was captured today; base the action assessment on price and indicators.",
           `Candidate assets (${payload.length} entries, JSON array):`,
           JSON.stringify(payload),
           "",
-          `Output a JSON object per the system-prompt schema. Include daily_view. watchlist must contain all five complete WatchlistPick objects (symbol / display_name / stance / rationale fields). Omitting a ticker or using a string array is forbidden.`,
+          `Output a JSON object per the system-prompt schema. Include daily_view and action_assessment. watchlist must contain all five complete WatchlistPick objects (symbol / display_name / stance / rationale fields). Omitting a ticker or using a string array is forbidden.`,
         ]
           .filter(Boolean)
           .join("\n")
       : [
-          `**输出硬约束**：响应必须是单一合法 JSON 对象（以 \`{\` 开头以 \`}\` 结尾，不要 markdown、不要前后缀）。必须包含非空的 \`daily_view\`（40-80 字，直接给出当日行情结论、核心矛盾和下一步验证信号）。**watchlist 字段必须为输入中的全部 5 个标的各输出一个完整对象**，每个对象形如 \`{ "symbol": "...", "display_name": "...", "stance": "偏上行"|"偏下行"|"中性", "rationale": "80-150 字中文，引用具体指标数字" }\`。**禁止把 watchlist 写成 ticker symbol 字符串数组，也禁止遗漏工业富联、国际现货黄金、BTC、ETH、SOL。**`,
+          `**输出硬约束**：响应必须是单一合法 JSON 对象（以 \`{\` 开头以 \`}\` 结尾，不要 markdown、不要前后缀）。必须包含非空的 \`daily_view\`（40-80 字）和 \`action_assessment\`（含 dip_buying、selling、80-180 字 summary）。**watchlist 字段必须为输入中的全部 5 个标的各输出一个完整对象**，每个对象形如 \`{ "symbol": "...", "display_name": "...", "stance": "偏上行"|"偏下行"|"中性", "rationale": "80-150 字中文，引用具体指标数字" }\`。**禁止把 watchlist 写成 ticker symbol 字符串数组，也禁止遗漏工业富联、国际现货黄金、BTC、ETH、SOL。**`,
           "",
           contextLines.length > 0
             ? `辅助背景（**必须在 market_overview 里至少引用一项**）：\n${contextLines.map((l) => `  - ${l}`).join("\n")}\n`
             : "",
+          newsPayload.length > 0
+            ? `今日相关权威资讯（用于操作判断，不得编造资讯之外的事实）：\n${JSON.stringify(newsPayload)}`
+            : "今日未抓取到额外相关资讯；操作判断以价格与技术指标为准。",
           `候选资产（共 ${payload.length} 个，JSON 数组）：`,
           JSON.stringify(payload),
           "",
-          `请按 system prompt 的 schema 输出 JSON 对象。必须提供精炼的 daily_view。watchlist 必须覆盖全部 5 个标的，并为每个标的输出完整对象（含 symbol / display_name / stance / rationale 四个字段），绝不允许遗漏或使用字符串数组。`,
+          `请按 system prompt 的 schema 输出 JSON 对象。必须提供精炼的 daily_view 和 action_assessment。watchlist 必须覆盖全部 5 个标的，并为每个标的输出完整对象（含 symbol / display_name / stance / rationale 四个字段），绝不允许遗漏或使用字符串数组。`,
         ]
           .filter(Boolean)
           .join("\n");
@@ -202,6 +238,14 @@ export async function generateTradingCommentary(
       REPORT_LOCALE === "en"
         ? "The focus assets remain mixed; wait for price confirmation rather than extrapolating one session's move."
         : "目标资产走势分化，当前更适合等待价格与动能共同确认，不宜根据单日波动外推趋势。",
+    action_assessment: {
+      dip_buying: "仅小仓试探",
+      selling: "暂不卖出",
+      summary:
+        REPORT_LOCALE === "en"
+          ? "New entries should wait for price and momentum confirmation and use small position sizes; existing positions should follow predefined risk limits rather than react to one session."
+          : "空仓者暂时只宜小仓试探，等待价格与动能共同转强；已有仓位按既定风险线管理，不宜仅因单日波动追涨杀跌。",
+    },
     market_overview: "",
     watchlist: [],
     risk_caveat:
@@ -282,9 +326,19 @@ async function callOnce(
   // wording) all trigger retry.
   const overview = parsed.market_overview ?? "";
   const dailyView = parsed.daily_view ?? "";
+  const action = parsed.action_assessment;
   const picks = parsed.watchlist ?? [];
   if (dailyView.length < 20) {
     throw new Error(`daily_view too short (${dailyView.length} chars)`);
+  }
+  if (
+    !action ||
+    !action.dip_buying ||
+    !action.selling ||
+    typeof action.summary !== "string" ||
+    action.summary.length < 30
+  ) {
+    throw new Error("action_assessment is missing or incomplete");
   }
   if (overview.length < 100) {
     throw new Error(`market_overview too short (${overview.length} chars)`);
@@ -310,6 +364,7 @@ async function callOnce(
   }
   return {
     daily_view: dailyView,
+    action_assessment: action,
     market_overview: overview,
     watchlist: picks as WatchlistPick[],
     risk_caveat: parsed.risk_caveat ?? fallback.risk_caveat,

@@ -72,6 +72,10 @@ data = json.loads(data_path.read_text(encoding="utf-8")) if data_path.exists() e
 headline = str(data.get("hero_headline") or "今日全球简报")
 overview = str(data.get("daily_overview") or "今日简报已生成，点击文末链接查看完整内容。")
 daily_view = str(data.get("trading", {}).get("daily_view") or "").strip()
+action = data.get("trading", {}).get("action_assessment") or {}
+action_dip = str(action.get("dip_buying") or "").strip()
+action_sell = str(action.get("selling") or "").strip()
+action_summary = str(action.get("summary") or "").strip()
 report_url = f"{report_home}/{report_date}/{report_date}.html"
 
 group_titles = {
@@ -212,6 +216,17 @@ email_html = f"""<!doctype html>
           </td>
         </tr>''' if daily_view else ""
         }
+        {
+          f'''<tr>
+          <td style="padding:0 30px 20px;">
+            <div style="padding:18px 20px;background:#eef6ff;border:1px solid #bfdbfe;border-left:4px solid #2563a8;border-radius:8px;">
+              <div style="font-size:12px;font-weight:700;letter-spacing:1px;color:#1d4f91;margin-bottom:8px;">操作判断</div>
+              <div style="font-size:14px;font-weight:700;color:#0f172a;margin-bottom:8px;">抄底：{escape(action_dip)} &nbsp;·&nbsp; 卖出：{escape(action_sell)}</div>
+              <div style="font-size:14px;line-height:1.8;color:#3f3f46;">{escape(action_summary)}</div>
+            </div>
+          </td>
+        </tr>''' if action_summary else ""
+        }
         <tr>
           <td style="padding:4px 30px 10px;">
             <h2 style="margin:0 0 16px;font-size:19px;color:#0f172a;">重点行情</h2>
@@ -256,6 +271,14 @@ plain_lines = [
 ]
 if daily_view:
     plain_lines.extend(["今日专业观点：", daily_view, ""])
+if action_summary:
+    plain_lines.extend(
+        [
+            f"操作判断：抄底 {action_dip}；卖出 {action_sell}",
+            action_summary,
+            "",
+        ]
+    )
 plain_lines.append("重点行情：")
 for item in tickers:
     if item.get("group") not in group_titles:

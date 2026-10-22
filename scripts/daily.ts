@@ -204,7 +204,7 @@ async function enrichMergedSubgroup(
  * indicators + signals, then ask Sonnet for a market overview + a
  * picks-to-watch list. Returns null if no ticker came back.
  */
-async function runTrading(): Promise<TradingSection | null> {
+async function runTrading(articles: ArticleInput[]): Promise<TradingSection | null> {
   console.log(`[daily] analyzing watchlist + crypto context (Yahoo / alt.me / CoinGecko)…`);
   const t0 = Date.now();
   const [tickers, cryptoFearGreed, cryptoGlobal] = await Promise.all([
@@ -222,10 +222,23 @@ async function runTrading(): Promise<TradingSection | null> {
   if (tickers.length === 0) return null;
   console.log(`[daily] generating trading commentary with ${getModelTag()}…`);
   const t1 = Date.now();
+  const focusedNews = articles
+    .slice()
+    .sort(
+      (a, b) =>
+        (b.publishedAt?.getTime() ?? 0) - (a.publishedAt?.getTime() ?? 0),
+    )
+    .slice(0, 10)
+    .map((a) => ({
+      title: a.title,
+      source: a.source,
+      summary: a.summary ?? a.excerpt,
+    }));
   const commentary = await generateTradingCommentary({
     tickers,
     cryptoFearGreed: cryptoFearGreed ?? undefined,
     cryptoGlobal: cryptoGlobal ?? undefined,
+    focusedNews,
   });
   console.log(
     `[daily] trading commentary ready in ${((Date.now() - t1) / 1000).toFixed(1)}s`,
@@ -268,7 +281,7 @@ async function main() {
   // if it errors, we still ship the news digest.
   let trading: TradingSection | null = null;
   try {
-    trading = await runTrading();
+    trading = await runTrading(articles);
   } catch (e) {
     const msg = e instanceof Error ? e.message : String(e);
     console.warn(`[daily] trading section failed: ${msg}`);
