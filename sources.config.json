@@ -1,5 +1,20 @@
 [
   {
+    "id": "anysearch-market",
+    "name": "AnySearch 市场新闻",
+    "type": "api",
+    "url": "https://api.anysearch.com/mcp",
+    "category": "finance",
+    "subcategory": "news",
+    "enabled": true,
+    "lang": "en",
+    "locales": [
+      "zh",
+      "en"
+    ],
+    "notes": "AnySearch queries for Industrial Fulian/A-shares, gold, Fed, BTC, ETH and SOL. Only allowlisted official and authoritative media URLs with verifiable publication dates are accepted."
+  },
+  {
     "id": "github-trending",
     "name": "GitHub Trending",
     "type": "scrape",

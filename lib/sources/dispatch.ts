@@ -6,6 +6,7 @@ import { fetchHuggingfacePapers } from "./huggingface-papers";
 import { fetchLinuxDo } from "./linuxdo";
 import { fetchRss } from "./rss";
 import { fetchV2ex } from "./v2ex";
+import { fetchAnySearch } from "./anysearch";
 import type { RawArticle, SourceDef } from "./types";
 
 /**
@@ -20,6 +21,7 @@ export async function fetchSource(source: SourceDef): Promise<RawArticle[]> {
   if (source.id === "attentionvc-ai") return fetchAttentionVc(source.id);
   if (source.id === "fii-announcements") return fetchFiiAnnouncements(source.id);
   if (source.id === "huggingface-papers") return fetchHuggingfacePapers(source.id, source.keywords);
+  if (source.id === "anysearch-market") return fetchAnySearch(source.id);
   return fetchRss(source.id, source.url, source.category, {
     useCurl: source.useCurl,
   });

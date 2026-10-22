@@ -40,7 +40,12 @@ async function fetchAll(): Promise<ArticleInput[]> {
     try {
       const items = await fetchSource(source);
       console.log(`  ${source.id.padEnd(20)} ${items.length}`);
-      articles.push(...items.map((it) => ({ ...it, source: source.name })));
+      articles.push(
+        ...items.map((it) => ({
+          ...it,
+          source: it.publisher ?? source.name,
+        })),
+      );
     } catch (e) {
       const msg = e instanceof Error ? e.message : String(e);
       console.error(`  ${source.id.padEnd(20)} FAILED — ${msg}`);

@@ -59,6 +59,7 @@ const SOURCE_PRIORITY: Record<string, number> = {
   "cftc-press": 100,
   "ecb-press": 100,
   "boe-news": 100,
+  "anysearch-market": 92,
   "bloomberg-markets": 80,
   "wsj-markets": 80,
   "ft-companies": 80,
@@ -87,6 +88,7 @@ function sourceTier(sourceId: string): "official" | "major-media" | "community" 
 
 const FOCUS_PATTERNS: RegExp[] = [
   /\b(?:industrial fulian|foxconn|fii|ingrasys)\b/i,
+  /\bA[- ]?shares?\b/i,
   /\b601138\b/,
   /\b(?:ai server|server rack|data center|liquid cooling)\b/i,
   /\b(?:gold|xauusd|bullion|precious metals?|gold etf)\b/i,
@@ -96,6 +98,10 @@ const FOCUS_PATTERNS: RegExp[] = [
 
 const FOCUS_TERMS_ZH = [
   "工业富联",
+  "A股",
+  "上证指数",
+  "深证成指",
+  "沪深股市",
   "富士康",
   "鸿佰",
   "601138",

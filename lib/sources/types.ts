@@ -66,4 +66,6 @@ export interface RawArticle {
    * used by GitHub Trending for "Language · ★stars · forks · stars today".
    */
   meta?: string;
+  /** Original publisher for an aggregated source such as AnySearch. */
+  publisher?: string;
 }
