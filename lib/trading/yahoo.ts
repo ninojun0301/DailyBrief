@@ -55,6 +55,44 @@ interface GoldApiResp {
   updatedAt?: string;
 }
 
+async function fetchSpotGoldPrice(): Promise<number | null> {
+  try {
+    const response = await fetch("https://api.gold-api.com/price/XAU", {
+      headers: HEADERS,
+      signal: AbortSignal.timeout(10_000),
+    });
+    if (!response.ok) return null;
+    const payload = (await response.json()) as GoldApiResp;
+    return typeof payload.price === "number" && Number.isFinite(payload.price)
+      ? payload.price
+      : null;
+  } catch {
+    return null;
+  }
+}
+
+function spotOnlyTicker(symbol: string, price: number): TickerRawData {
+  const now = new Date();
+  return {
+    symbol,
+    currency: "USD",
+    exchangeName: "SPOT",
+    regularMarketPrice: price,
+    fiftyTwoWeekHigh: price,
+    fiftyTwoWeekLow: price,
+    candles: [
+      {
+        date: now,
+        open: price,
+        high: price,
+        low: price,
+        close: price,
+        volume: 0,
+      },
+    ],
+  };
+}
+
 /**
  * Fetch daily OHLCV + meta from Yahoo Finance public chart API.
  * No key required. Works for stocks, ETFs, indices, crypto (BTC-USD),
@@ -69,12 +107,33 @@ export async function fetchTickerData(
   // candles for the technical structure and replace the displayed quote with
   // the current international spot price from the dedicated gold API.
   const yahooSymbol = symbol === "XAU-SPOT" ? "GC=F" : symbol;
+  const spotPricePromise = symbol === "XAU-SPOT" ? fetchSpotGoldPrice() : null;
   const url = `https://query2.finance.yahoo.com/v8/finance/chart/${encodeURIComponent(yahooSymbol)}?range=1y&interval=1d`;
-  const res = await fetch(url, { headers: HEADERS });
-  if (!res.ok) return null;
-  const data = (await res.json()) as YahooChartResp;
+  let res: Response | null = null;
+  try {
+    res = await fetch(url, {
+      headers: HEADERS,
+      signal: AbortSignal.timeout(20_000),
+    });
+  } catch {
+    res = null;
+  }
+  if (!res?.ok) {
+    const spot = spotPricePromise ? await spotPricePromise : null;
+    return spot == null ? null : spotOnlyTicker(symbol, spot);
+  }
+  let data: YahooChartResp;
+  try {
+    data = (await res.json()) as YahooChartResp;
+  } catch {
+    const spot = spotPricePromise ? await spotPricePromise : null;
+    return spot == null ? null : spotOnlyTicker(symbol, spot);
+  }
   const r = data.chart?.result?.[0];
-  if (!r || !r.meta || !r.timestamp || !r.indicators?.quote?.[0]) return null;
+  if (!r || !r.meta || !r.timestamp || !r.indicators?.quote?.[0]) {
+    const spot = spotPricePromise ? await spotPricePromise : null;
+    return spot == null ? null : spotOnlyTicker(symbol, spot);
+  }
 
   const ts = r.timestamp;
   const q = r.indicators.quote[0];
@@ -108,19 +167,15 @@ export async function fetchTickerData(
   };
 
   if (symbol === "XAU-SPOT") {
-    const spotRes = await fetch("https://api.gold-api.com/price/XAU", {
-      headers: HEADERS,
-    });
-    if (!spotRes.ok) return null;
-    const spot = (await spotRes.json()) as GoldApiResp;
-    if (typeof spot.price !== "number" || !Number.isFinite(spot.price)) {
+    const spot = spotPricePromise ? await spotPricePromise : null;
+    if (spot == null) {
       return null;
     }
     return {
       ...result,
       currency: "USD",
       exchangeName: "SPOT",
-      regularMarketPrice: spot.price,
+      regularMarketPrice: spot,
     };
   }
 
