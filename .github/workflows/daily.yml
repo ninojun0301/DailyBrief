@@ -134,11 +134,8 @@ jobs:
           hour_run_match=false
           if [ "$hour_match" = "true" ] && [ "$day_match" = "true" ]; then
             TODAY=$(TZ="$TZ_VAL" date +%Y-%m-%d)
-            CHECK_URL="https://api.github.com/repos/${GITHUB_REPOSITORY}/contents/${TODAY}/${TODAY}.html?ref=gh-pages"
+            CHECK_URL="https://raw.githubusercontent.com/${GITHUB_REPOSITORY}/gh-pages/${TODAY}/${TODAY}.html"
             HTTP_CODE=$(curl -s -o /dev/null -w "%{http_code}" \
-              -H "Authorization: Bearer ${GH_TOKEN}" \
-              -H "Accept: application/vnd.github+json" \
-              -H "X-GitHub-Api-Version: 2022-11-28" \
               "$CHECK_URL" || echo "000")
             if [ "$HTTP_CODE" = "404" ]; then
               hour_run_match=true
@@ -159,11 +156,8 @@ jobs:
             catchup_threshold=$earliest_hour
             if [ "$NOW_HOUR" -ge "$catchup_threshold" ]; then
               TODAY=$(TZ="$TZ_VAL" date +%Y-%m-%d)
-              CHECK_URL="https://api.github.com/repos/${GITHUB_REPOSITORY}/contents/${TODAY}/${TODAY}.html?ref=gh-pages"
+              CHECK_URL="https://raw.githubusercontent.com/${GITHUB_REPOSITORY}/gh-pages/${TODAY}/${TODAY}.html"
               HTTP_CODE=$(curl -s -o /dev/null -w "%{http_code}" \
-                -H "Authorization: Bearer ${GH_TOKEN}" \
-                -H "Accept: application/vnd.github+json" \
-                -H "X-GitHub-Api-Version: 2022-11-28" \
                 "$CHECK_URL" || echo "000")
               if [ "$HTTP_CODE" = "404" ]; then
                 echo "↻ Catchup: today's report ($TODAY) missing from gh-pages — recovering"
