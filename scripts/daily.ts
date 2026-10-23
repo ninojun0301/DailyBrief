@@ -34,24 +34,35 @@ import { todayKey } from "../lib/utils";
 const OUTPUT_DIR = "daily_reports";
 
 async function fetchAll(): Promise<ArticleInput[]> {
-  const articles: ArticleInput[] = [];
   const enabled = sources.filter((s) => s.enabled !== false);
-  for (const source of enabled) {
-    try {
-      const items = await fetchSource(source);
-      console.log(`  ${source.id.padEnd(20)} ${items.length}`);
-      articles.push(
-        ...items.map((it) => ({
+  const batches = await Promise.all(
+    enabled.map(async (source) => {
+      let timeout: ReturnType<typeof setTimeout> | undefined;
+      try {
+        const items = await Promise.race([
+          fetchSource(source),
+          new Promise<never>((_, reject) => {
+            timeout = setTimeout(
+              () => reject(new Error("source timed out after 60s")),
+              60_000,
+            );
+          }),
+        ]);
+        console.log(`  ${source.id.padEnd(20)} ${items.length}`);
+        return items.map((it) => ({
           ...it,
           source: it.publisher ?? source.name,
-        })),
-      );
-    } catch (e) {
-      const msg = e instanceof Error ? e.message : String(e);
-      console.error(`  ${source.id.padEnd(20)} FAILED — ${msg}`);
-    }
-  }
-  return articles;
+        }));
+      } catch (e) {
+        const msg = e instanceof Error ? e.message : String(e);
+        console.error(`  ${source.id.padEnd(20)} FAILED — ${msg}`);
+        return [];
+      } finally {
+        if (timeout) clearTimeout(timeout);
+      }
+    }),
+  );
+  return batches.flat();
 }
 
 async function enrichGhTrending(articles: ArticleInput[]): Promise<void> {
