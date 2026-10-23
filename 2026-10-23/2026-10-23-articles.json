@@ -5,8 +5,8 @@
       "sourceId": "anysearch-market",
       "title": "沃什讲话压低美联储10月加息预期，黄金期货突破4200美元",
       "url": "https://finance.sina.com.cn/stock/usstock/c/2026-10-19/doc-inivtynk0813091.shtml",
-      "excerpt": "截至北京时间10月19日12：51，现货黄金上涨0.4%，报每盎司4180.29美元；美国黄金期货上涨0.5%，报4200.92美元，突破4200美元关口。此前，市场因美国通胀 ... date: 3 days ago",
-      "publishedAt": "2026-10-19T16:20:39.712Z",
+      "excerpt": "截至北京时间10月19日12：51，现货黄金上涨0.4%，报每盎司4180.29美元；美国黄金期货上涨0.5%，报4200.92美元，突破4200美元关口。此前，市场因美国通胀 ... date: 4 days ago",
+      "publishedAt": "2026-10-19T11:35:57.899Z",
       "category": "finance",
       "publisher": "新浪财经",
       "meta": "AnySearch · 权威媒体",
@@ -20,7 +20,7 @@
       "publishedAt": "2026-10-20T07:00:00.000Z",
       "category": "tech",
       "source": "OpenAI News",
-      "summary": "Terminal X借助GPT-6.1，其输出与资深投资人判断的一致率达88.6%；其Eval Agent按54项标准评分，对基金授权偏离的检出率提升25%。"
+      "summary": "Terminal X 的 Eval Agent 依据 54 项标准对输出评分；在 GPT-6.1 Sol 支持下，其对基金授权偏离的检出量提高 25%，与资深投资人判断的一致率达 88.6%。"
     },
     {
       "sourceId": "openai-news",
@@ -30,7 +30,7 @@
       "publishedAt": "2026-10-14T07:00:00.000Z",
       "category": "tech",
       "source": "OpenAI News",
-      "summary": "Third Moment Research利用GPT-6 Astra、GPT-6.1 Sol、Codex及网络安全工具Daybreak，构建可连续运行36小时以上、规模达1万个智能体的系统，并能随使用持续改进。"
+      "summary": "AI 实验室 Third Moment Research 借助 GPT-6 Astra、GPT-6.1 Sol、Codex 及网络安全工具 Daybreak，构建可连续运行 36 小时以上、规模达 1 万个的智能体，并能随使用不断改进。"
     },
     {
       "sourceId": "openai-news",
@@ -40,7 +40,7 @@
       "publishedAt": "2026-10-09T07:00:00.000Z",
       "category": "tech",
       "source": "OpenAI News",
-      "summary": "Asana在Codex中使用GPT-6 Astra改造其浏览器智能体，测试中模型成本降低76倍、速度提升5倍，从而向客户提供能力更强的模型。"
+      "summary": "Asana 在 Codex 中使用 GPT-6 Astra 改造其浏览器智能体；测试中成本降低 76 倍、速度提升 5 倍，使其能向客户提供能力更强的模型。"
     },
     {
       "sourceId": "tldr-ai",
@@ -50,7 +50,7 @@
       "publishedAt": "2026-09-30T00:00:00.000Z",
       "category": "tech",
       "source": "TLDR AI",
-      "summary": "TLDR AI当日简讯涉及OpenAI「Dots」、GPT-6.1 Sol以及「软件工厂」等话题，摘要信息有限。"
+      "summary": "TLDR AI 当日简报主要涉及三项内容：OpenAI 的「Dots」、GPT-6.1 Sol 模型，以及「软件工厂」相关话题。"
     },
     {
       "sourceId": "smol-ai-news",
@@ -60,7 +60,7 @@
       "publishedAt": "2026-08-06T05:44:39.000Z",
       "category": "tech",
       "source": "Smol AI News",
-      "summary": "Meta的Muse Spark 1.2快速升至前沿水平，在Vals Index排名前五，测试成本为每项0.69美元，比Kimi便宜3倍，比Fable、Opus与5.6 Sol便宜10倍以上；在五项STEM奥赛中取得金牌级成绩。"
+      "summary": "Meta 的 Muse Spark 1.2 以每次测试 0.69 美元升至 Vals 指数前五，价格约为 Kimi 的三分之一，比 Fable、Opus 与 5.6 Sol 便宜 10 倍以上，并在五项 STEM 奥赛中达到金牌水平。"
     },
     {
       "sourceId": "smol-ai-news",
@@ -70,67 +70,57 @@
       "publishedAt": "2026-07-30T05:44:39.000Z",
       "category": "tech",
       "source": "Smol AI News",
-      "summary": "OpenAI大幅下调价格，GPT-5.6 Luna降价80%、Terra降价20%，并推出延迟最多降低2.5倍、价格翻倍的Sol Fast档位，使智能体工作流成本改善约10倍；ARC-AGI-3相关争论持续。"
+      "summary": "OpenAI 将 GPT-5.6 Luna 价格下调 80%、Terra 下调 20%，并推出延迟最多降低 2.5 倍、价格翻倍的 Sol Fast 档位，使智能体工作流成本约改善 10 倍；同期 ARC-AGI-3 引发讨论。"
     },
     {
       "sourceId": "latent-space",
       "title": "[AINews] OpenAI’s Patch the Planet program is 1 of 2 parties to discover PHP2Shell vulnerabilities in core PHP affecting 70% of the web, using GPT-5.6 Sol; coordinated response over 2 months",
-      "url": "https://www.latent.space/p/ainews-openais-patch-the-planet-program",
+      "url": "https://latent.space/p/ainews-openais-patch-the-planet-program/",
       "excerpt": "The Big Hardening begins",
       "publishedAt": "2026-10-22T07:42:44.000Z",
       "category": "tech",
       "source": "Latent Space",
-      "summary": "OpenAI的「Patch the Planet」计划是发现核心PHP中PHP2Shell漏洞的两方之一，该漏洞影响约70%的网站，发现过程使用GPT-5.6 Sol，双方经两个月协调响应。"
+      "summary": "OpenAI 的「Patch the Planet」计划是发现核心 PHP 中 PHP2Shell 漏洞的两方之一；该漏洞影响约 70% 的网站。相关工作借助 GPT-5.6 Sol 完成，并进行了为期两个月的协同响应。"
     },
     {
       "sourceId": "latent-space",
       "title": "The Programmable Data Center — Evan Conrad, SF Compute",
-      "url": "https://www.latent.space/p/sfcompute2",
+      "url": "https://latent.space/p/sfcompute2/",
       "excerpt": "From GPU trading to physical settlement, independent markets, and programmable compute",
       "publishedAt": "2026-10-20T19:31:57.000Z",
       "category": "tech",
       "source": "Latent Space",
-      "summary": "SF Compute的Evan Conrad介绍「可编程数据中心」构想：从GPU交易走向实物交割、独立市场与可编程算力。"
+      "summary": "SF Compute 的 Evan Conrad 介绍「可编程数据中心」构想，讨论算力市场如何从 GPU 交易走向实物交割、独立市场与可编程算力。"
     },
     {
       "sourceId": "bloomberg-markets",
-      "title": "Stocks Drop as Risk-Off Views Dominate With Oil Up, Meta Falling",
-      "url": "https://www.bloomberg.com/news/articles/2026-10-22/us-futures-slip-as-risk-off-sentiment-dominates-with-oil-rising",
-      "excerpt": "Stocks were lower Thursday as escalating concern about Mideast conflict pushed oil futures higher, spurring inflation fears with US midterm elections less than two weeks away. Meta Platforms Inc. tumbled as investors parsed its results along with the rest of the latest batch of technology earnings f",
-      "publishedAt": "2026-10-22T11:29:09.000Z",
+      "title": "Indian Small Caps Post Worst Drop in Five Months on Deleveraging",
+      "url": "https://www.bloomberg.com/news/articles/2026-10-23/margin-trade-liquidation-speeds-indian-small-cap-stock-decline",
+      "excerpt": "A wave of deleveraging by retail investors triggered the biggest rout in Indian small-cap stocks in five months, as mounting concerns over inflation and higher interest rates weigh on sentiment.",
+      "publishedAt": "2026-10-23T07:04:57.000Z",
       "category": "finance",
       "source": "Bloomberg Markets",
-      "summary": "美股周四走低：中东冲突担忧升温推高油价，加剧通胀忧虑；距离美国中期选举不到两周，Meta因财报遭投资者抛售而重挫。"
+      "summary": "散户去杠杆引发印度小盘股五个月来最大跌幅，通胀上升与利率走高的担忧进一步打压市场情绪，融资交易平仓加速下跌。"
     },
     {
       "sourceId": "bloomberg-markets",
-      "title": "Gold Falls as Higher Oil Fuels Inflation Fears Ahead of Fed Meet",
-      "url": "https://www.bloomberg.com/news/articles/2026-10-21/gold-edges-lower-as-traders-weigh-mideast-signals-fed-rate-path",
-      "excerpt": "Gold declined to the lowest in more than two months as escalating Middle East hostilities sent oil surging ahead of a Federal Reserve policy meeting, while a selloff in equities added to broader market volatility.",
-      "publishedAt": "2026-10-21T23:56:16.000Z",
+      "title": "Gold Hovers Near $4,000 an Ounce After Steep Loss in Rocky Week",
+      "url": "https://www.bloomberg.com/news/articles/2026-10-23/gold-holds-near-three-month-low-as-ai-jitters-fuel-volatility",
+      "excerpt": "Gold fluctuated near $4,000 an ounce after touching a three-month low, capping a volatile week that saw oil surge, stocks plunge and investors seek safety in US bonds.",
+      "publishedAt": "2026-10-23T00:15:37.000Z",
       "category": "finance",
       "source": "Bloomberg Markets",
-      "summary": "金价跌至两个多月来最低位：中东局势升级推高油价，在美联储议息会议前加剧通胀担忧，股市抛售也放大了市场波动。"
+      "summary": "金价在触及三个月低点后于每盎司4000美元附近波动，本周油价飙升、股市下挫，投资者转向美国国债避险。"
     },
     {
       "sourceId": "bloomberg-markets",
-      "title": "Blackstone Profit Drops 9.2% as Higher Rates Curb Dealmaking",
-      "url": "https://www.bloomberg.com/news/articles/2026-10-22/blackstone-profit-drops-9-2-as-rates-inflation-curb-dealmaking",
-      "excerpt": "Blackstone Inc. reported a drop in third-quarter income as higher interest rates subdued dealmaking, with the money the firm deployed reaching a low for this year.",
-      "publishedAt": "2026-10-22T11:06:46.000Z",
+      "title": "Bitcoin Billionaires Are Racing to Ride a 3,000% Crypto Boom",
+      "url": "https://www.bloomberg.com/news/articles/2026-10-23/bitcoin-billionaires-are-racing-to-ride-a-3-000-crypto-boom",
+      "excerpt": "Some of the most prominent early investors in Bitcoin are squaring off again. This time they are seeking to capitalize on a massive rally in the year’s standout major cryptocurrency.",
+      "publishedAt": "2026-10-23T10:15:00.000Z",
       "category": "finance",
       "source": "Bloomberg Markets",
-      "summary": "黑石集团第三季度利润下降9.2%。利率走高抑制了交易活动，当季投放的资金规模降至今年最低水平。"
-    },
-    {
-      "sourceId": "bloomberg-markets",
-      "title": "Norwegians Leave Gold in Forest as Some Fall for Scam",
-      "url": "https://www.bloomberg.com/news/articles/2026-10-22/norwegians-leave-gold-in-forest-as-some-fall-for-scam",
-      "excerpt": "Swindlers have persuaded Norwegians into buying gold and leaving it in the forest as part of a growing investment fraud, according to the country’s banking lobby.",
-      "publishedAt": "2026-10-22T12:16:20.000Z",
-      "category": "finance",
-      "source": "Bloomberg Markets",
-      "summary": "挪威银行业游说机构称，诈骗者诱使部分挪威人购买黄金，并将黄金留在森林中；这类投资欺诈案件正在增多。"
+      "summary": "比特币早期知名投资者再度展开角逐，试图借今年表现最突出的主流加密货币的大幅上涨获利。报道称相关涨势规模达3000%。"
     },
     {
       "sourceId": "wsj-markets",
@@ -151,16 +141,6 @@
       "source": "WSJ Markets"
     },
     {
-      "sourceId": "ft-companies",
-      "title": "Would you take out a mortgage backed by bitcoin?",
-      "url": "https://www.ft.com/content/42176f60-b2fd-431c-9f2c-e7e015b07315?syn-25a6b1a6=1",
-      "excerpt": "US officials are encouraging the use of crypto holdings as home-loan collateral",
-      "publishedAt": "2026-10-22T15:00:03.000Z",
-      "category": "finance",
-      "source": "Financial Times",
-      "summary": "美国监管官员正鼓励购房者以所持加密资产作为住房贷款的抵押品，这一做法引发市场对加密资产抵押贷款风险的关注。"
-    },
-    {
       "sourceId": "bbc-business",
       "title": "Faisal Islam: Inflation and borrowing figures illustrate chancellor's Budget challenge",
       "url": "https://www.bbc.co.uk/news/articles/cm3wv9pn22e5o?at_medium=RSS&at_campaign=rss",
@@ -168,7 +148,7 @@
       "publishedAt": "2026-10-21T10:20:15.000Z",
       "category": "finance",
       "source": "BBC Business",
-      "summary": "BBC记者Faisal Islam指出，周三公布的通胀与政府借贷数据，凸显财政大臣John Healey在敲定预算案时面临的政策约束。"
+      "summary": "BBC记者法伊萨尔·伊斯兰指出，周三公布的通胀与借贷数据凸显财政大臣约翰·希利在敲定预算时面临的政策约束。"
     },
     {
       "sourceId": "bbc-business",
@@ -178,7 +158,7 @@
       "publishedAt": "2026-10-21T10:16:17.000Z",
       "category": "finance",
       "source": "BBC Business",
-      "summary": "英国国家统计局数据显示，截至9月的年度通胀率由3.1%升至3.5%，政府借贷同期也升至一年来最高，预算案将于下周公布。"
+      "summary": "英国国家统计局数据显示，截至9月的一年通胀率由3.1%升至3.5%，政府借贷亦为一年来最高，数据公布正值下周预算发布前夕。"
     },
     {
       "sourceId": "bbc-business",
@@ -188,7 +168,17 @@
       "publishedAt": "2026-10-21T08:35:47.000Z",
       "category": "finance",
       "source": "BBC Business",
-      "summary": "英国9月通胀上升，主要由汽油和柴油价格上涨推动。"
+      "summary": "英国9月通胀上升，主要受汽油和柴油价格上涨推动。"
+    },
+    {
+      "sourceId": "economist-finance",
+      "title": "Sam Bankman-Fried says he has paid his debts",
+      "url": "https://www.economist.com/finance-and-economics/2026/10/22/sam-bankman-fried-says-he-has-paid-his-debts",
+      "excerpt": "The crypto tycoon speaks with The Economist from prison in California",
+      "publishedAt": "2026-10-22T15:51:39.000Z",
+      "category": "finance",
+      "source": "The Economist Finance",
+      "summary": "加密企业家萨姆·班克曼-弗里德在加利福尼亚狱中接受《经济学人》采访，称自己已偿还债务。"
     },
     {
       "sourceId": "economist-finance",
@@ -650,8 +640,7 @@
       "excerpt": "The U.S. Securities and Exchange Commission (SEC) and the French Autorité des Marchés Financiers (AMF) announced that they have entered into a Memorandum of Understanding (MOU) designed to facilitate consultation and information-sharing in the…",
       "publishedAt": "2026-10-20T13:25:16.000Z",
       "category": "finance",
-      "source": "美国证监会 SEC（官方）",
-      "summary": "美国证交会（SEC）与法国金融市场管理局（AMF）宣布签署监管合作谅解备忘录，旨在便利双方在投资顾问和投资服务领域的磋商与信息共享。"
+      "source": "美国证监会 SEC（官方）"
     },
     {
       "sourceId": "sec-press",
@@ -660,8 +649,7 @@
       "excerpt": "The U.S. Securities and Exchange Commission (SEC) and the Financial Services Agency of Japan (FSA) convened the Autumn SEC-FSA Financial Regulatory Dialogue in Tokyo on Oct. 19, 2026.The SEC–FSA Dialogue builds upon longstanding efforts between the two…",
       "publishedAt": "2026-10-20T12:51:00.000Z",
       "category": "finance",
-      "source": "美国证监会 SEC（官方）",
-      "summary": "美国证交会与日本金融厅于2026年10月19日在东京举行秋季金融监管对话，延续双方长期合作。"
+      "source": "美国证监会 SEC（官方）"
     },
     {
       "sourceId": "sec-press",
@@ -872,13 +860,23 @@
     },
     {
       "sourceId": "ecb-press",
+      "title": "ECB Consumer Expectations Survey results – September 2026",
+      "url": "https://www.ecb.europa.eu//press/pr/date/2026/html/ecb.pr261023~a3d201c97c.en.html",
+      "excerpt": "",
+      "publishedAt": "2026-10-23T08:00:00.000Z",
+      "category": "finance",
+      "source": "欧洲央行（官方）",
+      "summary": "欧洲央行发布2026年9月消费者预期调查结果，涉及家庭对通胀、收入与就业等的预期。"
+    },
+    {
+      "sourceId": "ecb-press",
       "title": "Piero Cipollone: Pontes and Appia: unlocking opportunities for banks",
       "url": "https://www.ecb.europa.eu//press/key/date/2026/html/ecb.sp261021_1~d190f2c349.en.pdf",
       "excerpt": "",
       "publishedAt": "2026-10-21T08:00:00.000Z",
       "category": "finance",
       "source": "欧洲央行（官方）",
-      "summary": "欧洲央行官员Piero Cipollone发表讲话，题为「Pontes与Appia：为银行释放机遇」，原文未提供更多内容细节。"
+      "summary": "欧洲央行执委皮耶罗·奇波洛内就「Pontes」与「Appia」发表讲话，主题为为银行释放机遇。"
     },
     {
       "sourceId": "ecb-press",
@@ -888,7 +886,7 @@
       "publishedAt": "2026-10-21T04:15:00.000Z",
       "category": "finance",
       "source": "欧洲央行（官方）",
-      "summary": "欧洲央行官员Philip R. Lane就欧元流动性额度与国际货币体系发表讲话，原文未提供更多内容细节。"
+      "summary": "欧洲央行首席经济学家菲利普·莱恩就欧元流动性额度与国际货币体系发表讲话。"
     },
     {
       "sourceId": "ecb-press",
@@ -999,13 +997,24 @@
       "source": "欧洲央行（官方）"
     },
     {
-      "sourceId": "ecb-press",
-      "title": "Decisions taken by the Governing Council of the ECB (in addition to decisions setting interest rates)",
-      "url": "https://www.ecb.europa.eu//press/govcdec/otherdec/2026/html/ecb.gc261002~54c6b5672b.en.html",
-      "excerpt": "",
-      "publishedAt": "2026-10-02T13:00:00.000Z",
+      "sourceId": "boe-news",
+      "title": "Regulators unveil plans to simplify Senior Manager and Certification Regime",
+      "url": "https://www.bankofengland.co.uk/news/2026/october/regulators-unveil-plans-to-simplify-senior-manager-and-certification-regime",
+      "excerpt": "The number of financial services roles required to face enhanced checks from regulators will fall significantly under proposals that will support growth.",
+      "publishedAt": "2026-10-22T20:00:00.000Z",
       "category": "finance",
-      "source": "欧洲央行（官方）"
+      "source": "英国央行（官方）",
+      "summary": "英国监管机构公布简化高级管理人员与认证制度（SMCR）的方案，需接受强化审查的金融服务岗位数量将大幅减少，以支持经济增长。"
+    },
+    {
+      "sourceId": "boe-news",
+      "title": "Minutes of the Securities Lending Committee meeting – September 2026",
+      "url": "https://www.bankofengland.co.uk/minutes/2026/september/securities-lending-committee-meeting-september-2026",
+      "excerpt": "The Securities Lending Committee is a forum for market participants and authorities to discuss the UK securities lending market.",
+      "publishedAt": "2026-10-22T15:35:53.000Z",
+      "category": "finance",
+      "source": "英国央行（官方）",
+      "summary": "英国央行公布2026年9月证券借贷委员会会议纪要。该委员会是市场参与者与监管机构讨论英国证券借贷市场的平台。"
     },
     {
       "sourceId": "boe-news",
@@ -1260,22 +1269,14 @@
       "source": "英国央行（官方）"
     },
     {
-      "sourceId": "boe-news",
-      "title": "Announcement of the publication of the Governor's interview transcript",
-      "url": "https://www.bankofengland.co.uk/news/2026/september/statement-announcing-governors-interview",
-      "excerpt": "Statement from the Bank of England",
-      "publishedAt": "2026-09-10T09:00:00.000Z",
-      "category": "finance",
-      "source": "英国央行（官方）"
-    },
-    {
-      "sourceId": "boe-news",
-      "title": "Delay to the November 2026 RTGS standards release",
-      "url": "https://www.bankofengland.co.uk/news/2026/august/delay-to-the-november-2026-rtgs-standards-release",
-      "excerpt": "Bank of England statement",
-      "publishedAt": "2026-08-27T13:16:29.000Z",
-      "category": "finance",
-      "source": "英国央行（官方）"
+      "sourceId": "guardian-world",
+      "title": "Jim Chalmers faces a world of hard choices where the solution to one problem makes the other worse",
+      "url": "https://www.theguardian.com/business/2026/oct/23/jim-chalmers-hard-choices-economy-inflation-unemployment",
+      "excerpt": "High inflation, low growth and rising unemployment can be added to the federal treasurer’s wall of worries Get our new political email, free app or daily news podcast Jim Chalmers in a speech last week offered the scant encouragement that the economy would be “a bit better” in a year’s time. Fast fo",
+      "publishedAt": "2026-10-23T04:54:47.000Z",
+      "category": "politics",
+      "source": "The Guardian",
+      "summary": "澳大利亚财政部长吉姆·查默斯面临高通胀、低增长和失业率上升的棘手局面，解决一个问题可能使另一个问题恶化。他上周仅表示经济将「略有好转」，未给出更多乐观信号。"
     }
   ]
 }
